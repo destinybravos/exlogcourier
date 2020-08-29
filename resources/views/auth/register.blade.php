@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        {{-- <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
 
@@ -68,7 +68,10 @@
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </form> --}}
+
+
+                    <register-component></register-component>
                 </div>
             </div>
         </div>

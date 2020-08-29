@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        {{-- <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
@@ -67,7 +67,15 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> --}}
+
+        @if (Route::has('password.request'))
+            <login-component reset-password-link="{{ route('password.request') }}"></login-component>
+        @else
+            <login-component></login-component>
+        @endif
+        
+
     </div>
 </div>
 @endsection
