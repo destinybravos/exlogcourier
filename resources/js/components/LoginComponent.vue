@@ -24,10 +24,6 @@
                             <label for="remember">Remember Me</label>
                         </div>
 
-                        <div class="form-group">
-                            <ckeditor :editor="editor" v-model="editorData"></ckeditor>
-                        </div>
-
                         <div class="form-group mb-0">
                             <div class="col-md-8">
                                 <button type="submit" class="btn btn-primary" @click.prevent="userLogin">
@@ -50,7 +46,7 @@
 
 <script>
 let token = $('meta[name=csrf-token]').attr('content');
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
 export default {
     props: {
         resetPasswordLink: String
@@ -62,13 +58,6 @@ export default {
             pass:'',
             remember:'',
             errors: {},
-            editor: ClassicEditor,
-            editorData:'',
-            editorConfig: {
-                toolbar: {
-                    items: ['bold', 'italic', 'link', '|',  'undo', 'redo']
-                }
-            }
         }
     },
     mounted() {
