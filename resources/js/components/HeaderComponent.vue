@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="sticky-top">
         <top-notification-bar></top-notification-bar>
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="">
                     <img src="/img/exlog_logo.jpg" alt="logo" style="max-height:50px;">
@@ -31,7 +31,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/"> 
+                                <a class="nav-link" href="/service"> 
                                     Services
                                 </a>
                             </li>

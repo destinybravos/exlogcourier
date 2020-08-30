@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(['prefix' => 'notification'], function () {
+    Route::post('/check', 'ApiController@check_notification');
+    Route::delete('/delete', 'ApiController@delete_notification');
+    Route::post('/create', 'ApiController@create_notification');
+});
+
+
