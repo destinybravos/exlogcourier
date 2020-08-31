@@ -24,6 +24,9 @@ Vue.component('login-component', require('./components/LoginComponent.vue').defa
 Vue.component('register-component', require('./components/RegisterComponent.vue').default);
 Vue.component('index-component', require('./components/IndexComponent.vue').default);
 Vue.component('services-component', require('./components/ServicesComponent.vue').default);
+Vue.component('gallery-component', require('./components/GalleryComponent.vue').default);
+Vue.component('tracking-component', require('./components/TrackingComponent.vue').default);
+Vue.component('contact-component', require('./components/ContactComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -10,6 +10,16 @@
     <title>Express Logistics and Courier</title>
     <link rel="shortcut icon" href="{{ asset('img/favicon.jpg') }}" type="image/x-icon">
 
+    <!-- Extra Meta -->
+    <!--    FACEBOOK / TWITTER -->
+    <meta property="og:title" content="Express Logistics and Courier Services">
+    <meta property="og:description" content="Flexible, fast and reliable services with imformation about the current status of your goods!">
+    <meta property="og:site_name" content="Express Logistics and Courier Services">
+    <meta property="og:image" content="https://exlogcourier.com/img/favicon.jpg">
+    <meta property="og:url" content="https://exlogcourier.com/">
+    <meta name="twitter:card" content="summary_large_image">
+
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 

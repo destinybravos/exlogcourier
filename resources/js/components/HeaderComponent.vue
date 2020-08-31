@@ -36,17 +36,17 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/"> 
+                                <a class="nav-link" href="/gallery"> 
                                     Gallery
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/"> 
+                                <a class="nav-link" href="/tracking"> 
                                     Tracking
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/"> 
+                                <a class="nav-link" href="/contact"> 
                                     Contact
                                 </a>
                             </li>
@@ -70,6 +70,23 @@
         </nav>
     </div>
 </template>
+
+<style scoped>
+    @media screen and (max-width: 767px) {
+       nav.navbar .nav-item:hover a.nav-link{
+           color: #261c6a;
+       }
+       nav.navbar .nav-item a.nav-link:active{
+           background-color: #261c6a;
+           color: white;
+       }
+       .navbar-nav{
+           border-top: thin solid #261c6a;
+           box-sizing: border-box;
+           -webkit-box-sizing: border-box;
+       }
+    }
+</style>
 
 <script>
 let token = $('meta[name=csrf-token]').attr('content');
