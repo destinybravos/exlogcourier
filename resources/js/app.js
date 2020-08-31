@@ -27,7 +27,6 @@ Vue.component('services-component', require('./components/ServicesComponent.vue'
 Vue.component('gallery-component', require('./components/GalleryComponent.vue').default);
 Vue.component('tracking-component', require('./components/TrackingComponent.vue').default);
 Vue.component('contact-component', require('./components/ContactComponent.vue').default);
-Vue.component('trackinginput-component', require('./components/TrackingInputComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

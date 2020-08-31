@@ -1,7 +1,5 @@
 <template>
-    <div id="index-component-div">
-        <BannerComponent page-name="trackinginput"></BannerComponent>
-
+    <div id="tracking-component-div" v-if="!openParcelDetails">
         <div class="container" id="app">
             <div class="row mt-5 justify-content-center">
                 <div class="col-md-6" style="text-align:center">
@@ -13,10 +11,10 @@
                     <div class="mb-4">
                         <h6  style="text-align:center">ENTER YOUR 10 CHARACTER TRACKING NUMBER</h6>
                     </div>
-                    <form method="post">
+                    <form method="post" @submit.prevent="checktrack">
                         <div class="form-group">
-                            <input class="form-control input" type="text" v-model="trackid" :class="[trackid.length < 10 ? 'red':'green']">
-                            <div class="alert alert-primary mt-1">
+                            <input class="form-control input" type="text" v-model="trackid" :class="trackid.length < 10 ? 'red':'green'">
+                            <div class="alert alert-primary mt-1" v-if="(trackid.length < 10)">
                                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                                 <span>Please enter any 10 character to enable you proceed</span>
                             </div>
@@ -36,6 +34,7 @@
             </div>
         </div>
     </div>
+    <ParcelDetails v-else :track-id="trackid"></ParcelDetails>
 </template>
 
 <style scoped>
@@ -75,21 +74,36 @@
 
 
 <script>
-import BannerComponent from '../components/utils/BannerComponent.vue';
+
+import ParcelDetails from '../trackingPageUtils/ParcelDetails.vue';
 
 export default {
-    el:'#app',
     components: {
-        BannerComponent,
+        ParcelDetails
     },
     data(){
         return{
-            trackid:''
+            trackid:'',
+            openParcelDetails:false
         }
     },
     methods:{
         checktrack: function(){
-            window.location.href='/tracking'
+            // Re-checking if the lenght is equal to or greater than 10
+            if(this.trackid.length >= 10){
+                // will will have to check if the parcel number exist or not before proceeding
+                this.checkParcelExists()
+            }else{
+                //we will bring in a very nice modal here
+                //but for now let's display an alert
+                alert('Your parcel details must be correct')
+            }
+        }, 
+        checkParcelExists(track_id){
+            // send a request to database checking if it exist before passing it on
+            // Otherwise we have to pop an error like invalid tracking number (The parcel you are looking for does not blablabla...)
+            // if it exists, open parcel details (set to through and display parcel)
+            this.openParcelDetails = true;
         }
     }
 }
