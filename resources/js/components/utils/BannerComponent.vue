@@ -64,7 +64,8 @@ export default {
                 services : 'Our flexible Services',
                 contact : 'Our Contact Channels',
                 gallery : 'Our services in Visuals',
-                tracking : 'Track Parcel Status'
+                tracking : 'Parcel Status Details',
+                trackinginput : 'Track Parcel Status'
             },
         }
     },

@@ -30,4 +30,9 @@ class PageController extends Controller
     {
         return view('tracking');
     }
+
+    public function trackinginput()
+    {
+        return view('trackinginput');
+    }
 }

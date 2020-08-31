@@ -41,7 +41,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/tracking"> 
+                                <a class="nav-link" href="/trackinginput"> 
                                     Tracking
                                 </a>
                             </li>
