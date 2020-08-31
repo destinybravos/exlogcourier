@@ -1,10 +1,28 @@
 <template>
-    <div class="py-1" style="background-color:#261c6a; color: orange; text-align:center; font-size:1.2rem;">
+    <div class="py-1" id="top_notification">
         <p v-for="(data, index) in notifications" :key="index">
             {{ data.msg }}
         </p>
     </div>
 </template>
+
+<style scoped>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #top_notification{
+        background-color:#261c6a; 
+        color: white; 
+        text-align:center; 
+        font-size:1rem;
+    }
+    #top_notification p{
+        padding: 0.5rem;
+        max-width: 90%;
+        margin: auto;
+    }
+</style>
 
 <script>
 import Api from "../../api/Api";

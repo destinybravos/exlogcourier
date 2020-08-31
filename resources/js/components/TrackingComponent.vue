@@ -1,6 +1,6 @@
 <template>
     <div id="index-component-div">
-        <BannerComponent page-name="services"></BannerComponent>
+        <BannerComponent page-name="tracking"></BannerComponent>
     </div>
 </template>
 

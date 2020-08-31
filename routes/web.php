@@ -13,12 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
+Route::get('/', 'PageController@index')->name('welcome');
 Route::get('/service', 'PageController@services')->name('services');
+Route::get('/contact', 'PageController@contact')->name('contact');
+Route::get('/gallery', 'PageController@gallery')->name('gallery');
+Route::get('/tracking', 'PageController@tracking')->name('tracking');
 
 Auth::routes();
 

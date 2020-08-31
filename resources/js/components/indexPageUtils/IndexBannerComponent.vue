@@ -78,8 +78,12 @@
         #banText{
             text-align: center;
         }
-       #banText h2{
+        #banText h2{
             font-size: 2rem;
+        }
+        #btn-request{
+            padding: 0.7rem 1.2rem;
+            font-size: 0.8rem;
         } 
     }
 </style>
