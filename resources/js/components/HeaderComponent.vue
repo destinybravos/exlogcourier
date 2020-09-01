@@ -58,7 +58,7 @@
                             </li>
                         </template>
                         <template v-else>
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown auth-nav" >
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     {{ curUser.name }}
                                 </a>
@@ -101,9 +101,12 @@
            color: white;
        }
        .navbar-nav{
-           border-top: thin solid #261c6a;
+           border-top: 1pt solid #261c6a;
            box-sizing: border-box;
            -webkit-box-sizing: border-box;
+       }
+       .auth-nav{
+           display:none !important;
        }
     }
 </style>

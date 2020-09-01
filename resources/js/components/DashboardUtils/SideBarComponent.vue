@@ -4,18 +4,27 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="" @click.prevent="changePage('dashboard')">
-                        <!-- Font Awesome Icon -->
+                        <font-awesome-icon icon="tachometer-alt" />
                         Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="" @click.prevent="changePage('parcel')">Parcel</a>
+                    <a class="nav-link" href="" @click.prevent="changePage('parcel')">
+                        <font-awesome-icon icon="truck" />
+                        Parcel
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="" @click.prevent="changePage('request')">Request</a>
+                    <a class="nav-link" href="" @click.prevent="changePage('request')">
+                        <font-awesome-icon icon="clipboard-list" />
+                        Request
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="" @click.prevent="changePage('contact')">Contacts</a>
+                    <a class="nav-link" href="" @click.prevent="changePage('contact')">
+                        <font-awesome-icon icon="user" />
+                        Contacts
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -23,6 +32,12 @@
 </template>
 
 <style scoped>
+    .navbar{
+        padding: 0;
+    }
+    .navbar-nav{
+        width: 100%;
+    }
     #side_bar{
         position: fixed;
         width: 250px;
@@ -37,6 +52,16 @@
     }
     #side_bar a{
         color: white;
+        padding: 0.7rem 1.3rem;
+    }
+    #side_bar li.nav-item:hover{
+        background-color: white !important;
+    }
+    #side_bar li.nav-item:hover a{
+        color: #261c6a !important;
+    }
+    .open{
+        left: 0 !important; 
     }
     @media screen and (max-width: 767px){
        #side_bar{
