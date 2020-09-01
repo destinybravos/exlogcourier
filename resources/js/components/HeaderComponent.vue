@@ -50,6 +50,12 @@
                                     Contact
                                 </a>
                             </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tracking" href="/tracking"> 
+                                    Track Your Item
+                                </a>
+                            </li>
                         </template>
                         <template v-else>
                             <li class="nav-item dropdown">
@@ -72,6 +78,20 @@
 </template>
 
 <style scoped>
+    .btn-tracking{
+        border: 1pt solid white;
+        margin-left: 20px;
+        border-radius: 5px;
+        background-color: #ff7900;
+        color: white !important;
+        font-weight: bold;
+    }
+    .btn-tracking:hover{
+        border: 1pt solid #ff7900;
+        color: #ff7900 !important;
+        background-color: white;
+        box-shadow: 0 0 30px #261c6a54;
+    }
     @media screen and (max-width: 767px) {
        nav.navbar .nav-item:hover a.nav-link{
            color: #261c6a;
