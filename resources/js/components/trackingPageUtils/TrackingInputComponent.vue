@@ -92,7 +92,7 @@ export default {
             // Re-checking if the lenght is equal to or greater than 10
             if(this.trackid.length >= 10){
                 // will will have to check if the parcel number exist or not before proceeding
-                this.checkParcelExists()
+                this.checkParcelExists(this.trackid)
             }else{
                 //we will bring in a very nice modal here
                 //but for now let's display an alert
