@@ -43,6 +43,7 @@
         <main class="py-0">
             @yield('content')
         </main>
+        <footer-component></footer-component>
     </div>
 </body>
 </html>

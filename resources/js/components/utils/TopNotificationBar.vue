@@ -12,9 +12,9 @@
         padding: 0;
     }
     #top_notification{
-        background-color:#261c6a; 
-        color: white; 
-        text-align:center; 
+        background-color:#261c6a;
+        color: white;
+        text-align:center;
         font-size:1rem;
     }
     #top_notification p{
