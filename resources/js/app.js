@@ -10,9 +10,11 @@ window.Vue = require('vue');
 
 // Added Font-Awesome Here
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, faClipboardList } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, 
+    faClipboardList, faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-library.add(faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, faClipboardList);
+library.add(faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, 
+    faClipboardList, faCircleNotch);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 /**

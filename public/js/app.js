@@ -12115,6 +12115,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     changePage: function changePage(page) {
+      if (window.outerWidth < 768) {
+        var sideBar = $('#side_bar');
+        sideBar.toggleClass('open');
+      }
+
       this.$emit('selectPage', page);
     }
   }
@@ -12399,6 +12404,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 var token = $('meta[name=csrf-token]').attr('content');
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -12410,7 +12417,8 @@ var token = $('meta[name=csrf-token]').attr('content');
       uname: '',
       pass: '',
       remember: '',
-      errors: {}
+      errors: {},
+      spinState: false
     };
   },
   mounted: function mounted() {// This is like document ready
@@ -12420,6 +12428,7 @@ var token = $('meta[name=csrf-token]').attr('content');
     userLogin: function userLogin() {
       var _this = this;
 
+      this.spinState = true;
       var disError = this.errors;
       var loginData = {
         email: this.uname,
@@ -12430,6 +12439,8 @@ var token = $('meta[name=csrf-token]').attr('content');
       axios.post('/login', loginData).then(function (response) {
         window.location.href = '/home';
       })["catch"](function (e) {
+        _this.spinState = false;
+
         _this.handleError(e);
       });
     },
@@ -50954,8 +50965,16 @@ var render = function() {
                     }
                   },
                   [
-                    _c("font-awesome-icon", { attrs: { icon: "sign-in-alt" } }),
-                    _vm._v(" Login\n                            ")
+                    !_vm.spinState
+                      ? _c("font-awesome-icon", {
+                          attrs: { icon: "sign-in-alt" }
+                        })
+                      : _c("font-awesome-icon", {
+                          attrs: { icon: "circle-notch", pulse: "" }
+                        }),
+                    _vm._v(
+                      " \n                                Login\n                            "
+                    )
                   ],
                   1
                 ),
@@ -64361,7 +64380,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 
 
-_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faUser"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faEnvelope"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faTachometerAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faLock"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faSignInAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faKey"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faUserLock"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faTruck"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faClipboardList"]);
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faUser"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faEnvelope"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faTachometerAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faLock"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faSignInAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faKey"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faUserLock"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faTruck"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faClipboardList"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faCircleNotch"]);
 Vue.component('font-awesome-icon', _fortawesome_vue_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"]);
 /**
  * The following block of code may be used to automatically register your

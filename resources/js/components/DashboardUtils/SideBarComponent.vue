@@ -82,6 +82,10 @@ export default {
     },
     methods:{
         changePage(page){
+            if(window.outerWidth < 768){
+                let sideBar = $('#side_bar');
+                sideBar.toggleClass('open');
+            }
             this.$emit('selectPage', page);
         }
     }

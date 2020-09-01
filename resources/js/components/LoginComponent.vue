@@ -27,7 +27,9 @@
                         <div class="form-group mb-0">
                             <div class="col-md-8">
                                 <button type="submit" class="btn btn-primary" @click.prevent="userLogin">
-                                    <font-awesome-icon icon="sign-in-alt" /> Login
+                                    <font-awesome-icon icon="sign-in-alt" v-if="!spinState" /> 
+                                    <font-awesome-icon icon="circle-notch" pulse v-else /> 
+                                    Login
                                 </button>
 
                                 <a class="btn btn-link" v-if="resetPasswordLink" :href="resetPasswordLink">
@@ -58,6 +60,7 @@ export default {
             pass:'',
             remember:'',
             errors: {},
+            spinState: false
         }
     },
     mounted() {
@@ -66,6 +69,7 @@ export default {
     methods:{
         // Methods within the component are defined here
         userLogin(){
+            this.spinState = true;
             let disError = this.errors;
             let loginData = {
                     email: this.uname,
@@ -79,6 +83,7 @@ export default {
                 window.location.href = '/home';
             })
             .catch((e) => {
+                this.spinState = false;
                 this.handleError(e)
             });
         },
