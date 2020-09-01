@@ -3,7 +3,15 @@
         <div class="container">
             <div class="row my-5">
                 <div class="col-md-12">
-                    Tracking Box for Tracker
+                    <div class="container">
+                        <div id="trackNo">
+                            <h1>TRACKING NUMBER</h1>
+                            <P>TRACK UP TO 10 NUMBERS AT A TIME</P>
+                        </div>
+                        <div id="trackInput">
+                            <input type="text" value="TRACK NUMBER">
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -22,5 +30,12 @@
         background-color: #261c6a;
         color: white;
         padding: 20px 0;
+    }
+
+    #trackNo{
+        display: inline;
+    }
+    #trackInput{
+        display: inline-block;
     }
 </style>

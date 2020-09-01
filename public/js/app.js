@@ -40558,7 +40558,7 @@ var render = function() {
     _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row my-5" }, [
         _c("div", { staticClass: "col-md-12" }, [
-          _c("div", [
+          _c("div", { staticClass: "container" }, [
             _c(
               "div",
               { attrs: { id: "trackNo" } },
