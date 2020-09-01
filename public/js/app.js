@@ -7864,7 +7864,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#footer-component[data-v-abfbddf2]{\n    background-color: #261c6a;\n    color: white;\n    padding: 20px 0;\n}\n", ""]);
+exports.push([module.i, "\n#footer-component[data-v-abfbddf2]{\n    background-color: #261c6a;\n    color: white;\n    padding: 20px 0;\n}\n#trackNo[data-v-abfbddf2]{\n    display: inline;\n}\n#trackInput[data-v-abfbddf2]{\n    display: inline-block;\n}\n", ""]);
 
 // exports
 
@@ -40554,31 +40554,52 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { attrs: { id: "footer-component" } }, [
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row my-5" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("div", [
+            _c(
+              "div",
+              { attrs: { id: "trackNo" } },
+              [
+                _c("h1", [_vm._v("TRACKING NUMBER")]),
+                _vm._v(" "),
+                _c("P", [_vm._v("TRACK UP TO 10 NUMBERS AT A TIME")])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _vm._m(0)
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(1)
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "footer-component" } }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row my-5" }, [
-          _c("div", { staticClass: "col-md-12" }, [
-            _vm._v("\n                Tracking Box for Tracker\n            ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row my-2" }, [
-          _c("div", { staticClass: "col-md-5" }, [_vm._v(" colomn 1")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-2" }, [_vm._v("  colomn 2 ")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-2" }, [_vm._v("  colomn 3 ")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-3" }, [_vm._v("  colomn 4 ")])
-        ])
-      ])
+    return _c("div", { attrs: { id: "trackInput" } }, [
+      _c("input", { attrs: { type: "text", value: "TRACK NUMBER" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row my-2" }, [
+      _c("div", { staticClass: "col-md-5" }, [_vm._v(" colomn 1")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-2" }, [_vm._v("  colomn 2 ")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-2" }, [_vm._v("  colomn 3 ")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-3" }, [_vm._v("  colomn 4 ")])
     ])
   }
 ]
