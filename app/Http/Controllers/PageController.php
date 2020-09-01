@@ -11,9 +11,9 @@ class PageController extends Controller
         return view('welcome');
     }
 
-    public function services()
+    public function about()
     {
-        return view('services');
+        return view('about');
     }
 
     public function gallery()

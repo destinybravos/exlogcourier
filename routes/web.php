@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PageController@index')->name('welcome');
 Route::get('/welcome', 'PageController@index')->name('welcome');
-Route::get('/service', 'PageController@services')->name('services');
+Route::get('/about', 'PageController@about')->name('about');
 Route::get('/contact', 'PageController@contact')->name('contact');
 Route::get('/gallery', 'PageController@gallery')->name('gallery');
 Route::get('/tracking', 'PageController@tracking')->name('tracking');

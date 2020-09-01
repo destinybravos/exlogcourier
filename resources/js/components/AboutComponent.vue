@@ -1,6 +1,6 @@
 <template>
     <div id="index-component-div">
-        <BannerComponent page-name="services"></BannerComponent>
+        <BannerComponent page-name="about"></BannerComponent>
 
         <div class="container mainContainer">
             <div class="row">
@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-md-5">
                     <div class="card cardImg">
-                        <img src="/img/bg1.jpg" class="  card-img-top">
+                        <img src="/img/bg3.jpg" class="  card-img-top">
                     </div>
                 </div>
             </div>
@@ -92,13 +92,14 @@
         /* font-weight: bold; */
         font-size: 1.2em;
         text-transform: uppercase;
+        color: #3d3072;
         /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     }
     .pText{
         line-clamp: 0;
     }
     .cardImg{
-         box-shadow: 0 0 40px #0d04442d;
+         box-shadow: 0 0 60px #0d04442d;
     }
     .iconImg{
         width: 70px;
@@ -113,6 +114,7 @@
     }
     .h1Text{
         font-weight: bolder;
+        color: #3d3072;
     }
 
 
