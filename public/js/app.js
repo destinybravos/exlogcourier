@@ -1950,6 +1950,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -7807,7 +7829,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n#contact-details[data-v-6147ab94]{\n    min-height: 500px;\n}\n", ""]);
+exports.push([module.i, "\n#contact-details[data-v-6147ab94]{\n    min-height: 500px;\n}\n#contImg[data-v-6147ab94]{\nbackground-image: url('/img/bg2.jpg');\n    background-size: cover;\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-size: 100%;\n    max-height: 100%;\n    width: 100%;\n}\n", ""]);
 
 // exports
 
@@ -7864,7 +7886,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#footer-component[data-v-abfbddf2]{\n    background-color: #261c6a;\n    color: white;\n    padding: 20px 0;\n}\n#trackNo[data-v-abfbddf2]{\n    display: inline;\n}\n#trackInput[data-v-abfbddf2]{\n    display: inline-block;\n}\n", ""]);
+exports.push([module.i, "\n#footer-component[data-v-abfbddf2]{\n    background-color: #261c6a;\n    color: white;\n    padding: 20px 0;\n}\n#containerT[data-v-abfbddf2]{\n    background-color: #f57302;\n    max-height: 2000px;\n    width: 100%;\n}\n", ""]);
 
 // exports
 
@@ -40223,11 +40245,33 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "contact-details" } }, [
-    _vm._v("\n    contact details\n")
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "container-fluid", attrs: { id: "contact-details" } },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col md-6" }, [
+              _vm._v("\n            HEY\n\n        ")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col md-6", attrs: { id: "contImg" } }, [
+              _vm._v("\n            HEY WERE GOOD\n        ")
+            ])
+          ]),
+          _vm._v("\n        div\n\n    ")
+        ])
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -40554,52 +40598,53 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "footer-component" } }, [
-    _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row my-5" }, [
-        _c("div", { staticClass: "col-md-12" }, [
-          _c("div", { staticClass: "container" }, [
-            _c(
-              "div",
-              { attrs: { id: "trackNo" } },
-              [
-                _c("h1", [_vm._v("TRACKING NUMBER")]),
-                _vm._v(" "),
-                _c("P", [_vm._v("TRACK UP TO 10 NUMBERS AT A TIME")])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _vm._m(0)
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _vm._m(1)
-    ])
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "trackInput" } }, [
-      _c("input", { attrs: { type: "text", value: "TRACK NUMBER" } })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row my-2" }, [
-      _c("div", { staticClass: "col-md-5" }, [_vm._v(" colomn 1")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-2" }, [_vm._v("  colomn 2 ")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-2" }, [_vm._v("  colomn 3 ")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-3" }, [_vm._v("  colomn 4 ")])
+    return _c("div", { attrs: { id: "footer-component" } }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row my-5" }, [
+          _c("div", { staticClass: "col-md-12", attrs: { id: "containerT" } }, [
+            _c("div", { staticClass: "container", attrs: { id: "trackCon" } }, [
+              _c("div", { staticClass: "row my-2" }, [
+                _c("div", { staticClass: "col-md-4" }, [
+                  _c("h3", { staticStyle: { "font-weight": "bolder" } }, [
+                    _vm._v("TRACK NUMBER")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("TRACK UP TO 10 NUMBERS AT A TIME")])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-8" }, [
+                  _c("input", {
+                    attrs: { type: "text", value: "#PACKAGE ID" }
+                  }),
+                  _vm._v(" "),
+                  _c("button", { attrs: { type: "text" } }, [_vm._v("Track ")])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row my-2" }, [
+          _c("div", { staticClass: "col-md-5" }, [
+            _vm._v(" EXPRESS LOGISTICS ")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-2" }, [
+            _vm._v(" SERVICE OFFERED  ")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-2" }, [_vm._v(" DESTINATION  ")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-3" }, [_vm._v("  CONTACT DETAILS ")])
+        ])
+      ])
     ])
   }
 ]
