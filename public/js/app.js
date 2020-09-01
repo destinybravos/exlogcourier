@@ -1972,6 +1972,39 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -7829,7 +7862,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n#contact-details[data-v-6147ab94]{\n    min-height: 500px;\n}\n#contImg[data-v-6147ab94]{\nbackground-image: url('/img/bg2.jpg');\n    background-size: cover;\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-size: 100%;\n    max-height: 100%;\n    width: 100%;\n}\n", ""]);
+exports.push([module.i, "\n#contact-details[data-v-6147ab94]{\n    min-height: 600px;\n    background-color: white;\n}\n#contImg[data-v-6147ab94]{\nbackground-image: url('/img/bg2.jpg');\n    background-size: cover;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: 100%;\n    min-height: 600px;\n    width: 100%;\n}\n.ConDet[data-v-6147ab94]{\n    margin: 50px auto;\n}\n", ""]);
 
 // exports
 
@@ -40256,18 +40289,73 @@ var staticRenderFns = [
       "div",
       { staticClass: "container-fluid", attrs: { id: "contact-details" } },
       [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col md-6" }, [
-              _vm._v("\n            HEY\n\n        ")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col md-6", attrs: { id: "contImg" } }, [
-              _vm._v("\n            HEY WERE GOOD\n        ")
+        _c(
+          "div",
+          { staticClass: "container", staticStyle: { "max-height": "100%" } },
+          [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col md-6" }, [
+                _c("div", { staticClass: "ConDet" }, [
+                  _vm._v("EXPRESS LOGISTIC ")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "ConDet" }, [
+                  _vm._v("FEEL FREE TO CONTACT US VIA PHONE OR EMAIL ANYTIME "),
+                  _c("br"),
+                  _vm._v(
+                    "\n                            IF YOU HAVE ANY QUESTIONS OR NEED HELP!\n                        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "ConDet" }, [
+                  _c("i", { staticClass: "fa fa-envelop" }, [
+                    _vm._v("Contact@expresslogistics.com")
+                  ]),
+                  _vm._v(
+                    "\n                            We usually reply within 24 hours "
+                  ),
+                  _c("br"),
+                  _vm._v(
+                    "\n                            +234 - 09087366474663664645\n                        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "ConDet" }, [
+                  _vm._v("VISIT HEAD OFFICE")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "ConDet" }, [
+                  _c("i", { staticClass: "fa fa-map-marker" }),
+                  _vm._v(" "),
+                  _c("i", { staticClass: "fa fa-desktop" }, [
+                    _vm._v("expresslogistics.com")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "ConDet" }, [
+                  _vm._v(
+                    "\n                            GET CONNECTED\n                            "
+                  ),
+                  _c("div", { staticClass: "container" }, [
+                    _c("div", [_c("i", { staticClass: "fa fa-twitter" })]),
+                    _vm._v(" "),
+                    _c("div", [_c("i", { staticClass: "fa fa-facebook" })]),
+                    _vm._v(" "),
+                    _c("div", [_c("i", { staticClass: "fa fa-google" })]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("i", { staticClass: "fa fa-linkedin-square" })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [_c("i", { staticClass: "fa fa-vimeo" })])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col md-6", attrs: { id: "contImg" } })
             ])
-          ]),
-          _vm._v("\n        div\n\n    ")
-        ])
+          ]
+        )
       ]
     )
   }
