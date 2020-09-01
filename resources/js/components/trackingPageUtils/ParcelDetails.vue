@@ -194,6 +194,19 @@
     </div>
 </template>
 
+<style scoped>
+    .cardHeadEdit{
+        background-color: #3d3072;
+        padding: 4px 10px !important;
+        color: #fff;
+    }
+    .progressBarRow{
+        background-color: #3d3072;
+        padding: 60px 20px !important;
+        color: #fff;
+    }
+</style>
+
 <script>
 export default {
     props:{
@@ -201,8 +214,12 @@ export default {
     },
     data(){
         return {
-
+            parcel : {}
         }
+    },
+    beforeCreate(){
+        // Request for the parcel detail from the database using the trackid
+        console.log(this.trackId);
     },
     mounted(){
         // console.log(this.trackId);
