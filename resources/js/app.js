@@ -10,9 +10,11 @@ window.Vue = require('vue');
 
 // Added Font-Awesome Here
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, faClipboardList } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, 
+    faClipboardList, faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-library.add(faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, faClipboardList);
+library.add(faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, 
+    faClipboardList, faCircleNotch);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 /**
@@ -27,6 +29,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('header-component', require('./components/HeaderComponent.vue').default);
+Vue.component('footer-component', require('./components/FooterComponent.vue').default);
 Vue.component('login-component', require('./components/LoginComponent.vue').default);
 Vue.component('register-component', require('./components/RegisterComponent.vue').default);
 Vue.component('index-component', require('./components/IndexComponent.vue').default);
