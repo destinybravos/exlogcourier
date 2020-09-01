@@ -7798,7 +7798,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n*[data-v-008cdbc8]{\n    margin: 0;\n    padding: 0;\n}\n#top_notification[data-v-008cdbc8]{\n    background-color:#261c6a; \n    color: white; \n    text-align:center; \n    font-size:1rem;\n}\n#top_notification p[data-v-008cdbc8]{\n    padding: 0.5rem;\n    max-width: 90%;\n    margin: auto;\n}\n", ""]);
+exports.push([module.i, "\n*[data-v-008cdbc8]{\n    margin: 0;\n    padding: 0;\n}\n#top_notification[data-v-008cdbc8]{\n    background-color:#261c6a;\n    color: white;\n    text-align:center;\n    font-size:1rem;\n}\n#top_notification p[data-v-008cdbc8]{\n    padding: 0.5rem;\n    max-width: 90%;\n    margin: auto;\n}\n", ""]);
 
 // exports
 
@@ -39933,7 +39933,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row my-5" }, [
           _c("div", { staticClass: "col-md-12" }, [
-            _vm._v("\n                Tracking Box\n            ")
+            _vm._v("\n                Tracking Box for Tracker\n            ")
           ])
         ]),
         _vm._v(" "),
