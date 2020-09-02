@@ -12026,6 +12026,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -50327,86 +50328,122 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    { staticClass: "container-fluid", attrs: { id: "contact-details" } },
+    [
+      _c(
+        "div",
+        { staticClass: "container", staticStyle: { "max-height": "100%" } },
+        [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col md-6" }, [
+              _c("div", { staticClass: "ConDet" }, [
+                _vm._v("EXPRESS LOGISTIC ")
+              ]),
+              _vm._v(" "),
+              _vm._m(0),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: "ConDet" }, [
+                _vm._v("VISIT HEAD OFFICE")
+              ]),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _c("div", { staticClass: "ConDet" }, [
+                _vm._v(
+                  "\n                            GET CONNECTED\n                            "
+                ),
+                _c("div", { staticClass: "container" }, [
+                  _c(
+                    "div",
+                    [_c("font-awesome-icon", { attrs: { icon: "envelope" } })],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _vm._m(3),
+                  _vm._v(" "),
+                  _vm._m(4),
+                  _vm._v(" "),
+                  _vm._m(5),
+                  _vm._v(" "),
+                  _vm._m(6)
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col md-6", attrs: { id: "contImg" } })
+          ])
+        ]
+      )
+    ]
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "container-fluid", attrs: { id: "contact-details" } },
-      [
-        _c(
-          "div",
-          { staticClass: "container", staticStyle: { "max-height": "100%" } },
-          [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col md-6" }, [
-                _c("div", { staticClass: "ConDet" }, [
-                  _vm._v("EXPRESS LOGISTIC ")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "ConDet" }, [
-                  _vm._v("FEEL FREE TO CONTACT US VIA PHONE OR EMAIL ANYTIME "),
-                  _c("br"),
-                  _vm._v(
-                    "\n                            IF YOU HAVE ANY QUESTIONS OR NEED HELP!\n                        "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "ConDet" }, [
-                  _c("i", { staticClass: "fa fa-envelop" }, [
-                    _vm._v("Contact@expresslogistics.com")
-                  ]),
-                  _vm._v(
-                    "\n                            We usually reply within 24 hours "
-                  ),
-                  _c("br"),
-                  _vm._v(
-                    "\n                            +234 - 09087366474663664645\n                        "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "ConDet" }, [
-                  _vm._v("VISIT HEAD OFFICE")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "ConDet" }, [
-                  _c("i", { staticClass: "fa fa-map-marker" }),
-                  _vm._v(" "),
-                  _c("i", { staticClass: "fa fa-desktop" }, [
-                    _vm._v("expresslogistics.com")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "ConDet" }, [
-                  _vm._v(
-                    "\n                            GET CONNECTED\n                            "
-                  ),
-                  _c("div", { staticClass: "container" }, [
-                    _c("div", [_c("i", { staticClass: "fa fa-twitter" })]),
-                    _vm._v(" "),
-                    _c("div", [_c("i", { staticClass: "fa fa-facebook" })]),
-                    _vm._v(" "),
-                    _c("div", [_c("i", { staticClass: "fa fa-google" })]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("i", { staticClass: "fa fa-linkedin-square" })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [_c("i", { staticClass: "fa fa-vimeo" })])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col md-6", attrs: { id: "contImg" } })
-            ])
-          ]
-        )
-      ]
-    )
+    return _c("div", { staticClass: "ConDet" }, [
+      _vm._v("FEEL FREE TO CONTACT US VIA PHONE OR EMAIL ANYTIME "),
+      _c("br"),
+      _vm._v(
+        "\n                            IF YOU HAVE ANY QUESTIONS OR NEED HELP!\n                        "
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "ConDet" }, [
+      _c("i", { staticClass: "fa fa-envelop" }, [
+        _vm._v("Contact@expresslogistics.com")
+      ]),
+      _vm._v("\n                            We usually reply within 24 hours "),
+      _c("br"),
+      _vm._v(
+        "\n                            +234 - 09087366474663664645\n                        "
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "ConDet" }, [
+      _c("i", { staticClass: "fa fa-map-marker" }),
+      _vm._v(" "),
+      _c("i", { staticClass: "fa fa-desktop" }, [
+        _vm._v("expresslogistics.com")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("i", { staticClass: "fa fa-facebook" })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("i", { staticClass: "fa fa-google" })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("i", { staticClass: "fa fa-linkedin-square" })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("i", { staticClass: "fa fa-vimeo" })])
   }
 ]
 render._withStripped = true
@@ -64708,7 +64745,8 @@ window.api = api;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fortawesome/fontawesome-svg-core */ "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js");
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
-/* harmony import */ var _fortawesome_vue_fontawesome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/vue-fontawesome */ "./node_modules/@fortawesome/vue-fontawesome/index.es.js");
+!(function webpackMissingModule() { var e = new Error("Cannot find module '@fortawesome/free-brands-svg-icons'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _fortawesome_vue_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/vue-fontawesome */ "./node_modules/@fortawesome/vue-fontawesome/index.es.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -64717,12 +64755,14 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js"); // Added Font-Awesome Here
+// We need to also install social icon with it ok
+
 
 
 
 
 _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faUser"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faEnvelope"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faTachometerAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faLock"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faSignInAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faKey"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faUserLock"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faTruck"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faClipboardList"]);
-Vue.component('font-awesome-icon', _fortawesome_vue_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"]);
+Vue.component('font-awesome-icon', _fortawesome_vue_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"]);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

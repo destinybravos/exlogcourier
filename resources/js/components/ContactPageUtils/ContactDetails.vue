@@ -22,7 +22,8 @@
                             <div class="ConDet">
                                 GET CONNECTED
                                 <div class="container">
-                                    <div><i class="fa fa-twitter"></i></div>
+                                    <!-- You dont use font awesome likr this here eeee yaaaa  not working there -->
+                                    <div><font-awesome-icon icon="envelope" /></div>
                                     <div><i class="fa fa-facebook"></i></div>
                                     <div><i class="fa fa-google"></i></div>
                                     <div><i class="fa fa-linkedin-square"></i></div>
