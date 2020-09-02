@@ -61,7 +61,7 @@ export default {
     data(){
         return {
             pages: {
-                services : 'Our flexible Services',
+                about : 'About Our Services',
                 contact : 'Our Contact Channels',
                 gallery : 'Our services in Visuals',
                 tracking : 'Parcel Status Details',
