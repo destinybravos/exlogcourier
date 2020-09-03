@@ -79,7 +79,7 @@ import Api from "../../api/Api";
 var token = $('meta[name=csrf_token]').attr('content');
 export default {
     components: {
-        ParcelDetai
+        // ParcelDetails
 
         // ckxckxckxckxckxckxc
     },
