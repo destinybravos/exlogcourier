@@ -21,8 +21,8 @@
             </div>
 
             <div class="col-md-5" id="banImg">
-                <!-- <img src="/img/exlog_bg1.png" alt="bg1" style="max-width:100%;"> -->
-                <!-- <img src="/img/bg1.jpg" alt="bg1" style="max-width:100%;"> -->
+                <!-- <img src="/img/bg2.jpg" alt="bg1" style="max-width:100%;">
+                <img src="/img/bg1.jpg" alt="bg1" style="max-width:100%;"> -->
             </div>
         </div>
     </div>
