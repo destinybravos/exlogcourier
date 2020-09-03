@@ -38,6 +38,7 @@ Vue.component('gallery-component', require('./components/GalleryComponent.vue').
 Vue.component('tracking-component', require('./components/TrackingComponent.vue').default);
 Vue.component('contact-component', require('./components/ContactComponent.vue').default);
 Vue.component('dashboard-component', require('./components/DashboardComponent.vue').default);
+// Vue.component('parcelreceipt-component', require('./components/ParcelReceiptComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

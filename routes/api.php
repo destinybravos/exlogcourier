@@ -23,5 +23,9 @@ Route::group(['prefix' => 'notification'], function () {
     Route::delete('/delete', 'ApiController@delete_notification');
     Route::post('/create', 'ApiController@create_notification');
 });
+ Route::group(['prefix' => 'parcel'], function() {
+    Route::post('/create', 'ApiController@create_parcel');
+    Route::post('/getparcel','ApiController@get_parcel');
+ });
 
 
