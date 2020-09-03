@@ -74,17 +74,20 @@
 
 
 <script>
-
-import ParcelDetails from '../trackingPageUtils/ParcelDetails.vue';
-
+import Api from "../../api/Api";
+// import ParcelDetails from "../components/trackingPageUtils/ParcelDetails.vue";
+var token = $('meta[name=csrf_token]').attr('content');
 export default {
     components: {
-        ParcelDetails
+        ParcelDetai
+
+        // ckxckxckxckxckxckxc
     },
     data(){
         return{
             trackid:'',
-            openParcelDetails:false
+            openParcelDetails:false,
+            displayParcelDetails:[]
         }
     },
     methods:{
@@ -98,12 +101,31 @@ export default {
                 //but for now let's display an alert
                 alert('Your parcel details must be correct')
             }
-        }, 
+        },
+        mounted(){
+            var _token = this.token;
+            console.log(this._token);
+        },
         checkParcelExists(track_id){
-            // send a request to database checking if it exist before passing it on
+             // send a request to database checking if it exist before passing it on
             // Otherwise we have to pop an error like invalid tracking number (The parcel you are looking for does not blablabla...)
+            let trackData = {
+                trackid:this.trackid,
+                _token:this._token,
+
+            };
+
+            Api.client.post('parcel/getparcel',trackData)
+            .then((res)=>{
+                this.displayParcel(res);
+            });
             // if it exists, open parcel details (set to through and display parcel)
             this.openParcelDetails = true;
+        },
+        displayParcel(response){
+            if(response.data.count > 0){
+                this.displayParcelDetails = response.data.displayParcelDetails
+            }
         }
     }
 }

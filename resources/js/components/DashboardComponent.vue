@@ -6,6 +6,9 @@
             <ContactManger v-if="currentPage === 'contact'"></ContactManger>
             <ParcelManager v-if="currentPage === 'parcel'"></ParcelManager>
             <RequestManager v-if="currentPage === 'request'"></RequestManager>
+
+            <!-- I Additional Parcel Receipt Component was added -->
+            <!-- <ParcelReceipt></ParcelReceipt> -->
         </div>
     </div>
 </template>
@@ -28,6 +31,9 @@ import ContactManger from "../components/DashboardUtils/ContactManger.vue";
 import ParcelManager from "../components/DashboardUtils/ParcelManager.vue";
 import RequestManager from "../components/DashboardUtils/RequestManager.vue";
 
+// I Imported additional Parcel Receipt Component
+// import ParcelReceipt from "../components/DashboardUtils/ParcelReceipt.vue";
+
 export default {
     components:{
         SideBarComponent,
@@ -35,6 +41,7 @@ export default {
         ParcelManager,
         ContactManger,
         DashboardHome : DashboardHomeComponent,
+        // ParcelReceipt,
 
     },
     data(){
