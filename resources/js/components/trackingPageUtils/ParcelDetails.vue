@@ -218,11 +218,16 @@ export default {
         }
     },
     beforeCreate(){
-        // Request for the parcel detail from the database using the trackid
-        console.log(this.trackId);
+        
     },
     mounted(){
-        // console.log(this.trackId);
+        // Request for the parcel detail from the database using the trackid
+        this.fetchParcelDetails();
+    },
+    methods:{
+        fetchParcelDetails(){
+            console.log(this.trackId);
+        }
     }
 }
 </script>

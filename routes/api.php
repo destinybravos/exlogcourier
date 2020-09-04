@@ -26,6 +26,7 @@ Route::group(['prefix' => 'notification'], function () {
  Route::group(['prefix' => 'parcel'], function() {
     Route::post('/create', 'ApiController@create_parcel');
     Route::post('/getparcel','ApiController@get_parcel');
+    Route::post('/fetch_all','ApiController@fetch_all');
  });
 
 
