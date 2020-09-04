@@ -2,11 +2,11 @@
     <div id="our-work-desc" class="">
         
         <div class="container">
-            <div class="col-md-7">
+            <!-- <div class="col-md-7">
                 
-            </div>
-            <div class="col-md-5">
-                
+            </div> -->
+            <div class="col-md-12">
+                <slider :image-list="images"></slider> 
             </div>
         </div>
 
@@ -22,3 +22,24 @@
         padding: 10vh 0;
     }
 </style>
+
+<script>
+import slider from '../utils/AgileSliderComponent.vue';
+export default {
+    components:{
+        slider
+    },
+    data(){
+        return{
+            images: {
+                image1: '/img/bg1.jpg',
+                image2: '/img/bg2.jpg',
+                image3: '/img/bg3.jpg'
+            }
+        }
+    },
+    beforeMount(){
+
+    }
+}
+</script>

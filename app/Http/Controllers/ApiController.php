@@ -89,4 +89,10 @@ class ApiController extends Controller
 
         return json_encode($result);
     }
+
+    public function fetch_all(Request $request)
+    {
+        $all_parcel = parcel::orderBy('created_at', 'DESC')->get();
+        return json_encode($all_parcel);
+    }
 }
