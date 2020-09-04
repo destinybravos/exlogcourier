@@ -10,24 +10,24 @@
                                 IF YOU HAVE ANY QUESTIONS OR NEED HELP!
                             </div>
                             <div class="ConDet">
-                              <i class="fa fa-envelop">Contact@expresslogistics.com</i>
+                                <font-awesome-icon icon="map-marker" /> Contact@expresslogistics.com
                                 We usually reply within 24 hours <br>
                                 +234 - 09087366474663664645
                             </div>
                             <div class="ConDet">VISIT HEAD OFFICE</div>
                             <div class="ConDet">
-                                <i class="fa fa-map-marker"></i>
-                                <i class="fa fa-desktop">expresslogistics.com</i>
+                                <font-awesome-icon icon="map-marker" />
+                                <font-awesome-icon icon="desktop" />expresslogistics.com
                             </div>
                             <div class="ConDet">
                                 GET CONNECTED
                                 <div class="container">
                                     <!-- You dont use font awesome likr this here eeee yaaaa  not working there -->
                                     <div><font-awesome-icon icon="envelope" /></div>
-                                    <div><i class="fa fa-facebook"></i></div>
-                                    <div><i class="fa fa-google"></i></div>
-                                    <div><i class="fa fa-linkedin-square"></i></div>
-                                    <div><i class="fa fa-vimeo"></i></div>
+                                    <div><font-awesome-icon icon="facebook" /></div>
+                                    <div><font-awesome-icon icon="google" /></div>
+                                    <div><font-awesome-icon icon="linkedin-square" /></div>
+                                    <div><font-awesome-icon icon="vimeo" /></div>
 
                                 </div>
                             </div>

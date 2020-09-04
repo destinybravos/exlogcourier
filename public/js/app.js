@@ -53327,13 +53327,37 @@ var render = function() {
               _vm._v(" "),
               _vm._m(0),
               _vm._v(" "),
-              _vm._m(1),
+              _c(
+                "div",
+                { staticClass: "ConDet" },
+                [
+                  _c("font-awesome-icon", { attrs: { icon: "map-marker" } }),
+                  _vm._v(
+                    " Contact@expresslogistics.com\n                            We usually reply within 24 hours "
+                  ),
+                  _c("br"),
+                  _vm._v(
+                    "\n                            +234 - 09087366474663664645\n                        "
+                  )
+                ],
+                1
+              ),
               _vm._v(" "),
               _c("div", { staticClass: "ConDet" }, [
                 _vm._v("VISIT HEAD OFFICE")
               ]),
               _vm._v(" "),
-              _vm._m(2),
+              _c(
+                "div",
+                { staticClass: "ConDet" },
+                [
+                  _c("font-awesome-icon", { attrs: { icon: "map-marker" } }),
+                  _vm._v(" "),
+                  _c("font-awesome-icon", { attrs: { icon: "desktop" } }),
+                  _vm._v("expresslogistics.com\n                        ")
+                ],
+                1
+              ),
               _vm._v(" "),
               _c("div", { staticClass: "ConDet" }, [
                 _vm._v(
@@ -53346,13 +53370,33 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _vm._m(3),
+                  _c(
+                    "div",
+                    [_c("font-awesome-icon", { attrs: { icon: "facebook" } })],
+                    1
+                  ),
                   _vm._v(" "),
-                  _vm._m(4),
+                  _c(
+                    "div",
+                    [_c("font-awesome-icon", { attrs: { icon: "google" } })],
+                    1
+                  ),
                   _vm._v(" "),
-                  _vm._m(5),
+                  _c(
+                    "div",
+                    [
+                      _c("font-awesome-icon", {
+                        attrs: { icon: "linkedin-square" }
+                      })
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
-                  _vm._m(6)
+                  _c(
+                    "div",
+                    [_c("font-awesome-icon", { attrs: { icon: "vimeo" } })],
+                    1
+                  )
                 ])
               ])
             ]),
@@ -53376,57 +53420,6 @@ var staticRenderFns = [
         "\n                            IF YOU HAVE ANY QUESTIONS OR NEED HELP!\n                        "
       )
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ConDet" }, [
-      _c("i", { staticClass: "fa fa-envelop" }, [
-        _vm._v("Contact@expresslogistics.com")
-      ]),
-      _vm._v("\n                            We usually reply within 24 hours "),
-      _c("br"),
-      _vm._v(
-        "\n                            +234 - 09087366474663664645\n                        "
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ConDet" }, [
-      _c("i", { staticClass: "fa fa-map-marker" }),
-      _vm._v(" "),
-      _c("i", { staticClass: "fa fa-desktop" }, [
-        _vm._v("expresslogistics.com")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("i", { staticClass: "fa fa-facebook" })])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("i", { staticClass: "fa fa-google" })])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("i", { staticClass: "fa fa-linkedin-square" })])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("i", { staticClass: "fa fa-vimeo" })])
   }
 ]
 render._withStripped = true
