@@ -41,7 +41,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card-body cardHeadEdit ">
-                        <p class="pTextBold">RECIEVER'S DETAILS</p>
+                        <p class="pTextBold">RECIEVER'S DETAILS</p> 
                     </div>
                     <div class="table-responsive mt-1">
                         <table class="table table-hover table-striped">
@@ -71,7 +71,7 @@
                             <tbody>
                                 <tr>
                                     <td>Name</td>
-                                    <td><b>Noble Okechi</b></td>
+                                    <td><b>{{ displayParcelDetails.sname }}</b></td>
                                 </tr>
                                 <tr>
                                     <td>Origin</td>
@@ -208,26 +208,52 @@
 </style>
 
 <script>
+import Api from "../../api/Api";
+var token = $('meta[name=csrf_token]').attr('content');
 export default {
     props:{
         trackId : String
     },
     data(){
         return {
-            parcel : {}
+            displayParcelDetails : {},
+            trackid:'',
+            // displayParcelDetails: []
         }
     },
     beforeCreate(){
         
     },
     mounted(){
+        var _token = this.token;
         // Request for the parcel detail from the database using the trackid
         this.fetchParcelDetails();
     },
     methods:{
         fetchParcelDetails(){
             console.log(this.trackId);
+            // trackid:this.trackId
+            let getDetails = {
+                trackid:this.trackId,
+                _token:this._token
+            };
+
+            Api.client.post('parcel/getparcel', getDetails)
+            .then((res)=>{
+                this.displayParcel(res);
+            });
+        },
+        displayParcel(response){
+            if(response.data.count > 0){
+                this.displayParcelDetails = response.data;
+                // this.openParcelDetails = true;
+                console.log(this.displayParcelDetails);
+            }else{
+                alert('Invalid Tracking Number')
+            }
         }
+
+        
     }
 }
 </script>

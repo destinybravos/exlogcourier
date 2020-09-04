@@ -118,11 +118,13 @@ export default {
                 this.displayParcel(res);
             });
             // if it exists, open parcel details (set to through and display parcel)
-            this.openParcelDetails = true;
         },
         displayParcel(response){
             if(response.data.count > 0){
                 this.displayParcelDetails = response.data.displayParcelDetails
+                this.openParcelDetails = true;
+            }else{
+                alert('Invalid Tracking Number')
             }
         }
     }
