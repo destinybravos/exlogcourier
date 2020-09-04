@@ -41,18 +41,18 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card-body cardHeadEdit ">
-                        <p class="pTextBold">RECIEVER'S DETAILS</p> 
+                        <p class="pTextBold">PARCEL'S ROUTE</p> 
                     </div>
                     <div class="table-responsive mt-1">
                         <table class="table table-hover table-striped">
                             <tbody>
                                 <tr>
                                     <td>From</td>
-                                    <td><b>Aba</b></td>
+                                    <td><b>{{ displayParcelDetails.clocation }}</b></td>
                                 </tr>
                                 <tr>
                                     <td>To</td>
-                                    <td><b>Owerri</b></td>
+                                    <td><strong>{{ displayParcelDetails.raddress }}</strong></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -75,7 +75,7 @@
                                 </tr>
                                 <tr>
                                     <td>Origin</td>
-                                    <td><b>Express Logistics</b></td>
+                                    <td><b>{{ displayParcelDetails.clocation }}</b></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -90,19 +90,19 @@
                             <tbody>
                                 <tr>
                                     <td>Name</td>
-                                    <td><b>Destiny Bravos</b></td>
+                                    <td><b>{{ displayParcelDetails.rname }}</b></td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
-                                    <td><b>destinybravos@gmail.com</b></td>
+                                    <td><b>{{ displayParcelDetails.remail }}</b></td>
                                 </tr>
                                 <tr>
                                     <td>Phone</td>
-                                    <td><b>+234 803 239 0858</b></td>
+                                    <td><strong>{{ displayParcelDetails.rphone }}</strong></td>
                                 </tr>
                                  <tr>
                                     <td>Address</td>
-                                    <td><b>Programmers City, Umuerim, Nekede, Owerri, Imo State</b></td>
+                                    <td><strong>{{ displayParcelDetails.raddress }}</strong></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -245,9 +245,11 @@ export default {
         },
         displayParcel(response){
             if(response.data.count > 0){
-                this.displayParcelDetails = response.data;
-                // this.openParcelDetails = true;
-                console.log(this.displayParcelDetails);
+                /*
+                *   The issue was that the data you are fetching are array data but you were accessing as object
+                *   So, what I did was just to get the object directly by adding the array index (0).
+                */
+                this.displayParcelDetails = response.data.parceldetail[0];
             }else{
                 alert('Invalid Tracking Number')
             }

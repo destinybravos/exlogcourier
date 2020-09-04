@@ -13645,9 +13645,11 @@ var token = $('meta[name=csrf_token]').attr('content');
     },
     displayParcel: function displayParcel(response) {
       if (response.data.count > 0) {
-        this.displayParcelDetails = response.data; // this.openParcelDetails = true;
-
-        console.log(this.displayParcelDetails);
+        /*
+        *   The issue was that the data you are fetching are array data but you were accessing as object
+        *   So, what I did was just to get the object directly by adding the array index (0).
+        */
+        this.displayParcelDetails = response.data.parceldetail[0];
       } else {
         alert('Invalid Tracking Number');
       }
@@ -57884,11 +57886,43 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _vm._m(1),
+      _c("div", { staticClass: "row" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-6" }, [
+          _vm._m(2),
+          _vm._v(" "),
+          _c("div", { staticClass: "table-responsive mt-1" }, [
+            _c("table", { staticClass: "table table-hover table-striped" }, [
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [_vm._v("From")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [
+                      _vm._v(_vm._s(_vm.displayParcelDetails.clocation))
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("To")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("strong", [
+                      _vm._v(_vm._s(_vm.displayParcelDetails.raddress))
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ]),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-md-6" }, [
-          _vm._m(2),
+          _vm._m(3),
           _vm._v(" "),
           _c("div", { staticClass: "table-responsive mt-1" }, [
             _c("table", { staticClass: "table table-hover table-striped" }, [
@@ -57901,13 +57935,65 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _vm._m(3)
+                _c("tr", [
+                  _c("td", [_vm._v("Origin")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [
+                      _vm._v(_vm._s(_vm.displayParcelDetails.clocation))
+                    ])
+                  ])
+                ])
               ])
             ])
           ])
         ]),
         _vm._v(" "),
-        _vm._m(4)
+        _c("div", { staticClass: "col-md-6" }, [
+          _vm._m(4),
+          _vm._v(" "),
+          _c("div", { staticClass: "table-responsive mt-1" }, [
+            _c("table", { staticClass: "table table-hover table-striped" }, [
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [_vm._v("Name")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [_vm._v(_vm._s(_vm.displayParcelDetails.rname))])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("Email")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [_vm._v(_vm._s(_vm.displayParcelDetails.remail))])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("Phone")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("strong", [
+                      _vm._v(_vm._s(_vm.displayParcelDetails.rphone))
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("Address")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("strong", [
+                      _vm._v(_vm._s(_vm.displayParcelDetails.raddress))
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
       ]),
       _vm._v(" "),
       _vm._m(5),
@@ -57948,54 +58034,36 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-6" }, [
-        _c("div", { staticClass: "card-body cardHeadEdit " }, [
-          _c("p", { staticClass: "pTextBold" }, [_vm._v("SHIPMENT DATES")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "table-responsive mt-1" }, [
-          _c("table", { staticClass: "table table-hover table-striped" }, [
-            _c("tbody", [
-              _c("tr", [
-                _c("td", [_vm._v("Estimated Time of Departuer (ETD)")]),
-                _vm._v(" "),
-                _c("td", [_c("b", [_vm._v("20th Sep, 2020")])])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [_vm._v("Estimated Time of Arrival (ETA)")]),
-                _vm._v(" "),
-                _c("td", [_c("b", [_vm._v("30th Oct, 2020")])])
-              ])
-            ])
-          ])
-        ])
+    return _c("div", { staticClass: "col-md-6" }, [
+      _c("div", { staticClass: "card-body cardHeadEdit " }, [
+        _c("p", { staticClass: "pTextBold" }, [_vm._v("SHIPMENT DATES")])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-6" }, [
-        _c("div", { staticClass: "card-body cardHeadEdit " }, [
-          _c("p", { staticClass: "pTextBold" }, [_vm._v("RECIEVER'S DETAILS")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "table-responsive mt-1" }, [
-          _c("table", { staticClass: "table table-hover table-striped" }, [
-            _c("tbody", [
-              _c("tr", [
-                _c("td", [_vm._v("From")]),
-                _vm._v(" "),
-                _c("td", [_c("b", [_vm._v("Aba")])])
-              ]),
+      _c("div", { staticClass: "table-responsive mt-1" }, [
+        _c("table", { staticClass: "table table-hover table-striped" }, [
+          _c("tbody", [
+            _c("tr", [
+              _c("td", [_vm._v("Estimated Time of Departuer (ETD)")]),
               _vm._v(" "),
-              _c("tr", [
-                _c("td", [_vm._v("To")]),
-                _vm._v(" "),
-                _c("td", [_c("b", [_vm._v("Owerri")])])
-              ])
+              _c("td", [_c("b", [_vm._v("20th Sep, 2020")])])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", [_vm._v("Estimated Time of Arrival (ETA)")]),
+              _vm._v(" "),
+              _c("td", [_c("b", [_vm._v("30th Oct, 2020")])])
             ])
           ])
         ])
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-body cardHeadEdit " }, [
+      _c("p", { staticClass: "pTextBold" }, [_vm._v("PARCEL'S ROUTE")])
     ])
   },
   function() {
@@ -58010,54 +58078,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("tr", [
-      _c("td", [_vm._v("Origin")]),
-      _vm._v(" "),
-      _c("td", [_c("b", [_vm._v("Express Logistics")])])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-6" }, [
-      _c("div", { staticClass: "card-body cardHeadEdit " }, [
-        _c("p", { staticClass: "pTextBold" }, [_vm._v("RECIEVER'S DETAILS")])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "table-responsive mt-1" }, [
-        _c("table", { staticClass: "table table-hover table-striped" }, [
-          _c("tbody", [
-            _c("tr", [
-              _c("td", [_vm._v("Name")]),
-              _vm._v(" "),
-              _c("td", [_c("b", [_vm._v("Destiny Bravos")])])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("Email")]),
-              _vm._v(" "),
-              _c("td", [_c("b", [_vm._v("destinybravos@gmail.com")])])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("Phone")]),
-              _vm._v(" "),
-              _c("td", [_c("b", [_vm._v("+234 803 239 0858")])])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("Address")]),
-              _vm._v(" "),
-              _c("td", [
-                _c("b", [
-                  _vm._v("Programmers City, Umuerim, Nekede, Owerri, Imo State")
-                ])
-              ])
-            ])
-          ])
-        ])
-      ])
+    return _c("div", { staticClass: "card-body cardHeadEdit " }, [
+      _c("p", { staticClass: "pTextBold" }, [_vm._v("RECIEVER'S DETAILS")])
     ])
   },
   function() {
