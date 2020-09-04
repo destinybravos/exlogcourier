@@ -13373,9 +13373,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var token = $('meta[name=csrf_token]').attr('content');
 /* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    ParcelDetai: ParcelDetai // ckxckxckxckxckxckxc
-
+  components: {// ParcelDetails
+    // ckxckxckxckxckxckxc
   },
   data: function data() {
     return {
