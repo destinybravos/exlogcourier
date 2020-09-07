@@ -27,6 +27,8 @@ class CreateParcelsTable extends Migration
             $table->string('clocation');
             $table->string('days');
             $table->string('message');
+            $table->string('start');
+            $table->string('end');
             $table->string('status')->default('active');
             $table->timestamps();
         });

@@ -26,6 +26,13 @@ Route::group(['prefix' => 'notification'], function () {
  Route::group(['prefix' => 'parcel'], function() {
     Route::post('/create', 'ApiController@create_parcel');
     Route::post('/getparcel','ApiController@get_parcel');
+    Route::post('/getparceltimeline','ApiController@get_timeline');
+    Route::post('/fetch_all','ApiController@fetch_all');
+    Route::post('/generatereceipt','ApiController@generate_receipt');
+    Route::post('/generatereceipttimeline','ApiController@generate_receipt_timeline');
+    Route::post('/updateparcel','ApiController@update_parcel');
+    Route::post('/resetparcelstatus','ApiController@reset_parcel_shipping_status');
+    Route::post('/deleteparcel','ApiController@delete_parcel');
  });
 
 

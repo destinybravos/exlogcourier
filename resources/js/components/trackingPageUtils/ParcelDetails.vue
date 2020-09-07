@@ -29,11 +29,11 @@
                             <tbody>
                                 <tr>
                                     <td>Estimated Time of Departuer (ETD)</td>
-                                    <td><b>20th Sep, 2020</b></td>
+                                    <td><b>{{ displayParcelDetails.start }}</b></td>
                                 </tr>
                                 <tr>
                                     <td>Estimated Time of Arrival (ETA)</td>
-                                    <td><b>30th Oct, 2020</b></td>
+                                    <td><b>{{ displayParcelDetails.end }}</b></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -41,18 +41,18 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card-body cardHeadEdit ">
-                        <p class="pTextBold">RECIEVER'S DETAILS</p>
+                        <p class="pTextBold">PARCEL'S ROUTE</p> 
                     </div>
                     <div class="table-responsive mt-1">
                         <table class="table table-hover table-striped">
                             <tbody>
                                 <tr>
                                     <td>From</td>
-                                    <td><b>Aba</b></td>
+                                    <td><b>{{ displayParcelDetails.clocation }}</b></td>
                                 </tr>
                                 <tr>
                                     <td>To</td>
-                                    <td><b>Owerri</b></td>
+                                    <td><strong>{{ displayParcelDetails.raddress }}</strong></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -71,11 +71,11 @@
                             <tbody>
                                 <tr>
                                     <td>Name</td>
-                                    <td><b>Noble Okechi</b></td>
+                                    <td><b>{{ displayParcelDetails.sname }}</b></td>
                                 </tr>
                                 <tr>
                                     <td>Origin</td>
-                                    <td><b>Express Logistics</b></td>
+                                    <td><b>{{ displayParcelDetails.clocation }}</b></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -90,19 +90,19 @@
                             <tbody>
                                 <tr>
                                     <td>Name</td>
-                                    <td><b>Destiny Bravos</b></td>
+                                    <td><b>{{ displayParcelDetails.rname }}</b></td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
-                                    <td><b>destinybravos@gmail.com</b></td>
+                                    <td><b>{{ displayParcelDetails.remail }}</b></td>
                                 </tr>
                                 <tr>
                                     <td>Phone</td>
-                                    <td><b>+234 803 239 0858</b></td>
+                                    <td><strong>{{ displayParcelDetails.rphone }}</strong></td>
                                 </tr>
                                  <tr>
                                     <td>Address</td>
-                                    <td><b>Programmers City, Umuerim, Nekede, Owerri, Imo State</b></td>
+                                    <td><strong>{{ displayParcelDetails.raddress }}</strong></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -125,7 +125,7 @@
                             <tbody>
                                 <tr>
                                     <td>Item Description</td>
-                                    <td><b>This parcel is containing an iPhone 11 pro max with electronic gadgets</b></td>
+                                    <td><b>{{ displayParcelDetails.description }}</b></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -137,7 +137,7 @@
                             <tbody>
                                 <tr>
                                     <td>Weight and Dimension</td>
-                                    <td><b>8cm x 12cm x 10cm (13kg)</b></td>
+                                    <td><b>{{ displayParcelDetails.dimension }}</b></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -164,11 +164,11 @@
                                     <th>ACTIVITY</th>
                                     <th>LOCATION</th>
                                 </tr>
-                                <tr>
-                                    <td>20th, Sep 2020</td>
-                                    <td>11:20pm</td>
-                                    <td>Parcel Reviewed and Logged in for Shipment</td>
-                                    <td>Aba</td>
+                                <tr v-for="(timeline, index) in displayParcelTimeline" :key="index">
+                                    <td>{{ timeline.date }}</td>
+                                    <td>{{ timeline.time }}</td>
+                                    <td>{{ timeline.activity }}</td>
+                                    <td>{{ timeline.location }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -181,10 +181,13 @@
                 <div class="col-md-12">
                     <div class="card-body">
                         <div class="progress mb-3">
-                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                        <div class="alert alert-success">
-                            <p><b>Destiny Bravos</b>, your parcel is safely intransit and its currently at Aba</p>
+                        <div class="alert alert-success" v-if="displayParcelDetails.status == 'active'">
+                            <p><b>{{ displayParcelDetails.rname }}</b>, your parcel is safely intransit and its currently at {{ displayParcelDetails.clocation }}</p>
+                        </div>
+                        <div class="alert alert-danger" v-else>
+                            <p><b>{{ displayParcelDetails.message }}</b></p>
                         </div>
                     </div>
                 </div>
@@ -208,21 +211,82 @@
 </style>
 
 <script>
+import Api from "../../api/Api";
+var token = $('meta[name=csrf_token]').attr('content');
 export default {
     props:{
         trackId : String
     },
     data(){
         return {
-            parcel : {}
+            displayParcelDetails : {},
+            trackid:'',
+            // displayParcelDetails: []
+            startDate:'',
+            displayParcelTimeline:[],
         }
     },
     beforeCreate(){
-        // Request for the parcel detail from the database using the trackid
-        console.log(this.trackId);
+        
     },
     mounted(){
-        // console.log(this.trackId);
+        var _token = this.token;
+        // Request for the parcel detail from the database using the trackid
+        this.fetchParcelDetails();
+
+        // Tring date functions 
+        // var d = new Date('D, d M, Y.', this.displayParcelDetails.created_at);
+        // this.getdate = d.getDate('U');
+        // this.startDate = d.Date();
+        // console.log(this.d);
+        // const field = document.querySelector("input[name=parcelStart]").value;
+        // console.log(field);
+        // console.log(this.$refs.parcelStart.value);
+        // var testtt = displayParcelDetails.days;
+        // console.log(testtt);
+
+    },
+    methods:{
+        fetchParcelDetails(){
+            console.log(this.trackId);
+            // trackid:this.trackId
+            let getDetails = {
+                trackid:this.trackId,
+                _token:this._token
+            };
+
+            Api.client.post('parcel/getparcel', getDetails)
+            .then((res)=>{
+                this.displayParcel(res);
+            });
+
+            // RETRIEVING TIMELINE INFO
+            Api.client.post('parcel/getparceltimeline', getDetails)
+            .then((res)=>{
+                this.displayParcelTimeLine(res);
+            });
+        },
+        displayParcel(response){
+            if(response.data.count > 0){
+                /*
+                *   The issue was that the data you are fetching are array data but you were accessing as object
+                *   So, what I did was just to get the object directly by adding the array index (0).
+                */
+                this.displayParcelDetails = response.data.parceldetail[0];
+            }else{
+                alert('Invalid Tracking Number')
+            }
+        },
+        displayParcelTimeLine(response){
+            if(response.data.count > 0){
+                this.displayParcelTimeline = response.data.parceldetail;
+                console.log(this.displayParcelTimeLine);
+            }else{
+                alert('Invalid Tracking Number')
+            }
+        }
+
+        
     }
 }
 </script>

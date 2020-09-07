@@ -11,12 +11,20 @@ window.Vue = require('vue');
 // Added Font-Awesome Here
 // We need to also install social icon with it ok
 import { library } from '@fortawesome/fontawesome-svg-core';
+<<<<<<< HEAD
 import { faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck,
     faClipboardList, faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 import { faFontAwesome, faFacebook, faTwitter, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 library.add(faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck,
     faClipboardList, faCircleNotch);
+=======
+import { faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, 
+    faClipboardList, faCircleNotch, faSave, faEdit, faTrash, faTrashAlt, faEye } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+library.add(faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, 
+    faClipboardList, faCircleNotch, faSave, faEdit, faTrash, faTrashAlt, faEye);
+>>>>>>> 68521de7262791a669e4d04834c64643daff5bd1
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 /**
@@ -36,7 +44,7 @@ Vue.component('login-component', require('./components/LoginComponent.vue').defa
 Vue.component('register-component', require('./components/RegisterComponent.vue').default);
 Vue.component('index-component', require('./components/IndexComponent.vue').default);
 Vue.component('about-component', require('./components/AboutComponent.vue').default);
-Vue.component('gallery-component', require('./components/GalleryComponent.vue').default);
+Vue.component('services-component', require('./components/ServicesComponent.vue').default);
 Vue.component('tracking-component', require('./components/TrackingComponent.vue').default);
 Vue.component('contact-component', require('./components/ContactComponent.vue').default);
 Vue.component('dashboard-component', require('./components/DashboardComponent.vue').default);
