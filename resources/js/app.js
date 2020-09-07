@@ -11,25 +11,17 @@ window.Vue = require('vue');
 // Added Font-Awesome Here
 // We need to also install social icon with it ok
 import { library } from '@fortawesome/fontawesome-svg-core';
-<<<<<<< HEAD
+import { faFontAwesome, faFacebook, faTwitter, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import { faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck,
-    faClipboardList, faCircleNotch } from '@fortawesome/free-solid-svg-icons';
-import { faFontAwesome, faFacebook, faTwitter, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-library.add(faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck,
-    faClipboardList, faCircleNotch);
-=======
-import { faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, 
     faClipboardList, faCircleNotch, faSave, faEdit, faTrash, faTrashAlt, faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-library.add(faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, 
-    faClipboardList, faCircleNotch, faSave, faEdit, faTrash, faTrashAlt, faEye);
->>>>>>> 68521de7262791a669e4d04834c64643daff5bd1
+library.add(faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck,
+    faClipboardList, faCircleNotch, faSave, faEdit, faTrash, faTrashAlt, faEye, faFontAwesome, faFacebook, faTwitter, faTwitterSquare);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 /**
  * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
+
  * components and automatically register them with their "basename".
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
