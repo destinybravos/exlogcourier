@@ -35,6 +35,7 @@ return array(
     'App\\User' => $baseDir . '/app/User.php',
     'App\\notify' => $baseDir . '/app/notify.php',
     'App\\parcel' => $baseDir . '/app/parcel.php',
+    'App\\timeline' => $baseDir . '/app/timeline.php',
     'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
     'Asm89\\Stack\\Cors' => $vendorDir . '/asm89/stack-cors/src/Cors.php',
     'Asm89\\Stack\\CorsService' => $vendorDir . '/asm89/stack-cors/src/CorsService.php',

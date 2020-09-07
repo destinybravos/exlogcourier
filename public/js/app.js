@@ -12282,6 +12282,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _trackingPageUtils_AddParcel_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../trackingPageUtils/AddParcel.vue */ "./resources/js/components/trackingPageUtils/AddParcel.vue");
 /* harmony import */ var _trackingPageUtils_ParcelList_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../trackingPageUtils/ParcelList.vue */ "./resources/js/components/trackingPageUtils/ParcelList.vue");
+/* harmony import */ var _trackingPageUtils_ParcelReceipt_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../trackingPageUtils/ParcelReceipt.vue */ "./resources/js/components/trackingPageUtils/ParcelReceipt.vue");
 //
 //
 //
@@ -12327,10 +12328,12 @@ __webpack_require__.r(__webpack_exports__);
 // I Imported additional Parcel Receipt Component
 
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     AddParcelComponent: _trackingPageUtils_AddParcel_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    ParcelListComponent: _trackingPageUtils_ParcelList_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+    ParcelListComponent: _trackingPageUtils_ParcelList_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    ParcelReceiptComponent: _trackingPageUtils_ParcelReceipt_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }
 });
 
@@ -13675,6 +13678,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 var token = $('meta[name=csrf_token]').attr('content');
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -13684,15 +13690,26 @@ var token = $('meta[name=csrf_token]').attr('content');
   data: function data() {
     return {
       displayParcelDetails: {},
-      trackid: '' // displayParcelDetails: []
-
+      trackid: '',
+      // displayParcelDetails: []
+      startDate: '',
+      displayParcelTimeline: []
     };
   },
   beforeCreate: function beforeCreate() {},
   mounted: function mounted() {
     var _token = this.token; // Request for the parcel detail from the database using the trackid
 
-    this.fetchParcelDetails();
+    this.fetchParcelDetails(); // Tring date functions 
+    // var d = new Date('D, d M, Y.', this.displayParcelDetails.created_at);
+    // this.getdate = d.getDate('U');
+    // this.startDate = d.Date();
+    // console.log(this.d);
+    // const field = document.querySelector("input[name=parcelStart]").value;
+    // console.log(field);
+    // console.log(this.$refs.parcelStart.value);
+    // var testtt = displayParcelDetails.days;
+    // console.log(testtt);
   },
   methods: {
     fetchParcelDetails: function fetchParcelDetails() {
@@ -13706,6 +13723,10 @@ var token = $('meta[name=csrf_token]').attr('content');
       };
       _api_Api__WEBPACK_IMPORTED_MODULE_0__["default"].client.post('parcel/getparcel', getDetails).then(function (res) {
         _this.displayParcel(res);
+      }); // RETRIEVING TIMELINE INFO
+
+      _api_Api__WEBPACK_IMPORTED_MODULE_0__["default"].client.post('parcel/getparceltimeline', getDetails).then(function (res) {
+        _this.displayParcelTimeLine(res);
       });
     },
     displayParcel: function displayParcel(response) {
@@ -13715,6 +13736,14 @@ var token = $('meta[name=csrf_token]').attr('content');
         *   So, what I did was just to get the object directly by adding the array index (0).
         */
         this.displayParcelDetails = response.data.parceldetail[0];
+      } else {
+        alert('Invalid Tracking Number');
+      }
+    },
+    displayParcelTimeLine: function displayParcelTimeLine(response) {
+      if (response.data.count > 0) {
+        this.displayParcelTimeline = response.data.parceldetail;
+        console.log(this.displayParcelTimeLine);
       } else {
         alert('Invalid Tracking Number');
       }
@@ -13764,6 +13793,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 var token = $('meta[name=csrf-token]').attr('content');
 
 
@@ -13775,7 +13807,8 @@ var token = $('meta[name=csrf-token]').attr('content');
     return {
       parcels: [],
       modalShowState: false,
-      selectedParcel: {}
+      selectedParcel: {},
+      editMode: false
     };
   },
   mounted: function mounted() {
@@ -13809,6 +13842,323 @@ var token = $('meta[name=csrf-token]').attr('content');
     },
     hideParcelDetailsModal: function hideParcelDetailsModal(state) {
       this.modalShowState = state;
+    },
+    editParcel: function editParcel() {
+      // turn on editMode
+      // this.modalShowState = false;
+      editMode = true;
+    },
+    // STOP OR PAUSE PARCEL
+    stopParcel: function stopParcel(parcel) {
+      var _this2 = this;
+
+      this.selectedParcel = parcel;
+      console.log(this.selectedParcel.trackid);
+      var stopParcelData = {
+        _token: this._token,
+        trackid: this.selectedParcel.trackid
+      };
+      _api_Api__WEBPACK_IMPORTED_MODULE_0__["default"].client.post('parcel/resetparcelstatus', stopParcelData).then(function (res) {
+        _this2.stopParcelShipping(res);
+      });
+    },
+    stopParcelShipping: function stopParcelShipping(response) {
+      if (response.data.status == 'success') {
+        window.location.reload();
+        alert(this.response.data.message);
+      } else {
+        alert(this.response.data.message);
+      }
+    },
+    // DELETE PARCEL
+    deleteParcel: function deleteParcel(parcel) {
+      var _this3 = this;
+
+      this.selectedParcel = parcel;
+      console.log(this.selectedParcel.trackid);
+      var deleteParcelData = {
+        _token: this._token,
+        trackid: this.selectedParcel.trackid
+      };
+      _api_Api__WEBPACK_IMPORTED_MODULE_0__["default"].client.post('parcel/deleteparcel', deleteParcelData).then(function (res) {
+        _this3.deleteParcelShipping(res);
+      });
+    },
+    deleteParcelShipping: function deleteParcelShipping(response) {
+      if (response.data.status == 'success') {
+        window.location.reload();
+        alert(this.response.data.message);
+      } else {
+        alert(this.response.data.message);
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _api_Api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../api/Api */ "./resources/js/api/Api.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var token = $('meta[name=csrf_token]').attr('content');
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      // parcel : {}
+      receiptDetails: {},
+      getTrack: '',
+      receiptTimeline: []
+    };
+  },
+  mounted: function mounted() {
+    // Send a Request to the database to generate the receipt
+    var _token = this.token;
+    this.generateReceipt(); // console.log( receiptDetails.trackid);
+
+    this.getTrack = document.getElementById('track');
+    console.log(this.getTrack);
+  },
+  methods: {
+    generateReceipt: function generateReceipt() {
+      var _this = this;
+
+      var setReceipt = {
+        _token: this._token
+      };
+      _api_Api__WEBPACK_IMPORTED_MODULE_0__["default"].client.post('parcel/generatereceipt', setReceipt).then(function (res) {
+        _this.displayReceipt(res);
+      });
+      _api_Api__WEBPACK_IMPORTED_MODULE_0__["default"].client.post('parcel/generatereceipttimeline', setReceipt).then(function (res) {
+        _this.displayReceiptTimeline(res);
+      });
+    },
+    displayReceipt: function displayReceipt(response) {
+      if (response.data.count > 0) {
+        this.receiptDetails = response.data.receiptdetail[0];
+        console.log(this.receiptDetails);
+      } else {
+        alert('Invalide Request');
+      }
+    },
+    displayReceiptTimeline: function displayReceiptTimeline(response) {
+      if (response.data.count > 0) {
+        this.receiptTimeline = response.data.receiptdetail;
+        console.log(this.receiptTimeline);
+      } else {
+        alert('Invalide Request');
+      }
     }
   }
 });
@@ -14175,6 +14525,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _api_Api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../api/Api */ "./resources/js/api/Api.js");
 //
 //
 //
@@ -14213,6 +14564,49 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var token = $('meta[name=csrf_token]').attr('content');
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     isShow: Boolean,
@@ -14221,7 +14615,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       customModal: '',
-      editMode: false
+      editMode: false // Returning form data for updating
+
     };
   },
   watch: {
@@ -14235,6 +14630,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.customModal = $('body #customModal');
+    var _token = this.token;
   },
   methods: {
     displayModal: function displayModal() {
@@ -14245,9 +14641,34 @@ __webpack_require__.r(__webpack_exports__);
       this.customModal.modal('hide');
     },
     saveParcelDetails: function saveParcelDetails() {
+      var _this = this;
+
       // Update the parcel details
-      // Then turn off editors mode
+      var updateDate = {
+        sname: this.parcel.sname,
+        rname: this.parcel.rname,
+        raddress: this.parcel.raddress,
+        remail: this.parcel.remail,
+        rphone: this.parcel.rphone,
+        description: this.parcel.description,
+        dimension: this.parcel.dimension,
+        clocation: this.parcel.clocation,
+        message: this.parcel.message,
+        trackid: this.parcel.trackid,
+        _token: this._token
+      };
+      _api_Api__WEBPACK_IMPORTED_MODULE_0__["default"].client.post('parcel/updateparcel', updateDate).then(function (res) {
+        _this.returnResponse(res);
+      }); // Then turn off editors mode
+
       this.editMode = false;
+    },
+    returnResponse: function returnResponse(response) {
+      if (response.data.status == 'success') {
+        alert(response.data.message);
+      } else {
+        alert(response.data.message);
+      }
     },
     editParcel: function editParcel() {
       // turn on editMode
@@ -19002,6 +19423,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, "\n@media screen and (max-width: 767px){\n.display-lg{\n        display: none;\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=style&index=0&id=716ed3a0&scoped=true&lang=css&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=style&index=0&id=716ed3a0&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.cardHeadEdit[data-v-716ed3a0]{\n    background-color: #3d3072;\n    padding: 4px 10px !important;\n    color: #fff;\n}\n.formateP[data-v-716ed3a0]{\n    text-align: center;\n}\n", ""]);
 
 // exports
 
@@ -53612,6 +54052,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=style&index=0&id=716ed3a0&scoped=true&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=style&index=0&id=716ed3a0&scoped=true&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./ParcelReceipt.vue?vue&type=style&index=0&id=716ed3a0&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=style&index=0&id=716ed3a0&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/trackingPageUtils/TrackingInputComponent.vue?vue&type=style&index=0&id=506a7d79&scoped=true&lang=css&":
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/trackingPageUtils/TrackingInputComponent.vue?vue&type=style&index=0&id=506a7d79&scoped=true&lang=css& ***!
@@ -56141,16 +56611,13 @@ var render = function() {
             {
               staticClass: "tab-pane fade",
               attrs: {
-                id: "addparcel",
+                id: "parcelreceipt",
                 role: "tabpanel",
                 "aria-labelledby": "nav-receipts-tab"
               }
             },
-            [
-              _vm._v(
-                "\n                Reciept Comming Here. Use search input to pull\n            "
-              )
-            ]
+            [_c("ParcelReceiptComponent")],
+            1
           )
         ]
       )
@@ -56221,7 +56688,7 @@ var staticRenderFns = [
               attrs: {
                 id: "nav-home-tab",
                 "data-toggle": "tab",
-                href: "#addparcel",
+                href: "#parcelreceipt",
                 role: "tab",
                 "aria-controls": "nav-receipts",
                 "aria-selected": "false"
@@ -58067,7 +58534,31 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _vm._m(1),
+        _c("div", { staticClass: "col-md-6" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c("div", { staticClass: "table-responsive mt-1" }, [
+            _c("table", { staticClass: "table table-hover table-striped" }, [
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [_vm._v("Estimated Time of Departuer (ETD)")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [_vm._v(_vm._s(_vm.displayParcelDetails.start))])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("Estimated Time of Arrival (ETA)")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [_vm._v(_vm._s(_vm.displayParcelDetails.end))])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-md-6" }, [
           _vm._m(2),
@@ -58178,13 +58669,97 @@ var render = function() {
       _vm._v(" "),
       _vm._m(5),
       _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-6" }, [
+          _c("div", { staticClass: "table-responsive mt-1" }, [
+            _c("table", { staticClass: "table table-hover table-striped" }, [
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [_vm._v("Item Description")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [
+                      _vm._v(_vm._s(_vm.displayParcelDetails.description))
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-6" }, [
+          _c("div", { staticClass: "table-responsive mt-1" }, [
+            _c("table", { staticClass: "table table-hover table-striped" }, [
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [_vm._v("Weight and Dimension")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [
+                      _vm._v(_vm._s(_vm.displayParcelDetails.dimension))
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
       _vm._m(6),
       _vm._v(" "),
-      _vm._m(7),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("div", { staticClass: "table-responsive mt-1" }, [
+            _c("table", { staticClass: "table table-hover table-striped" }, [
+              _c(
+                "tbody",
+                [
+                  _vm._m(7),
+                  _vm._v(" "),
+                  _vm._l(_vm.displayParcelTimeline, function(timeline, index) {
+                    return _c("tr", { key: index }, [
+                      _c("td", [_vm._v(_vm._s(timeline.date))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(timeline.time))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(timeline.activity))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(timeline.location))])
+                    ])
+                  })
+                ],
+                2
+              )
+            ])
+          ])
+        ])
+      ]),
       _vm._v(" "),
-      _vm._m(8),
-      _vm._v(" "),
-      _vm._m(9)
+      _c("div", { staticClass: "row progressBarRow" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("div", { staticClass: "card-body" }, [
+            _vm._m(8),
+            _vm._v(" "),
+            _vm.displayParcelDetails.status == "active"
+              ? _c("div", { staticClass: "alert alert-success" }, [
+                  _c("p", [
+                    _c("b", [_vm._v(_vm._s(_vm.displayParcelDetails.rname))]),
+                    _vm._v(
+                      ", your parcel is safely intransit and its currently at " +
+                        _vm._s(_vm.displayParcelDetails.clocation)
+                    )
+                  ])
+                ])
+              : _c("div", { staticClass: "alert alert-danger" }, [
+                  _c("p", [
+                    _c("b", [_vm._v(_vm._s(_vm.displayParcelDetails.message))])
+                  ])
+                ])
+          ])
+        ])
+      ])
     ])
   ])
 }
@@ -58214,28 +58789,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-6" }, [
-      _c("div", { staticClass: "card-body cardHeadEdit " }, [
-        _c("p", { staticClass: "pTextBold" }, [_vm._v("SHIPMENT DATES")])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "table-responsive mt-1" }, [
-        _c("table", { staticClass: "table table-hover table-striped" }, [
-          _c("tbody", [
-            _c("tr", [
-              _c("td", [_vm._v("Estimated Time of Departuer (ETD)")]),
-              _vm._v(" "),
-              _c("td", [_c("b", [_vm._v("20th Sep, 2020")])])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("Estimated Time of Arrival (ETA)")]),
-              _vm._v(" "),
-              _c("td", [_c("b", [_vm._v("30th Oct, 2020")])])
-            ])
-          ])
-        ])
-      ])
+    return _c("div", { staticClass: "card-body cardHeadEdit " }, [
+      _c("p", { staticClass: "pTextBold" }, [_vm._v("SHIPMENT DATES")])
     ])
   },
   function() {
@@ -58279,46 +58834,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-6" }, [
-        _c("div", { staticClass: "table-responsive mt-1" }, [
-          _c("table", { staticClass: "table table-hover table-striped" }, [
-            _c("tbody", [
-              _c("tr", [
-                _c("td", [_vm._v("Item Description")]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("b", [
-                    _vm._v(
-                      "This parcel is containing an iPhone 11 pro max with electronic gadgets"
-                    )
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-6" }, [
-        _c("div", { staticClass: "table-responsive mt-1" }, [
-          _c("table", { staticClass: "table table-hover table-striped" }, [
-            _c("tbody", [
-              _c("tr", [
-                _c("td", [_vm._v("Weight and Dimension")]),
-                _vm._v(" "),
-                _c("td", [_c("b", [_vm._v("8cm x 12cm x 10cm (13kg)")])])
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-12" }, [
         _c("div", { staticClass: "card-body cardHeadEdit " }, [
           _c("p", { staticClass: "pTextBold" }, [_vm._v("TRAVEL TIMELINE")])
@@ -58330,68 +58845,31 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("div", { staticClass: "table-responsive mt-1" }, [
-          _c("table", { staticClass: "table table-hover table-striped" }, [
-            _c("tbody", [
-              _c("tr", [
-                _c("th", [_vm._v("DATE")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("TIME")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("ACTIVITY")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("LOCATION")])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [_vm._v("20th, Sep 2020")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("11:20pm")]),
-                _vm._v(" "),
-                _c("td", [
-                  _vm._v("Parcel Reviewed and Logged in for Shipment")
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Aba")])
-              ])
-            ])
-          ])
-        ])
-      ])
+    return _c("tr", [
+      _c("th", [_vm._v("DATE")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("TIME")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("ACTIVITY")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("LOCATION")])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row progressBarRow" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("div", { staticClass: "progress mb-3" }, [
-            _c("div", {
-              staticClass: "progress-bar",
-              staticStyle: { width: "25%" },
-              attrs: {
-                role: "progressbar",
-                "aria-valuenow": "25",
-                "aria-valuemin": "0",
-                "aria-valuemax": "100"
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "alert alert-success" }, [
-            _c("p", [
-              _c("b", [_vm._v("Destiny Bravos")]),
-              _vm._v(
-                ", your parcel is safely intransit and its currently at Aba"
-              )
-            ])
-          ])
-        ])
-      ])
+    return _c("div", { staticClass: "progress mb-3" }, [
+      _c("div", {
+        staticClass: "progress-bar",
+        staticStyle: { width: "" },
+        attrs: {
+          role: "progressbar",
+          "aria-valuenow": "25",
+          "aria-valuemin": "0",
+          "aria-valuemax": "100"
+        }
+      })
     ])
   }
 ]
@@ -58436,13 +58914,59 @@ var render = function() {
                       [
                         _c("font-awesome-icon", {
                           staticClass: "text-success mx-1",
-                          attrs: { icon: "eye", size: "1x" }
+                          attrs: { icon: "eye", size: "1x" },
+                          on: {
+                            click: function($event) {
+                              return _vm.showParcelDetailsModal(parcel)
+                            }
+                          }
                         }),
                         _vm._v(" "),
                         _c("font-awesome-icon", {
                           staticClass: "text-danger mx-1",
-                          attrs: { icon: "trash", size: "1x" }
-                        })
+                          attrs: { icon: "trash", size: "1x" },
+                          on: {
+                            click: function($event) {
+                              return _vm.deleteParcel(parcel)
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("font-awesome-icon", {
+                          staticClass: "text-primary mx-1",
+                          attrs: { icon: "edit", size: "1x" },
+                          on: {
+                            click: function($event) {
+                              return _vm.editParcel()
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        parcel.status == "active"
+                          ? _c(
+                              "span",
+                              {
+                                staticClass: "btn btn-danger",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.stopParcel(parcel)
+                                  }
+                                }
+                              },
+                              [_vm._v(" Pause")]
+                            )
+                          : _c(
+                              "span",
+                              {
+                                staticClass: "btn btn-success",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.stopParcel(parcel)
+                                  }
+                                }
+                              },
+                              [_vm._v(" Continue")]
+                            )
                       ],
                       1
                     ),
@@ -58517,6 +59041,362 @@ var staticRenderFns = [
       _c("th", [_vm._v("Reciever")]),
       _vm._v(" "),
       _c("th", { staticClass: "display-lg" }, [_vm._v("Sender")])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=template&id=716ed3a0&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=template&id=716ed3a0&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "container" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12 bg-gray" }, [
+          _c("p", { staticClass: "pTextBold" }, [
+            _c("strong", [
+              _vm._v(
+                "\n                        Tracking ID: \n                        "
+              ),
+              _c(
+                "i",
+                {
+                  staticStyle: {
+                    padding: "10px 10px 1px",
+                    display: "inline-block",
+                    "border-bottom": "2pt solid #ff7900",
+                    "font-style": "normal"
+                  }
+                },
+                [_vm._v(_vm._s(_vm.receiptDetails.trackid))]
+              )
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-6" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c("div", { staticClass: "table-responsive mt-1" }, [
+            _c("table", { staticClass: "table table-hover table-striped" }, [
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [_vm._v("Estimated Time of Departuer (ETD)")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [_vm._v(_vm._s(_vm.receiptDetails.start))])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("Estimated Time of Arrival (ETA)")]),
+                  _vm._v(" "),
+                  _c("td", [_c("b", [_vm._v(_vm._s(_vm.receiptDetails.end))])])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-6" }, [
+          _vm._m(2),
+          _vm._v(" "),
+          _c("div", { staticClass: "table-responsive mt-1" }, [
+            _c("table", { staticClass: "table table-hover table-striped" }, [
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [_vm._v("From")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [_vm._v(_vm._s(_vm.receiptDetails.clocation))])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("To")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [_vm._v(_vm._s(_vm.receiptDetails.rcountry))])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-6" }, [
+          _vm._m(3),
+          _vm._v(" "),
+          _c("div", { staticClass: "table-responsive mt-1" }, [
+            _c("table", { staticClass: "table table-hover table-striped" }, [
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [_vm._v("Name")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [_vm._v(_vm._s(_vm.receiptDetails.sname))])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(4)
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-6" }, [
+          _vm._m(5),
+          _vm._v(" "),
+          _c("div", { staticClass: "table-responsive mt-1" }, [
+            _c("table", { staticClass: "table table-hover table-striped" }, [
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [_vm._v("Name")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [_vm._v(_vm._s(_vm.receiptDetails.rname))])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("Email")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [_vm._v(_vm._s(_vm.receiptDetails.remail))])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("Phone")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [_vm._v(_vm._s(_vm.receiptDetails.rphone))])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("Address")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [_vm._v(_vm._s(_vm.receiptDetails.raddress))])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(6),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-6" }, [
+          _c("div", { staticClass: "table-responsive mt-1" }, [
+            _c("table", { staticClass: "table table-hover table-striped" }, [
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [_vm._v("Item Description")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [_vm._v(_vm._s(_vm.receiptDetails.description))])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-6" }, [
+          _c("div", { staticClass: "table-responsive mt-1" }, [
+            _c("table", { staticClass: "table table-hover table-striped" }, [
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [_vm._v("Weight and Dimension")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("b", [_vm._v(_vm._s(_vm.receiptDetails.dimension))])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(7),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("div", { staticClass: "table-responsive mt-1" }, [
+            _c("table", { staticClass: "table table-hover table-striped" }, [
+              _c(
+                "tbody",
+                [
+                  _vm._m(8),
+                  _vm._v(" "),
+                  _vm._l(_vm.receiptTimeline, function(timeline, index) {
+                    return _c("tr", { key: index }, [
+                      _c("td", [_vm._v(_vm._s(timeline.date))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(timeline.time))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(timeline.activity))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(timeline.location))])
+                    ])
+                  })
+                ],
+                2
+              )
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(9)
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "row",
+        staticStyle: {
+          "text-align": "center",
+          padding: "50px 0 30px",
+          color: "#261c6a"
+        }
+      },
+      [
+        _c("div", { staticClass: "col-md-12", attrs: { id: "trackText" } }, [
+          _c("h2", [_vm._v("EXPRESS LOGISTICS COURIER")]),
+          _vm._v(" "),
+          _c("h2", [_vm._v("WAYBILL RECEIPT")])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-body cardHeadEdit " }, [
+      _c("p", { staticClass: "pTextBold" }, [_vm._v("SHIPMENT DATES")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-body cardHeadEdit " }, [
+      _c("p", { staticClass: "pTextBold" }, [_vm._v("RECIEVER'S DETAILS")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-body cardHeadEdit " }, [
+      _c("p", { staticClass: "pTextBold" }, [_vm._v("SENDER'S DETAILS")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td", [_vm._v("Origin")]),
+      _vm._v(" "),
+      _c("td", [_c("b", [_vm._v("Express Logistics")])])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-body cardHeadEdit " }, [
+      _c("p", { staticClass: "pTextBold" }, [_vm._v("RECIEVER'S DETAILS")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "card-body cardHeadEdit " }, [
+          _c("p", { staticClass: "pTextBold" }, [_vm._v("SHIPMENT DETAILS")])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "card-body cardHeadEdit " }, [
+          _c("p", { staticClass: "pTextBold" }, [_vm._v("TRAVEL TIMELINE")])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("th", [_vm._v("DATE")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("TIME")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("ACTIVITY")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("LOCATION")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row mt-5" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "card-body" }, [
+          _c("p", { staticClass: "formateP" }, [
+            _vm._v("Thanks for shipping with Express Logistics Courier Service")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "formateP" }, [_vm._v("www.exlogcourier.com")])
+        ])
+      ])
     ])
   }
 ]
@@ -58918,6 +59798,33 @@ var render = function() {
                               _vm._s(_vm.parcel.sname) +
                               "\n                "
                           )
+                        ]),
+                        _vm._v(" "),
+                        _c("li", { staticClass: "list-group-item" }, [
+                          _c("strong", [_vm._v("Receiver: ")]),
+                          _vm._v(
+                            " " +
+                              _vm._s(_vm.parcel.rname) +
+                              "\n                "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("li", { staticClass: "list-group-item" }, [
+                          _c("strong", [_vm._v("Recepient Address: ")]),
+                          _vm._v(
+                            " " +
+                              _vm._s(_vm.parcel.raddress) +
+                              "\n                "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("li", { staticClass: "list-group-item" }, [
+                          _c("strong", [_vm._v("Recepient Email: ")]),
+                          _vm._v(
+                            " " +
+                              _vm._s(_vm.parcel.remail) +
+                              "\n                "
+                          )
                         ])
                       ])
                     ]
@@ -58944,6 +59851,230 @@ var render = function() {
                               return
                             }
                             _vm.$set(_vm.parcel, "sname", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(1),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.parcel.rname,
+                            expression: "parcel.rname"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.parcel.rname },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.parcel, "rname", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(2),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.parcel.raddress,
+                            expression: "parcel.raddress"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.parcel.raddress },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.parcel,
+                              "raddress",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(3),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.parcel.remail,
+                            expression: "parcel.remail"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.parcel.remail },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.parcel, "remail", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(4),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.parcel.rphone,
+                            expression: "parcel.rphone"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.parcel.rphone },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.parcel, "rphone", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(5),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.parcel.description,
+                            expression: "parcel.description"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.parcel.description },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.parcel,
+                              "description",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(6),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.parcel.dimension,
+                            expression: "parcel.dimension"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.parcel.dimension },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.parcel,
+                              "dimension",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(7),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.parcel.clocation,
+                            expression: "parcel.clocation"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.parcel.clocation },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.parcel,
+                              "clocation",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(8),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.parcel.message,
+                            expression: "parcel.message"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.parcel.message },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.parcel, "message", $event.target.value)
                           }
                         }
                       })
@@ -59007,6 +60138,70 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("label", { attrs: { for: "sender" } }, [
       _c("strong", [_vm._v("Sender")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "sender" } }, [
+      _c("strong", [_vm._v("Receiver")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "sender" } }, [
+      _c("strong", [_vm._v("Recepient Address")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "sender" } }, [
+      _c("strong", [_vm._v("Recepient Email")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "sender" } }, [
+      _c("strong", [_vm._v("Recepient Phone")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "sender" } }, [
+      _c("strong", [_vm._v("Description")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "sender" } }, [
+      _c("strong", [_vm._v("Dimension")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "sender" } }, [
+      _c("strong", [_vm._v("Current Location")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "sender" } }, [
+      _c("strong", [_vm._v("Parcel Stop Message")])
     ])
   }
 ]
@@ -73104,6 +74299,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ParcelList_vue_vue_type_template_id_cebada54___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ParcelList_vue_vue_type_template_id_cebada54___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/trackingPageUtils/ParcelReceipt.vue":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/trackingPageUtils/ParcelReceipt.vue ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ParcelReceipt_vue_vue_type_template_id_716ed3a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ParcelReceipt.vue?vue&type=template&id=716ed3a0&scoped=true& */ "./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=template&id=716ed3a0&scoped=true&");
+/* harmony import */ var _ParcelReceipt_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ParcelReceipt.vue?vue&type=script&lang=js& */ "./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _ParcelReceipt_vue_vue_type_style_index_0_id_716ed3a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ParcelReceipt.vue?vue&type=style&index=0&id=716ed3a0&scoped=true&lang=css& */ "./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=style&index=0&id=716ed3a0&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _ParcelReceipt_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ParcelReceipt_vue_vue_type_template_id_716ed3a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ParcelReceipt_vue_vue_type_template_id_716ed3a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "716ed3a0",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/trackingPageUtils/ParcelReceipt.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ParcelReceipt_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./ParcelReceipt.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ParcelReceipt_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=style&index=0&id=716ed3a0&scoped=true&lang=css&":
+/*!******************************************************************************************************************************!*\
+  !*** ./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=style&index=0&id=716ed3a0&scoped=true&lang=css& ***!
+  \******************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ParcelReceipt_vue_vue_type_style_index_0_id_716ed3a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./ParcelReceipt.vue?vue&type=style&index=0&id=716ed3a0&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=style&index=0&id=716ed3a0&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ParcelReceipt_vue_vue_type_style_index_0_id_716ed3a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ParcelReceipt_vue_vue_type_style_index_0_id_716ed3a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ParcelReceipt_vue_vue_type_style_index_0_id_716ed3a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ParcelReceipt_vue_vue_type_style_index_0_id_716ed3a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ParcelReceipt_vue_vue_type_style_index_0_id_716ed3a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=template&id=716ed3a0&scoped=true&":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=template&id=716ed3a0&scoped=true& ***!
+  \****************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ParcelReceipt_vue_vue_type_template_id_716ed3a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./ParcelReceipt.vue?vue&type=template&id=716ed3a0&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/trackingPageUtils/ParcelReceipt.vue?vue&type=template&id=716ed3a0&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ParcelReceipt_vue_vue_type_template_id_716ed3a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ParcelReceipt_vue_vue_type_template_id_716ed3a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

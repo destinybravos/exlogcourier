@@ -15,6 +15,15 @@
                     <li class="list-group-item">
                         <strong>Sender: </strong> {{ parcel.sname }}
                     </li>
+                     <li class="list-group-item">
+                        <strong>Receiver: </strong> {{ parcel.rname }}
+                    </li>
+                     <li class="list-group-item">
+                        <strong>Recepient Address: </strong> {{ parcel.raddress }}
+                    </li>
+                     <li class="list-group-item">
+                        <strong>Recepient Email: </strong> {{ parcel.remail }}
+                    </li>
                 </ul>
             </div>
             <!-- Editor Mode == True  then this modal body-->
@@ -22,6 +31,38 @@
                 <div class="form-group">
                     <label for="sender"><strong>Sender</strong></label>
                     <input type="text" class="form-control" v-model="parcel.sname">
+                </div>
+                <div class="form-group">
+                    <label for="sender"><strong>Receiver</strong></label>
+                    <input type="text" class="form-control" v-model="parcel.rname">
+                </div>
+                <div class="form-group">
+                    <label for="sender"><strong>Recepient Address</strong></label>
+                    <input type="text" class="form-control" v-model="parcel.raddress">
+                </div>
+                <div class="form-group">
+                    <label for="sender"><strong>Recepient Email</strong></label>
+                    <input type="text" class="form-control" v-model="parcel.remail">
+                </div>
+                <div class="form-group">
+                    <label for="sender"><strong>Recepient Phone</strong></label>
+                    <input type="text" class="form-control" v-model="parcel.rphone">
+                </div>
+                <div class="form-group">
+                    <label for="sender"><strong>Description</strong></label>
+                    <input type="text" class="form-control" v-model="parcel.description">
+                </div>
+                <div class="form-group">
+                    <label for="sender"><strong>Dimension</strong></label>
+                    <input type="text" class="form-control" v-model="parcel.dimension">
+                </div>
+                <div class="form-group">
+                    <label for="sender"><strong>Current Location</strong></label>
+                    <input type="text" class="form-control" v-model="parcel.clocation">
+                </div>
+                <div class="form-group">
+                    <label for="sender"><strong>Parcel Stop Message</strong></label>
+                    <input type="text" class="form-control" v-model="parcel.message">
                 </div>
             </div>
 
@@ -37,7 +78,8 @@
 </template>
 
 <script>
-
+import Api from "../../api/Api";
+var token = $('meta[name=csrf_token]').attr('content')
 export default {
     props:{
         isShow:Boolean,
@@ -47,6 +89,9 @@ export default {
         return{
             customModal:'',
             editMode: false
+
+            // Returning form data for updating
+            
         }
     },
     watch:{
@@ -60,6 +105,7 @@ export default {
     },
     mounted(){
          this.customModal = $('body #customModal');
+         var _token = this.token;
     },
     methods:{
         displayModal(){
@@ -71,9 +117,34 @@ export default {
         },
         saveParcelDetails(){
             // Update the parcel details
+            let updateDate = {
+                sname:this.parcel.sname,
+                rname:this.parcel.rname,
+                raddress:this.parcel.raddress,
+                remail:this.parcel.remail,
+                rphone:this.parcel.rphone,
+                description:this.parcel.description,
+                dimension:this.parcel.dimension,
+                clocation:this.parcel.clocation,
+                message:this.parcel.message,
+                trackid:this.parcel.trackid,
+                _token:this._token
+            };
 
+            Api.client.post('parcel/updateparcel',updateDate)
+            .then((res)=>{
+                this.returnResponse(res)
+            });
             // Then turn off editors mode
             this.editMode = false;
+        },
+
+        returnResponse(response){
+            if(response.data.status == 'success'){
+                alert(response.data.message);
+            }else{
+                alert(response.data.message);
+            }
         },
         editParcel(){
             // turn on editMode
