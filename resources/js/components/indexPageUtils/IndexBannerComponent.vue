@@ -1,28 +1,27 @@
 <template>
     <div class="container-fluid bg-light" style="min-height: 300px; background-color:white !important;">
         <div class="row justify-content-center">
-            <div class="col-md-7">
+            <div class="col-lg-7">
                 <div id="banText">
                     <h2 class="mb-5">
                         Express Logistics and Speedy Courier Delivery
                     </h2>
                     <p class="mb-5">
-                        We do the heavy lifting to you irrespective of your location and your time constraint.
+                        worldwide freight forwarding, logistics and courier services
                     </p>
-                    <a href="#" class="btn mb-2" id="btn-request">
-                        REQUEST OUR SERVICE NOW
+                    <a href="/services" class="btn mb-2" id="btn-request">
+                        SEE OUR SERVICES
                     </a>
                     <p id="tagged">
                         <label>Speedy Delivery</label>
                         <span>.</span>
                         <label>Reliable Services</label>
-                    </p>
+                    </p> 
                 </div>
             </div>
 
-            <div class="col-md-5" id="banImg">
-                <!-- <img src="/img/bg2.jpg" alt="bg1" style="max-width:100%;">
-                <img src="/img/bg1.jpg" alt="bg1" style="max-width:100%;"> -->
+            <div class="col-lg-5" id="banImg">
+                <img src="/img/bg2.jpg" alt=" " style="max-width:100%; padding:20px;">
             </div>
         </div>
     </div>
@@ -42,18 +41,14 @@
         font-size: 1.23rem;
         color: #261c6a;
     }
-    #banImg{
+    /* #banImg{
         min-height: 400px;
-        background-image: url('/img/bg1.jpg');
-        background-size: cover;
-        background-position: left center;
-        background-repeat: no-repeat;
-    }
+    } */
     #btn-request{
         background-color: #ff7900;
         border: none;
         border-radius: 100px;
-        padding: 0.8rem 2rem;
+        padding: 0.3rem 1rem;
         color: white;
         font-weight: 900;
         font-size: 1.2rem;
@@ -90,6 +85,12 @@
 
 <script>
 export default {
-    
+    components:{
+        
+    },
+    data(){
+        return{
+        }
+    },
 }
 </script>

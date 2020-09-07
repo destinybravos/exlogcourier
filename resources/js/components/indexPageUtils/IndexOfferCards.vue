@@ -1,8 +1,13 @@
 <template>
     <div id="index-offer-card" class="pt-3 pb-5">
-        <h2 class="mt-5 mb-1 py-5">
-            What we Offer as our Service<i>!</i>
-        </h2>
+        <section>
+            <h2 class="mt-5">  
+                Your Consignment => Our Commitment!
+            </h2>
+            <p class="my-3">
+                For us moving your consignment from one destination to the other is equivalent to ensuring your reputation, travels far and wide, unblemished.
+            </p>
+        </section>
 
         <!-- Cards Structure -->
         <div class="container">
@@ -14,16 +19,16 @@
                                 <img src="/img/bg1.jpg" alt="">
                             </div>
                             <h4 class="card-title mt-4 mb-4">
-                                Quality Services at Affordable Price
+                                OCEAN FREIGHTS
                             </h4>
                             <p class="mt-4 mb-3">
-                                Our prices in as much as they are competitively on the low side, we still 
-                                offer top notch services that our peers are finding it difficult to keep up.
+                                We provides a holistic solution to transport your bulky and gigantic 
+                                cargo through water ways, eclipsing territories and regions..
                             </p>
-                            <button id="btn-action" class="my-2">
-                                Request Service
+                            <a href="/services#ocean_frieght" id="btn-action" class="btn my-2">
+                                View Service
                                 <img src="/img/arrow-right.svg" alt=" ">
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -32,19 +37,19 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="card-image-container">
-                                <img src="/img/bg1.jpg" alt="">
+                                <img src="/img/truck2.jpg" alt="">
                             </div>
                             <h4 class="card-title mt-4 mb-4">
-                                Quality Services at Affordable Price
+                                ROAD / RAIL FREIGHTS
                             </h4>
                             <p class="mt-4 mb-3">
-                                Our prices in as much as they are competitively on the low side, we still 
-                                offer top notch services that our peers are finding it difficult to keep up.
+                                We offer express delivery services via road/rail because we have an expansive network of 
+                                owned and leased vehicles, capable of safe and timely deliveries.
                             </p>
-                            <button id="btn-action" class="my-2">
-                                Request Service
+                            <a href="/services#road_frieght" id="btn-action" class="btn my-2">
+                                View Service
                                 <img src="/img/arrow-right.svg" alt=" ">
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -53,19 +58,19 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="card-image-container">
-                                <img src="/img/bg1.jpg" alt="">
+                                <img src="/img/air_cargo.jpg" alt="">
                             </div>
                             <h4 class="card-title mt-4 mb-4">
-                                Quality Services at Affordable Price
+                                AIR FREIGHTS
                             </h4>
                             <p class="mt-4 mb-3">
-                                Our prices in as much as they are competitively on the low side, we still 
-                                offer top notch services that our peers are finding it difficult to keep up.
+                                Our Air Freight service provides, top notch, hassle free and timely movement for all your 
+                                consignments at very competitive rates..
                             </p>
-                            <button id="btn-action" class="my-2">
-                                Request Service
+                            <a href="/services#air_frieght" id="btn-action" class="btn my-2">
+                                View Service
                                 <img src="/img/arrow-right.svg" alt=" ">
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -79,11 +84,18 @@
         background-color: white !important;
         text-align: center;
     }
+    #index-offer-card section{
+        max-width: 93%;
+        margin: auto auto 50px;
+    }
     #index-offer-card h2{
         font-weight: 900;
-        font-size: 2.5rem;
+        /* font-size: 2.5rem; */
         color:#261c6a;
         text-align: center;
+    }
+    #index-offer-card section p{
+        font-size: 1.2rem;
     }
     .card-image-container{
         width: 250px;
@@ -95,6 +107,9 @@
     }
     .card{
         border: none;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
     }
     
     .card:hover{
@@ -116,7 +131,7 @@
         color: #181146;
     }
     #btn-action{
-        box-shadow: 0 15px 35px -15px rgba(78,34,208,0.7),0 15px 35px -15px rgba(12,5,62,0.3);
+        box-shadow: 0 15px 15px -15px rgba(78,34,208,0.7),0 15px 35px -15px rgba(12,5,62,0.3);
         outline: none;
         background-color: #fff;
         color:  #25129c;
