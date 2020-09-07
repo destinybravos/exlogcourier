@@ -11,9 +11,12 @@
                     </tr>
                     <tr style="cursor:pointer;" v-for="(parcel, index) in parcels" :key="index">
                         <td>
-                            <font-awesome-icon icon="eye" size="1x" class="text-success mx-1"/> 
+                            <font-awesome-icon icon="eye" size="1x" class="text-success mx-1" @click="showParcelDetailsModal(parcel)"/> 
                             <!-- <font-awesome-icon icon="edit" size="1x" class="text-primary mx-2"/>  -->
-                            <font-awesome-icon icon="trash" size="1x" class="text-danger mx-1"/> 
+                            <font-awesome-icon icon="trash" size="1x" class="text-danger mx-1" @click="deleteParcel(parcel)"/> 
+                            <font-awesome-icon icon="edit" size="1x" class="text-primary mx-1" @click="editParcel()"/>
+                            <span class="btn btn-danger" v-if="parcel.status == 'active'" @click="stopParcel(parcel)"> Pause</span>
+                            <span class="btn btn-success" v-else @click="stopParcel(parcel)"> Continue</span>
                         </td>
                         <td @click="showParcelDetailsModal(parcel)">{{ parcel.trackid }}</td>
                         <td @click="showParcelDetailsModal(parcel)">{{ parcel.rname }}</td>
@@ -40,7 +43,8 @@ export default {
         return{
             parcels: [],
             modalShowState:false,
-            selectedParcel: {}
+            selectedParcel: {},
+            editMode:false
         }
     },
     mounted(){
@@ -75,6 +79,58 @@ export default {
         },
         hideParcelDetailsModal(state){
             this.modalShowState = state;
+        },
+        editParcel(){
+            // turn on editMode
+            // this.modalShowState = false;
+            editMode = true;
+
+        },
+
+        // STOP OR PAUSE PARCEL
+        stopParcel(parcel){
+            this.selectedParcel = parcel;
+            console.log(this.selectedParcel.trackid);
+
+            let stopParcelData = {
+                _token:this._token,
+                trackid:this.selectedParcel.trackid
+            };
+            Api.client.post('parcel/resetparcelstatus', stopParcelData)
+            .then((res)=>{
+                this.stopParcelShipping(res);
+            });
+        },
+        stopParcelShipping(response){
+            if(response.data.status == 'success'){
+                window.location.reload();
+                alert(this.response.data.message);
+            }else{
+                alert(this.response.data.message);
+            }
+        },
+
+        // DELETE PARCEL
+        deleteParcel(parcel){
+            this.selectedParcel = parcel;
+            console.log(this.selectedParcel.trackid);
+
+            let deleteParcelData = {
+                _token:this._token,
+                trackid:this.selectedParcel.trackid
+            };
+            Api.client.post('parcel/deleteparcel', deleteParcelData)
+            .then((res)=>{
+                this.deleteParcelShipping(res);
+            });
+        },
+        deleteParcelShipping(response){
+            if(response.data.status == 'success'){
+                window.location.reload();
+                alert(this.response.data.message);
+            }else{
+                alert(this.response.data.message);
+            }
         }
     }
 }

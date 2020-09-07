@@ -13,7 +13,7 @@
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab" href="#parcellist" role="tab" aria-controls="nav-list" aria-selected="true">Parcel List</a>
                     <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#addparcel" role="tab" aria-controls="nav-parcel" aria-selected="false">Add Parcel</a>
-                    <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#addparcel" role="tab" aria-controls="nav-receipts" aria-selected="false">Manage Receipts</a>
+                    <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#parcelreceipt" role="tab" aria-controls="nav-receipts" aria-selected="false">Manage Receipts</a>
                 </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
@@ -23,9 +23,9 @@
                 <div class="tab-pane fade" id="addparcel" role="tabpanel" aria-labelledby="nav-parcel-tab">
                     <AddParcelComponent></AddParcelComponent>
                 </div>
-                <div class="tab-pane fade" id="addparcel" role="tabpanel" aria-labelledby="nav-receipts-tab">
+                <div class="tab-pane fade" id="parcelreceipt" role="tabpanel" aria-labelledby="nav-receipts-tab">
                     <!-- Import the receipts component here -->
-                    Reciept Comming Here. Use search input to pull
+                    <ParcelReceiptComponent></ParcelReceiptComponent>
                 </div>
             </div>
 
@@ -44,10 +44,12 @@
 // I Imported additional Parcel Receipt Component
 import AddParcelComponent from '../trackingPageUtils/AddParcel.vue';
 import ParcelListComponent from '../trackingPageUtils/ParcelList.vue';
+import ParcelReceiptComponent from '../trackingPageUtils/ParcelReceipt.vue';
     export default {
         components:{
             AddParcelComponent,
-            ParcelListComponent
+            ParcelListComponent,
+            ParcelReceiptComponent,
         },
         
     }

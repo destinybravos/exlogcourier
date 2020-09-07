@@ -3,7 +3,8 @@
         <div class="container">
             <div class="row" style="text-align:center; padding:50px 0 30px; color:#261c6a;">
                 <div class="col-md-12" id="trackText">
-                    <h2>YOUR PARCEL DETAILS</h2>
+                    <h2>EXPRESS LOGISTICS COURIER</h2>
+                    <h2>WAYBILL RECEIPT</h2>
                 </div>
             </div>
             <!-- Tracking number row -->
@@ -12,7 +13,7 @@
                     <p class="pTextBold">
                         <strong>
                             Tracking ID: 
-                            <i style="padding:10px 10px 1px; display:inline-block; border-bottom: 2pt solid #ff7900; font-style:normal;">{{ trackId }}</i>
+                            <i style="padding:10px 10px 1px; display:inline-block; border-bottom: 2pt solid #ff7900; font-style:normal;">{{ receiptDetails.trackid}}</i>
                         </strong>
                     </p>
                 </div>
@@ -29,11 +30,11 @@
                             <tbody>
                                 <tr>
                                     <td>Estimated Time of Departuer (ETD)</td>
-                                    <td><b>20th Sep, 2020</b></td>
+                                    <td><b>{{ receiptDetails.start}}</b></td>
                                 </tr>
                                 <tr>
                                     <td>Estimated Time of Arrival (ETA)</td>
-                                    <td><b>30th Oct, 2020</b></td>
+                                    <td><b>{{ receiptDetails.end}}</b></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -48,11 +49,11 @@
                             <tbody>
                                 <tr>
                                     <td>From</td>
-                                    <td><b>Aba</b></td>
+                                    <td><b>{{ receiptDetails.clocation}}</b></td>
                                 </tr>
                                 <tr>
                                     <td>To</td>
-                                    <td><b>Owerri</b></td>
+                                    <td><b>{{ receiptDetails.rcountry}}</b></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -71,7 +72,7 @@
                             <tbody>
                                 <tr>
                                     <td>Name</td>
-                                    <td><b>Noble Okechi</b></td>
+                                    <td><b>{{ receiptDetails.sname}}</b></td>
                                 </tr>
                                 <tr>
                                     <td>Origin</td>
@@ -90,19 +91,19 @@
                             <tbody>
                                 <tr>
                                     <td>Name</td>
-                                    <td><b>Destiny Bravos</b></td>
+                                    <td><b>{{ receiptDetails.rname}}</b></td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
-                                    <td><b>destinybravos@gmail.com</b></td>
+                                    <td><b>{{ receiptDetails.remail}}</b></td>
                                 </tr>
                                 <tr>
                                     <td>Phone</td>
-                                    <td><b>+234 803 239 0858</b></td>
+                                    <td><b>{{ receiptDetails.rphone}}</b></td>
                                 </tr>
                                  <tr>
                                     <td>Address</td>
-                                    <td><b>Programmers City, Umuerim, Nekede, Owerri, Imo State</b></td>
+                                    <td><b>{{ receiptDetails.raddress}}</b></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -125,7 +126,7 @@
                             <tbody>
                                 <tr>
                                     <td>Item Description</td>
-                                    <td><b>This parcel is containing an iPhone 11 pro max with electronic gadgets</b></td>
+                                    <td><b>{{ receiptDetails.description}}</b></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -137,7 +138,7 @@
                             <tbody>
                                 <tr>
                                     <td>Weight and Dimension</td>
-                                    <td><b>8cm x 12cm x 10cm (13kg)</b></td>
+                                    <td><b>{{ receiptDetails.dimension}}</b></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -164,11 +165,11 @@
                                     <th>ACTIVITY</th>
                                     <th>LOCATION</th>
                                 </tr>
-                                <tr>
-                                    <td>20th, Sep 2020</td>
-                                    <td>11:20pm</td>
-                                    <td>Parcel Reviewed and Logged in for Shipment</td>
-                                    <td>Aba</td>
+                                <tr v-for="(timeline, index) in receiptTimeline" :key="index">
+                                    <td>{{ timeline.date }}</td>
+                                    <td>{{ timeline.time }}</td>
+                                    <td>{{ timeline.activity }}</td>
+                                    <td>{{ timeline.location }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -177,15 +178,11 @@
             </div>
 
             <!-- PROGRESS BAR ROW -->
-            <div class="row progressBarRow">
+            <div class="row mt-5">
                 <div class="col-md-12">
                     <div class="card-body">
-                        <div class="progress mb-3">
-                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="alert alert-success">
-                            <p><b>Destiny Bravos</b>, your parcel is safely intransit and its currently at Aba</p>
-                        </div>
+                        <p class="formateP">Thanks for shipping with Express Logistics Courier Service</p>
+                        <p class="formateP">www.exlogcourier.com</p>
                     </div>
                 </div>
             </div>
@@ -200,29 +197,63 @@
         padding: 4px 10px !important;
         color: #fff;
     }
-    .progressBarRow{
-        background-color: #3d3072;
-        padding: 60px 20px !important;
-        color: #fff;
+    .formateP{
+        text-align: center;
     }
 </style>
 
 <script>
+import Api from "../../api/Api";
+var token = $('meta[name=csrf_token]').attr('content')
 export default {
-    props:{
-        trackId : String
-    },
     data(){
         return {
-            parcel : {}
+            // parcel : {}
+            receiptDetails : {},
+            getTrack:'',
+            receiptTimeline: []
         }
     },
-    beforeCreate(){
-        // Request for the parcel detail from the database using the trackid
-        console.log(this.trackId);
-    },
     mounted(){
-        // console.log(this.trackId);
+        // Send a Request to the database to generate the receipt
+        var _token = this.token;
+        this.generateReceipt();
+        // console.log( receiptDetails.trackid);
+        this.getTrack = document.getElementById('track');
+        console.log(this.getTrack);
+    },
+    methods:{
+        generateReceipt(){
+            let setReceipt = {
+                _token:this._token,
+            };
+
+            Api.client.post('parcel/generatereceipt', setReceipt)
+            .then((res)=>{
+                this.displayReceipt(res);
+            });
+
+            Api.client.post('parcel/generatereceipttimeline', setReceipt)
+            .then((res)=>{
+                this.displayReceiptTimeline(res);
+            });
+        },
+        displayReceipt(response){
+            if(response.data.count > 0){
+                this.receiptDetails = response.data.receiptdetail[0];
+                console.log(this.receiptDetails);
+            }else{
+                alert('Invalide Request');
+            }
+        },
+        displayReceiptTimeline(response){
+            if(response.data.count > 0){
+                this.receiptTimeline = response.data.receiptdetail;
+                console.log(this.receiptTimeline);
+            }else{
+                alert('Invalide Request');
+            }
+        }
     }
 }
 </script>
