@@ -1,15 +1,25 @@
 <template>
     <div>
         <!-- Start -->
-            <agile :nav-buttons="false" :autoplay-speed="5000" :speed="10000" fade="fade" 
+            <!-- For image slide -->
+            <agile :nav-buttons="false" :autoplay-speed="timeInterval" :speed="(timeInterval / 3)" fade="fade" 
             pause-on-hover="pause-on-hover" pause-on-dots-hover="pause-on-dots-hover" 
-            autoplay="autoplay">
+            autoplay="autoplay" v-if="sliderType === 'images'">
                 <img v-for="(imageSrc, index) in imageList" :key="index" :src="imageSrc" :alt="index" class="slide">
-                <!-- <img class="slide" src="https://images.unsplash.com/photo-1509549649946-f1b6276d4f35?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1600&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"/>
-                <img class="slide" src="https://images.unsplash.com/photo-1511469054436-c7dedf24c66b?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1600&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjEyMDd9"/>
-                <img class="slide" src="https://images.unsplash.com/photo-1511135232973-c3ee80040060?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1600&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjEyMDd9"/>
-                <img class="slide" src="https://images.unsplash.com/photo-1511231683436-44735d14c11c?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1600&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjEyMDd9"/>
-                <img class="slide" src="https://images.unsplash.com/photo-1517677129300-07b130802f46?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1600&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjEyMDd9"/> -->
+            </agile>
+            <!-- For Container Slides -->
+            <agile :nav-buttons="false" :autoplay-speed="timeInterval" :speed="(timeInterval / 3)" fade="fade" 
+            pause-on-hover="pause-on-hover" pause-on-dots-hover="pause-on-dots-hover" 
+            autoplay="autoplay"  v-if="sliderType === 'containers'">
+                <div v-for="(imageSrc, index) in imageList" :key="index" class="slide slide-container"
+                :style="`background-image: url(${imageSrc.image})`">
+                    <section>
+                        <h2>{{ imageSrc.caption }}</h2>
+                        <p>
+                            {{ imageSrc.sub_caption }}
+                        </p>
+                    </section>
+                </div>
             </agile>
         <!-- End -->
     </div>
@@ -52,6 +62,42 @@
         object-fit: cover;
     width: 100%;
     }
+    .slide-container{
+        /* min-height: 400px; */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        align-content: flex-end;
+    }
+    .slide-container section{
+        font-weight: bolder;
+        color: white;
+        text-align: center;
+        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3), rgba(0,0,0,0.6), rgba(0,0,0,0.9));
+        padding: 100px 0 20px;
+        text-shadow: 0 0 10px #000000;
+    }
+    .slide-container h2{
+        font-weight: bolder;
+        text-transform: uppercase;
+        max-width: 90%;
+        margin: auto;
+    }
+    .slide-container p{
+        font-weight: normal;
+        max-width: 90%;
+        margin: auto;
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+    @media screen and (max-width: 767px) {
+        .agile__dots {
+            display:none;
+        }
+    }
 
 </style>
 
@@ -60,7 +106,9 @@ import { VueAgile } from 'vue-agile'
  
 export default { 
     props:{
-        imageList : Object,
+        imageList : Array,
+        timeInterval:Number,
+        sliderType:String
     },
     components: {
         agile: VueAgile 

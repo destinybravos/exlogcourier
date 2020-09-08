@@ -9,17 +9,19 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 // Added Font-Awesome Here
+// We need to also install social icon with it ok
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, 
+import { faFontAwesome, faFacebook, faTwitter, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck,
     faClipboardList, faCircleNotch, faSave, faEdit, faTrash, faTrashAlt, faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-library.add(faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, 
-    faClipboardList, faCircleNotch, faSave, faEdit, faTrash, faTrashAlt, faEye);
+library.add(faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck,
+    faClipboardList, faCircleNotch, faSave, faEdit, faTrash, faTrashAlt, faEye, faFontAwesome, faFacebook, faTwitter, faTwitterSquare);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 /**
  * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
+
  * components and automatically register them with their "basename".
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
@@ -34,7 +36,7 @@ Vue.component('login-component', require('./components/LoginComponent.vue').defa
 Vue.component('register-component', require('./components/RegisterComponent.vue').default);
 Vue.component('index-component', require('./components/IndexComponent.vue').default);
 Vue.component('about-component', require('./components/AboutComponent.vue').default);
-Vue.component('gallery-component', require('./components/GalleryComponent.vue').default);
+Vue.component('services-component', require('./components/ServicesComponent.vue').default);
 Vue.component('tracking-component', require('./components/TrackingComponent.vue').default);
 Vue.component('contact-component', require('./components/ContactComponent.vue').default);
 Vue.component('dashboard-component', require('./components/DashboardComponent.vue').default);
