@@ -10,9 +10,13 @@
                         <h2 class="h2Text">EXPRESS LOGISTICS</h2>
                     </div>
                     <div class="mt-4">
-                        <h5 class="h5Text">
-                            Express Logistics Courier Services provide standard domestic and international parcel pick-up, delivery and return solutions for business customers and consumers
-                        </h5>
+                        <div class="card shadow">
+                            <div class="card-body shadw">
+                                <h5 class="h5Text">
+                                    Express Logistics Courier Services provide standard domestic and international parcel pick-up, delivery and return solutions for business customers and consumers
+                                </h5>
+                            </div>
+                        </div>
                         <div class="mt-5">
                             <div class="row">
                                 <div class="col-4">
@@ -48,7 +52,7 @@
             <div class="container">
 
                 <div class="row abtServiceRow">
-                    <div class="col-md-6">
+                    <div class="col-md-6 mt-5">
                          <img src="/img/bg-2.png" class="card-img-top">
                     </div>
                     <div class="col-md-6">
@@ -82,21 +86,25 @@
     }
     .h3Text{
         font-size: 1.4em;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
     }
     .h2Text{
         font-weight: bolder;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 3.0em;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 3.2em;
     }
     .h5Text{
         /* font-weight: bold; */
         font-size: 1.2em;
         text-transform: uppercase;
         color: #3d3072;
+        font-family: "Lucida Console", Monaco, monospace;
         /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     }
     .pText{
         line-clamp: 0;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        font-size: 1.3em;
     }
     .cardImg{
          box-shadow: 0 0 60px #0d04442d;

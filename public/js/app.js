@@ -15227,6 +15227,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
  // import OurWorkDecription from '../components/indexPageUtils/OurWorkDecription.vue';
 
@@ -22363,7 +22371,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.mainContainer[data-v-5049bb1b]{\n    margin-top: 100px;\n    margin-bottom: 50px;\n}\n.h3Text[data-v-5049bb1b]{\n    font-size: 1.4em;\n}\n.h2Text[data-v-5049bb1b]{\n    font-weight: bolder;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 3.0em;\n}\n.h5Text[data-v-5049bb1b]{\n    /* font-weight: bold; */\n    font-size: 1.2em;\n    text-transform: uppercase;\n    color: #3d3072;\n    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */\n}\n.pText[data-v-5049bb1b]{\n    line-clamp: 0;\n}\n.cardImg[data-v-5049bb1b]{\n     box-shadow: 0 0 60px #0d04442d;\n}\n.iconImg[data-v-5049bb1b]{\n    width: 70px;\n    height: 60px;\n}\n#abtContainerFluid[data-v-5049bb1b]{\n    background-color: #f8ebe2;\n    padding: 40px auto;\n}\n.abtServiceRow[data-v-5049bb1b]{\n    padding: 40px 0;\n}\n.h1Text[data-v-5049bb1b]{\n    font-weight: bolder;\n    color: #3d3072;\n}\n@media screen and (max-width: 520px){\n.spanText[data-v-5049bb1b]{\n        display:block;\n}\n.mainContainer[data-v-5049bb1b]{\n        margin-top: 70px;\n}\n.h2Text[data-v-5049bb1b]{\n    font-size: 2.0em;\n}\n}\n", ""]);
+exports.push([module.i, "\n.mainContainer[data-v-5049bb1b]{\n    margin-top: 100px;\n    margin-bottom: 50px;\n}\n.h3Text[data-v-5049bb1b]{\n    font-size: 1.4em;\n    font-family: \"Trebuchet MS\", Helvetica, sans-serif;\n}\n.h2Text[data-v-5049bb1b]{\n    font-weight: bolder;\n    font-family: \"Arial Black\", Gadget, sans-serif;\n    font-size: 3.2em;\n}\n.h5Text[data-v-5049bb1b]{\n    /* font-weight: bold; */\n    font-size: 1.2em;\n    text-transform: uppercase;\n    color: #3d3072;\n    font-family: \"Lucida Console\", Monaco, monospace;\n    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */\n}\n.pText[data-v-5049bb1b]{\n    line-clamp: 0;\n    font-family: \"Trebuchet MS\", Helvetica, sans-serif;\n    font-size: 1.3em;\n}\n.cardImg[data-v-5049bb1b]{\n     box-shadow: 0 0 60px #0d04442d;\n}\n.iconImg[data-v-5049bb1b]{\n    width: 70px;\n    height: 60px;\n}\n#abtContainerFluid[data-v-5049bb1b]{\n    background-color: #f8ebe2;\n    padding: 40px auto;\n}\n.abtServiceRow[data-v-5049bb1b]{\n    padding: 40px 0;\n}\n.h1Text[data-v-5049bb1b]{\n    font-weight: bolder;\n    color: #3d3072;\n}\n@media screen and (max-width: 520px){\n.spanText[data-v-5049bb1b]{\n        display:block;\n}\n.mainContainer[data-v-5049bb1b]{\n        margin-top: 70px;\n}\n.h2Text[data-v-5049bb1b]{\n    font-size: 2.0em;\n}\n}\n", ""]);
 
 // exports
 
@@ -59313,10 +59321,14 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "mt-4" }, [
-            _c("h5", { staticClass: "h5Text" }, [
-              _vm._v(
-                "\n                        Express Logistics Courier Services provide standard domestic and international parcel pick-up, delivery and return solutions for business customers and consumers\n                    "
-              )
+            _c("div", { staticClass: "card shadow" }, [
+              _c("div", { staticClass: "card-body shadw" }, [
+                _c("h5", { staticClass: "h5Text" }, [
+                  _vm._v(
+                    "\n                                Express Logistics Courier Services provide standard domestic and international parcel pick-up, delivery and return solutions for business customers and consumers\n                            "
+                  )
+                ])
+              ])
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "mt-5" }, [
@@ -59385,7 +59397,7 @@ var staticRenderFns = [
       [
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "row abtServiceRow" }, [
-            _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "col-md-6 mt-5" }, [
               _c("img", {
                 staticClass: "card-img-top",
                 attrs: { src: "/img/bg-2.png" }
