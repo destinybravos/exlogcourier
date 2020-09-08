@@ -22453,7 +22453,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#footer-component[data-v-abfbddf2]{\n    background-color: #261c6a;\n    color: white;\n    padding: 20px 0;\n}\n#containerT[data-v-abfbddf2]{\n    background-color: #f57302;\n    max-height: 2000px;\n    width: 100%;\n}\n#contAside[data-v-abfbddf2]{\n    background-color:whitesmoke;\n    color:#261c6a;\n    width:50%;\n    text-align: center;\n    font-weight: bolder;\n}\n", ""]);
+exports.push([module.i, "\n#footer-component[data-v-abfbddf2]{\n    background-color: #261c6a;\n    color: white;\n    padding: 20px 0;\n}\n#containerT[data-v-abfbddf2]{\n    background-color: #f57302;\n    max-height: 2000px;\n    width: 100%;\n}\n#contAside h5[data-v-abfbddf2]{\n    background-color:whitesmoke;\n    color:#261c6a;\n    width:50%;\n    text-align: center;\n    font-weight: bolder;\n}\n#trackText[data-v-abfbddf2]{\n    margin-top: 30px;\n}\n#TrackbtnDiv[data-v-abfbddf2]{\n    margin-top: 30px;\n}\n#trackInput[data-v-abfbddf2]{\n    width: 500px;\n    height: 40px;\n    background-color: #f57302;\n    color: white;\n}\n#trackBtn[data-v-abfbddf2]{\n    height: 40px;\n    background-color: #f57302;\n    width: 100px;\n    color:white;\n}\n", ""]);
 
 // exports
 
@@ -60079,21 +60079,41 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-md-12", attrs: { id: "containerT" } }, [
             _c("div", { staticClass: "container", attrs: { id: "trackCon" } }, [
               _c("div", { staticClass: "row my-2" }, [
-                _c("div", { staticClass: "col-md-4" }, [
-                  _c("h3", { staticStyle: { "font-weight": "bolder" } }, [
-                    _vm._v("TRACK NUMBER")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("TRACK UP TO 10 NUMBERS AT A TIME")])
-                ]),
+                _c(
+                  "div",
+                  { staticClass: "col-md-4", attrs: { id: "trackText" } },
+                  [
+                    _c(
+                      "h3",
+                      {
+                        staticStyle: { "font-weight": "bolder", margin: "0px" }
+                      },
+                      [_vm._v("TRACK NUMBER")]
+                    ),
+                    _vm._v(" "),
+                    _c("p", { staticStyle: { margin: "0px" } }, [
+                      _vm._v("TRACK UP TO 10 NUMBERS AT A TIME")
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
-                _c("div", { staticClass: "col-md-8" }, [
-                  _c("input", {
-                    attrs: { type: "text", value: "#PACKAGE ID" }
-                  }),
-                  _vm._v(" "),
-                  _c("button", { attrs: { type: "text" } }, [_vm._v("Track ")])
-                ])
+                _c(
+                  "div",
+                  { staticClass: "col-md-8", attrs: { id: "TrackbtnDiv" } },
+                  [
+                    _c("input", {
+                      attrs: {
+                        id: "trackInput",
+                        type: "text",
+                        value: "#PACKAGE ID"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("button", { attrs: { id: "trackBtn", type: "text" } }, [
+                      _vm._v("TRACK ")
+                    ])
+                  ]
+                )
               ])
             ])
           ])
@@ -60102,67 +60122,73 @@ var staticRenderFns = [
         _c("div", { staticClass: "row my-2" }, [
           _c("div", { staticClass: "col-md-5" }, [
             _c("aside", { attrs: { id: "contAside" } }, [
-              _vm._v(" EXPRESS LOGISTICS")
+              _c("h5", [_vm._v(" EXPRESS LOGISTICS ")])
             ]),
             _vm._v(" "),
             _c("p", [
               _vm._v(
-                "As a leading provider of air transportation, Express Logistics and Courier is your #1\n                source for expedited international automobile shopping with services to over 150 countries worldwide,\n                we have the resources and expertise to facilitate your international shipment and make the delivery as simple as possbile\n                "
+                "As a leading provider of air transportation, Express Logistics and Courier is your #1\n                    source for expedited international automobile shopping with services to over 150 countries worldwide,\n                    we have the resources and expertise to facilitate your international shipment and make the delivery as simple as possbile\n                    "
               )
             ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-2" }, [
-            _c("h5", [_vm._v("SERVICE OFFERED")]),
+            _c("h5", { staticStyle: { "font-weight": "bold" } }, [
+              _vm._v("SERVICES")
+            ]),
             _vm._v(" "),
             _c("p", [
-              _vm._v("\n                    Sea Freight "),
+              _vm._v("\n                        Sea Freight "),
               _c("br"),
-              _vm._v("\n                    Road transport "),
+              _vm._v("\n                        Road transport "),
               _c("br"),
-              _vm._v("\n                    Air Freight "),
+              _vm._v("\n                        Air Freight "),
               _c("br"),
-              _vm._v("\n                    Railway Logistics "),
+              _vm._v("\n                        Railway Logistics "),
               _c("br"),
-              _vm._v("\n                    Packaging & Storage "),
+              _vm._v("\n                        Packaging & Storage "),
               _c("br"),
-              _vm._v("\n                    Warehousing "),
+              _vm._v("\n                        Warehousing "),
               _c("br"),
-              _vm._v("\n                    Door-2-Door Delivery "),
+              _vm._v("\n                        Door-2-Door Delivery "),
               _c("br")
             ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-2" }, [
-            _c("h5", [_vm._v("DESTINATION")]),
+            _c("h5", { staticStyle: { "font-weight": "bolder" } }, [
+              _vm._v("DESTINATION")
+            ]),
             _vm._v(" "),
             _c("p", [
-              _vm._v("\n                    Lagos, Nigeria "),
+              _vm._v("\n                        Lagos, Nigeria "),
               _c("br"),
-              _vm._v("\n                    Accra, Ghana "),
+              _vm._v("\n                        Accra, Ghana "),
               _c("br"),
-              _vm._v("\n                    Canada, United States "),
+              _vm._v("\n                        Canada, United States "),
               _c("br"),
-              _vm._v("\n                    Paris, France "),
+              _vm._v("\n                        Paris, France "),
               _c("br"),
-              _vm._v("\n                    Osio, Norway "),
+              _vm._v("\n                        Osio, Norway "),
               _c("br"),
               _vm._v(
-                "\n                    Frankfurt, Germany\n\n\n                "
+                "\n                        Frankfurt, Germany\n\n\n                    "
               )
             ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-3" }, [
-            _c("h5", [_vm._v("CONTACT DETAILS")]),
+            _c("h5", { staticStyle: { "font-weight": "bolder" } }, [
+              _vm._v("CONTACT DETAILS")
+            ]),
             _vm._v(" "),
             _c("p", [
               _vm._v(
-                "\n                    Yesikent Mah  Allyey 1905 Sok - No 123 Esenyurt Instanbul, Turkey "
+                "\n                        Yesikent Mah  Allyey 1905 Sok - No 123 Esenyurt Instanbul, Turkey "
               ),
               _c("br"),
               _vm._v(
-                "\n                    Email: contact@expresslogistics&courier.com\n                    Call: +120 - 344 -567\n                "
+                "\n                        Email: contact@expresslogistics&courier.com\n                        Call: +120 - 344 -567\n                    "
               )
             ])
           ])
