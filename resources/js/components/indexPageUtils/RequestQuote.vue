@@ -36,6 +36,7 @@ export default {
         text-align: center;
         color: white;
         font-weight: 900;
+        text-transform: uppercase;
     }
     #btn_truck{
         padding: 5px 10px;

@@ -22950,7 +22950,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n#top_hd_req[data-v-55e80151]{\n    text-align: center;\n    color: white;\n    font-weight: 900;\n}\n#btn_truck[data-v-55e80151]{\n    padding: 5px 10px;\n    border-radius: 5px;\n    float: right;\n    margin-right: -45px;\n    z-index: 4;\n    position: inherit;\n}\n@media screen and (max-width: 767px) {\n#btn_truck[data-v-55e80151]{\n        display:none;\n}\n}\n", ""]);
+exports.push([module.i, "\n#top_hd_req[data-v-55e80151]{\n    text-align: center;\n    color: white;\n    font-weight: 900;\n    text-transform: uppercase;\n}\n#btn_truck[data-v-55e80151]{\n    padding: 5px 10px;\n    border-radius: 5px;\n    float: right;\n    margin-right: -45px;\n    z-index: 4;\n    position: inherit;\n}\n@media screen and (max-width: 767px) {\n#btn_truck[data-v-55e80151]{\n        display:none;\n}\n}\n", ""]);
 
 // exports
 
