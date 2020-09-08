@@ -20,7 +20,14 @@
             </div>
 
             <div class="row my-2">
-                <div class="col-md-5"> EXPRESS LOGISTICS </div>
+                <div class="col-md-5">
+                    <h1> EXPRESS LOGISTICS</h1>
+                    <p>As a leading provider of air transportation, Express Logistics and Courier is your #1 <br>
+                    source for expedited international automobile shopping with services to over 150 countries worldwide,
+                    we have the resources and expertise to facilitate your international shipment and make the delivery as simple as possbile
+                    </p>
+
+                </div>
                 <div class="col-md-2"> SERVICE OFFERED  </div>
                 <div class="col-md-2"> DESTINATION  </div>
                 <div class="col-md-3">  CONTACT DETAILS </div>
