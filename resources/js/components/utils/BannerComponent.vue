@@ -63,7 +63,7 @@ export default {
             pages: {
                 about : 'About Our Services',
                 contact : 'Our Contact Channels',
-                gallery : 'Our services in Visuals',
+                gallery : 'Express Services',
                 tracking : 'Parcel Status Details',
             },
         }
