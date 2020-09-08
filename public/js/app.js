@@ -22453,7 +22453,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#footer-component[data-v-abfbddf2]{\n    background-color: #261c6a;\n    color: white;\n    padding: 20px 0;\n}\n#containerT[data-v-abfbddf2]{\n    background-color: #f57302;\n    max-height: 2000px;\n    width: 100%;\n}\n", ""]);
+exports.push([module.i, "\n#footer-component[data-v-abfbddf2]{\n    background-color: #261c6a;\n    color: white;\n    padding: 20px 0;\n}\n#containerT[data-v-abfbddf2]{\n    background-color: #f57302;\n    max-height: 2000px;\n    width: 100%;\n}\n#contAside[data-v-abfbddf2]{\n    background-color:whitesmoke;\n    color:#261c6a;\n    width:50%;\n    text-align: center;\n    font-weight: bolder;\n}\n", ""]);
 
 // exports
 
@@ -60101,16 +60101,71 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "row my-2" }, [
           _c("div", { staticClass: "col-md-5" }, [
-            _vm._v(" EXPRESS LOGISTICS ")
+            _c("aside", { attrs: { id: "contAside" } }, [
+              _vm._v(" EXPRESS LOGISTICS")
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "As a leading provider of air transportation, Express Logistics and Courier is your #1\n                source for expedited international automobile shopping with services to over 150 countries worldwide,\n                we have the resources and expertise to facilitate your international shipment and make the delivery as simple as possbile\n                "
+              )
+            ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-2" }, [
-            _vm._v(" SERVICE OFFERED  ")
+            _c("h5", [_vm._v("SERVICE OFFERED")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v("\n                    Sea Freight "),
+              _c("br"),
+              _vm._v("\n                    Road transport "),
+              _c("br"),
+              _vm._v("\n                    Air Freight "),
+              _c("br"),
+              _vm._v("\n                    Railway Logistics "),
+              _c("br"),
+              _vm._v("\n                    Packaging & Storage "),
+              _c("br"),
+              _vm._v("\n                    Warehousing "),
+              _c("br"),
+              _vm._v("\n                    Door-2-Door Delivery "),
+              _c("br")
+            ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-2" }, [_vm._v(" DESTINATION  ")]),
+          _c("div", { staticClass: "col-md-2" }, [
+            _c("h5", [_vm._v("DESTINATION")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v("\n                    Lagos, Nigeria "),
+              _c("br"),
+              _vm._v("\n                    Accra, Ghana "),
+              _c("br"),
+              _vm._v("\n                    Canada, United States "),
+              _c("br"),
+              _vm._v("\n                    Paris, France "),
+              _c("br"),
+              _vm._v("\n                    Osio, Norway "),
+              _c("br"),
+              _vm._v(
+                "\n                    Frankfurt, Germany\n\n\n                "
+              )
+            ])
+          ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-3" }, [_vm._v("  CONTACT DETAILS ")])
+          _c("div", { staticClass: "col-md-3" }, [
+            _c("h5", [_vm._v("CONTACT DETAILS")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                    Yesikent Mah  Allyey 1905 Sok - No 123 Esenyurt Instanbul, Turkey "
+              ),
+              _c("br"),
+              _vm._v(
+                "\n                    Email: contact@expresslogistics&courier.com\n                    Call: +120 - 344 -567\n                "
+              )
+            ])
+          ])
         ])
       ])
     ])
