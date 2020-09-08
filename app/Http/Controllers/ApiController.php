@@ -69,7 +69,9 @@ class ApiController extends Controller
         $saveParcel->trackid = $req->trackid;
         $saveParcel->start = $saveStart;
         $saveParcel->end = $saveEnd;
-        if($saveParcel->save()){
+        $saveParcel->startint = $start;
+        $saveParcel->endint = $end;
+            if($saveParcel->save()){
             // TIMELINE CODE FUNCTION
             $retriveParcel = parcel::where('trackid',$req->trackid)->get();
             foreach($retriveParcel as $parcel){
@@ -103,10 +105,12 @@ class ApiController extends Controller
     public function get_parcel(Request $check){
         // return $check;
         $getParcel = parcel::where('trackid',$check->trackid)->get();
+        $now = date('U');
         if(count($getParcel) > 0){
            $result = [
                'count' => count($getParcel),
-               'parceldetail' => $getParcel
+               'parceldetail' => $getParcel,
+               'now' => $now
            ];
         }else{
             $result = [
