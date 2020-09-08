@@ -1,12 +1,28 @@
 <template>
     <div id="our-work-desc" class="">
-        
         <div class="container">
-            <!-- <div class="col-md-7">
-                
-            </div> -->
-            <div class="col-md-12">
-                <slider :image-list="images"></slider> 
+            <div class="row">
+                <div class="col-md-6" style="color:white;" id="dont_fret">
+                    <h1>Don’t Fret, Over Freight!</h1>
+
+                    <ul type="circle">
+                        <li>
+                            Trust Our Dedicated Services & Expansive Network Encompassing Road, Rail, Air and Ocean!
+                        </li>
+                        <li>
+                            Express Logistics is built strongly with 97+ families and we work towards customer’s satisfaction.
+                        </li>
+                    </ul>
+
+                    <h2>
+                        <font-awesome-icon icon="phone-alt" pulse/> 
+                        +44 7520635476
+                    </h2>
+
+                </div>
+                <div class="col-md-6">
+                    <img src="/img/air_cargo2.jpg" alt=" " style="max-width:100%;">
+                </div>
             </div>
         </div>
 
@@ -19,7 +35,19 @@
         background-image: url('/img/shapes-dark.jpg');
         background-size: cover;
         background-position: center;
-        padding: 10vh 0;
+        padding: 5vh 0;
+    }
+    #dont_fret h1{
+        font-weight: bolder;
+        margin: 20px auto;
+    }
+    #dont_fret h2{
+        font-weight: bolder;
+        margin: 20px auto;
+    }
+    #dont_fret ul{
+        font-size: 1.2rem;
+        margin: 30px auto;
     }
 </style>
 

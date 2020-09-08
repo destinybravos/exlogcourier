@@ -273,6 +273,7 @@ export default {
                 *   So, what I did was just to get the object directly by adding the array index (0).
                 */
                 this.displayParcelDetails = response.data.parceldetail[0];
+
             }else{
                 alert('Invalid Tracking Number')
             }
@@ -280,9 +281,9 @@ export default {
         displayParcelTimeLine(response){
             if(response.data.count > 0){
                 this.displayParcelTimeline = response.data.parceldetail;
-                console.log(this.displayParcelTimeLine);
+                // console.log(this.displayParcelTimeLine);
             }else{
-                alert('Invalid Tracking Number')
+                alert('Invalid Tracking Number');
             }
         }
 

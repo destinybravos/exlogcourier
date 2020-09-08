@@ -104,6 +104,11 @@
         border-radius: 100%;
         display: flex;
         margin: 10px auto;
+        align-content: center;
+        align-items: center;
+    }
+    .card-image-container img{
+        min-height: 100%;
     }
     .card{
         border: none;
