@@ -181,7 +181,7 @@
                 <div class="col-md-12">
                     <div class="card-body">
                         <div class="progress mb-3">
-                            <div class="progress-bar" role="progressbar" style="width: " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" :style="{width: pacs+'%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <div class="alert alert-success" v-if="displayParcelDetails.status == 'active'">
                             <p><b>{{ displayParcelDetails.rname }}</b>, your parcel is safely intransit and its currently at {{ displayParcelDetails.clocation }}</p>
@@ -224,6 +224,8 @@ export default {
             // displayParcelDetails: []
             startDate:'',
             displayParcelTimeline:[],
+            pacs:'',
+            test:'50%'
         }
     },
     beforeCreate(){
@@ -233,17 +235,6 @@ export default {
         var _token = this.token;
         // Request for the parcel detail from the database using the trackid
         this.fetchParcelDetails();
-
-        // Tring date functions 
-        // var d = new Date('D, d M, Y.', this.displayParcelDetails.created_at);
-        // this.getdate = d.getDate('U');
-        // this.startDate = d.Date();
-        // console.log(this.d);
-        // const field = document.querySelector("input[name=parcelStart]").value;
-        // console.log(field);
-        // console.log(this.$refs.parcelStart.value);
-        // var testtt = displayParcelDetails.days;
-        // console.log(testtt);
 
     },
     methods:{
@@ -273,6 +264,18 @@ export default {
                 *   So, what I did was just to get the object directly by adding the array index (0).
                 */
                 this.displayParcelDetails = response.data.parceldetail[0];
+                let currentnow = response.data.now;
+                // console.log(this.displayParcelDetails.endint);
+                let total = this.displayParcelDetails.endint - this.displayParcelDetails.startint;
+                // console.log(total);
+                let now = currentnow - this.displayParcelDetails.startint;
+                // console.log(now +'this is it');
+                this.pacs = (now/total*100)-10;
+                // console.log(this.pacs);
+                if (this.pacs > 90){
+                    this.pacs = 90;
+                }
+                // console.log(this.pacs); 
             }else{
                 alert('Invalid Tracking Number')
             }

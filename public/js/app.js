@@ -16857,23 +16857,16 @@ var token = $('meta[name=csrf_token]').attr('content');
       trackid: '',
       // displayParcelDetails: []
       startDate: '',
-      displayParcelTimeline: []
+      displayParcelTimeline: [],
+      pacs: '',
+      test: '50%'
     };
   },
   beforeCreate: function beforeCreate() {},
   mounted: function mounted() {
     var _token = this.token; // Request for the parcel detail from the database using the trackid
 
-    this.fetchParcelDetails(); // Tring date functions 
-    // var d = new Date('D, d M, Y.', this.displayParcelDetails.created_at);
-    // this.getdate = d.getDate('U');
-    // this.startDate = d.Date();
-    // console.log(this.d);
-    // const field = document.querySelector("input[name=parcelStart]").value;
-    // console.log(field);
-    // console.log(this.$refs.parcelStart.value);
-    // var testtt = displayParcelDetails.days;
-    // console.log(testtt);
+    this.fetchParcelDetails();
   },
   methods: {
     fetchParcelDetails: function fetchParcelDetails() {
@@ -16900,6 +16893,18 @@ var token = $('meta[name=csrf_token]').attr('content');
         *   So, what I did was just to get the object directly by adding the array index (0).
         */
         this.displayParcelDetails = response.data.parceldetail[0];
+        var currentnow = response.data.now; // console.log(this.displayParcelDetails.endint);
+
+        var total = this.displayParcelDetails.endint - this.displayParcelDetails.startint; // console.log(total);
+
+        var now = currentnow - this.displayParcelDetails.startint; // console.log(now +'this is it');
+
+        this.pacs = now / total * 100 - 10; // console.log(this.pacs);
+
+        if (this.pacs > 90) {
+          this.pacs = 90;
+        } // console.log(this.pacs); 
+
       } else {
         alert('Invalid Tracking Number');
       }
@@ -62014,7 +62019,18 @@ var render = function() {
       _c("div", { staticClass: "row progressBarRow" }, [
         _c("div", { staticClass: "col-md-12" }, [
           _c("div", { staticClass: "card-body" }, [
-            _vm._m(8),
+            _c("div", { staticClass: "progress mb-3" }, [
+              _c("div", {
+                staticClass: "progress-bar",
+                style: { width: _vm.pacs + "%" },
+                attrs: {
+                  role: "progressbar",
+                  "aria-valuenow": "25",
+                  "aria-valuemin": "0",
+                  "aria-valuemax": "100"
+                }
+              })
+            ]),
             _vm._v(" "),
             _vm.displayParcelDetails.status == "active"
               ? _c("div", { staticClass: "alert alert-success" }, [
@@ -62127,23 +62143,6 @@ var staticRenderFns = [
       _c("th", [_vm._v("ACTIVITY")]),
       _vm._v(" "),
       _c("th", [_vm._v("LOCATION")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "progress mb-3" }, [
-      _c("div", {
-        staticClass: "progress-bar",
-        staticStyle: { width: "" },
-        attrs: {
-          role: "progressbar",
-          "aria-valuenow": "25",
-          "aria-valuemin": "0",
-          "aria-valuemax": "100"
-        }
-      })
     ])
   }
 ]
