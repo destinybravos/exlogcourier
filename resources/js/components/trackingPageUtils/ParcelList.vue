@@ -13,10 +13,10 @@
                         <td>
                             <font-awesome-icon icon="eye" size="1x" class="text-success mx-1" @click="showParcelDetailsModal(parcel)"/> 
                             <!-- <font-awesome-icon icon="edit" size="1x" class="text-primary mx-2"/>  -->
-                            <font-awesome-icon icon="trash" size="1x" class="text-danger mx-1" @click="deleteParcel(parcel)"/> 
                             <font-awesome-icon icon="edit" size="1x" class="text-primary mx-1" @click="editParcel()"/>
                             <span class="btn btn-danger" v-if="parcel.status == 'active'" @click="stopParcel(parcel)"> Pause</span>
                             <span class="btn btn-success" v-else @click="stopParcel(parcel)"> Continue</span>
+                            <font-awesome-icon icon="trash" size="1x" class="text-danger mx-1" @click="deleteParcel(parcel)"/> 
                         </td>
                         <td @click="showParcelDetailsModal(parcel)">{{ parcel.trackid }}</td>
                         <td @click="showParcelDetailsModal(parcel)">{{ parcel.rname }}</td>

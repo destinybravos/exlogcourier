@@ -15235,6 +15235,63 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
  // import OurWorkDecription from '../components/indexPageUtils/OurWorkDecription.vue';
 
@@ -17831,6 +17888,7 @@ var token = $('meta[name=csrf_token]').attr('content');
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _api_Api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../api/Api */ "./resources/js/api/Api.js");
 /* harmony import */ var _trackingPageUtils_ParcelDetails_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../trackingPageUtils/ParcelDetails.vue */ "./resources/js/components/trackingPageUtils/ParcelDetails.vue");
+//
 //
 //
 //
@@ -22849,7 +22907,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.mainContainer[data-v-5049bb1b]{\n    margin-top: 100px;\n    margin-bottom: 50px;\n}\n.h3Text[data-v-5049bb1b]{\n    font-size: 1.4em;\n    font-family: \"Trebuchet MS\", Helvetica, sans-serif;\n}\n.h2Text[data-v-5049bb1b]{\n    font-weight: bolder;\n    font-family: \"Arial Black\", Gadget, sans-serif;\n    font-size: 3.2em;\n}\n.h5Text[data-v-5049bb1b]{\n    /* font-weight: bold; */\n    font-size: 1.2em;\n    text-transform: uppercase;\n    color: #3d3072;\n    font-family: \"Lucida Console\", Monaco, monospace;\n    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */\n}\n.pText[data-v-5049bb1b]{\n    line-clamp: 0;\n    font-family: \"Trebuchet MS\", Helvetica, sans-serif;\n    font-size: 1.3em;\n}\n.cardImg[data-v-5049bb1b]{\n     box-shadow: 0 0 60px #0d04442d;\n}\n.iconImg[data-v-5049bb1b]{\n    width: 70px;\n    height: 60px;\n}\n#abtContainerFluid[data-v-5049bb1b]{\n    background-color: #f8ebe2;\n    padding: 40px auto;\n}\n.abtServiceRow[data-v-5049bb1b]{\n    padding: 40px 0;\n}\n.h1Text[data-v-5049bb1b]{\n    font-weight: bolder;\n    color: #3d3072;\n}\n@media screen and (max-width: 520px){\n.spanText[data-v-5049bb1b]{\n        display:block;\n}\n.mainContainer[data-v-5049bb1b]{\n        margin-top: 70px;\n}\n.h2Text[data-v-5049bb1b]{\n    font-size: 2.0em;\n}\n}\n", ""]);
+exports.push([module.i, "\n.mainContainer[data-v-5049bb1b]{\n    margin-top: 100px;\n    margin-bottom: 50px;\n}\n.h3Text[data-v-5049bb1b]{\n    font-size: 1.4em;\n    font-family: \"Trebuchet MS\", Helvetica, sans-serif;\n}\n.h2Text[data-v-5049bb1b]{\n    font-weight: bolder;\n    font-family: \"Arial Black\", Gadget, sans-serif;\n    font-size: 3.2em;\n}\n.h5Text[data-v-5049bb1b]{\n    /* font-weight: bold; */\n    font-size: 1.2em;\n    text-transform: uppercase;\n    color: #3d3072;\n    font-family: \"Lucida Console\", Monaco, monospace;\n    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */\n}\n.pText[data-v-5049bb1b]{\n    line-clamp: 0;\n    font-family: \"Trebuchet MS\", Helvetica, sans-serif;\n    font-size: 1.2em;\n}\n.cardImg[data-v-5049bb1b]{\n     box-shadow: 0 0 60px #0d04442d;\n}\n.iconImg[data-v-5049bb1b]{\n    width: 70px;\n    height: 60px;\n}\n#abtContainerFluid[data-v-5049bb1b]{\n    background-color: #fa992b;\n    padding: 40px auto;\n}\n.abtServiceRow[data-v-5049bb1b]{\n    padding: 40px 0;\n}\n.h1Text[data-v-5049bb1b]{\n    font-weight: bolder;\n    color: #3d3072;\n}\nh5 span[data-v-5049bb1b]{\n    font-weight: bold;\n}\n#our-work-desc[data-v-5049bb1b]{\n    min-height: 300px;\n    background-image: url('/img/shapes-dark.jpg');\n    background-size: cover;\n    background-position: center;\n    padding: 5vh 0;\n}\n#our-work-desc h1[data-v-5049bb1b]{\n    font-weight: bolder;\n    margin-top: 5px;\n}\n.hdCaption[data-v-5049bb1b]{\n    background-color: #fa992b;\n    padding: 7px 10px;\n    color: #fff;\n}\n.lastDivP[data-v-5049bb1b]{\n    font-family: \"Trebuchet MS\", Helvetica, sans-serif;\n}\n@media screen and (max-width: 520px){\n.spanText[data-v-5049bb1b]{\n        display:block;\n}\n.mainContainer[data-v-5049bb1b]{\n        margin-top: 70px;\n}\n.h2Text[data-v-5049bb1b]{\n    font-size: 2.0em;\n}\n}\n", ""]);
 
 // exports
 
@@ -23172,7 +23230,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.themeBtn[data-v-506a7d79]{\n    background-image: linear-gradient(to right, #3d3072, #ffd09c);\n    padding: 15px 35px;\n    color: #fff;\n    border: none;\n    text-align: center !important;\n    /* width: 20%; */\n}\n.trackH5[data-v-506a7d79]{\n    text-align: center;\n}\n.input[data-v-506a7d79]{\n    padding: 1.6rem;\n}\n.red[data-v-506a7d79]{\n    border: 2px solid red;\n}\n.green[data-v-506a7d79]{\n    border: 2px solid green;\n}\n@media screen and (max-width: 767px) {\n#banText h2[data-v-506a7d79]{\n        font-size: 1.2rem;\n}\n#banText[data-v-506a7d79]{\n        margin:3vh auto;\n}\n.trackH5[data-v-506a7d79]{\n        font-size: 1.1em;\n}\n}\n", ""]);
+exports.push([module.i, "\n.themeBtn[data-v-506a7d79]{\n    background-image: linear-gradient(to right, #3d3072, #ffd09c);\n    padding: 15px 35px;\n    color: #fff;\n    border: none;\n    text-align: center !important;\n    /* width: 20%; */\n}\n.trackH5[data-v-506a7d79]{\n    text-align: center;\n    font-family: \"Trebuchet MS\", Helvetica, sans-serif;\n}\n.input[data-v-506a7d79]{\n    padding: 1.6rem;\n}\n.red[data-v-506a7d79]{\n    border: 2px solid red;\n}\n.green[data-v-506a7d79]{\n    border: 2px solid green;\n}\n@media screen and (max-width: 767px) {\n#banText h2[data-v-506a7d79]{\n        font-size: 1.2rem;\n}\n#banText[data-v-506a7d79]{\n        margin:3vh auto;\n}\n.trackH5[data-v-506a7d79]{\n        font-size: 1.1em;\n}\n}\n", ""]);
 
 // exports
 
@@ -59920,9 +59978,11 @@ var render = function() {
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
       _c("IndexOfferCards"),
       _vm._v(" "),
-      _vm._m(1)
+      _vm._m(2)
     ],
     1
   )
@@ -59991,26 +60051,86 @@ var staticRenderFns = [
                   ])
                 ])
               ])
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "mt-3 pText" }, [
-              _vm._v(
-                "\n                        Backed by our strong group network and experience, Express Logistics Courier Services offer a full range of cross-border shipping services covering more than 220 countries across the globe.\n                    "
-              )
             ])
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-5" }, [
+        _c("div", { staticClass: "col-md-5 mt-5" }, [
           _c("div", { staticClass: "card cardImg" }, [
             _c("img", {
               staticClass: "  card-img-top",
-              attrs: { src: "/img/bg3.jpg" }
+              attrs: { src: "/img/truck_on_go.jpg" }
             })
           ])
         ])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "container-fluid", attrs: { id: "our-work-desc" } },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-6 mt-3" }, [
+              _c("img", {
+                staticStyle: { "max-width": "100%" },
+                attrs: { src: "/img/warehouse_trucks.png", alt: " " }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6 mt-3" }, [
+              _c("div", { staticClass: "hdCaption" }, [
+                _c("h1", [_vm._v("Our Mission")])
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-3 pText text-light" }, [
+                _vm._v(
+                  "\n                        As a leading provider of air transportation, Express Logistics and Courier is here to provide you a fast delivery service down to your door steps.\n                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-3 pText text-light" }, [
+                _vm._v(
+                  "\n                        Backed by our strong group network and experience, Express Logistics Courier Services offer a full range of cross-border shipping services covering more than 220 countries across the globe.\n                    "
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row mt-5" }, [
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("div", { staticClass: "hdCaption" }, [
+                _c("h1", {}, [_vm._v("How Do We Work?")])
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-3 pText text-light" }, [
+                _vm._v(
+                  "\n                        From Packages to Pallets, whether you need a document rushed across town or an urgent part delivered to your plant.\n                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-3 pText text-light" }, [
+                _vm._v(
+                  "\n                        Abex Courier Service offers a wide range of delivery options that will meet any budget. No distance is too far and no job is too big.\n                    "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("img", {
+                staticStyle: { "max-width": "100%" },
+                attrs: { src: "/img/bg3.jpg", alt: " " }
+              })
+            ])
+          ])
+        ])
+      ]
+    )
   },
   function() {
     var _vm = this
@@ -60036,7 +60156,7 @@ var staticRenderFns = [
                 )
               ]),
               _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
+              _c("p", { staticClass: "mt-3 lastDivP" }, [
                 _vm._v(
                   "\n                        From Packages to Pallets, whether you need a document rushed across town or an urgent part delivered to your plant.\n                    "
                 )
@@ -63653,16 +63773,6 @@ var render = function() {
                         }),
                         _vm._v(" "),
                         _c("font-awesome-icon", {
-                          staticClass: "text-danger mx-1",
-                          attrs: { icon: "trash", size: "1x" },
-                          on: {
-                            click: function($event) {
-                              return _vm.deleteParcel(parcel)
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("font-awesome-icon", {
                           staticClass: "text-primary mx-1",
                           attrs: { icon: "edit", size: "1x" },
                           on: {
@@ -63696,7 +63806,17 @@ var render = function() {
                                 }
                               },
                               [_vm._v(" Continue")]
-                            )
+                            ),
+                        _vm._v(" "),
+                        _c("font-awesome-icon", {
+                          staticClass: "text-danger mx-1",
+                          attrs: { icon: "trash", size: "1x" },
+                          on: {
+                            click: function($event) {
+                              return _vm.deleteParcel(parcel)
+                            }
+                          }
+                        })
                       ],
                       1
                     ),
@@ -64277,7 +64397,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row justify-content-center mt-5" }, [
-      _c("div", { staticClass: "col-md-6" }, [
+      _c("div", { staticClass: "col-md-6 mb-3" }, [
         _c("h5", { staticClass: "trackH5" }, [
           _vm._v(
             "\n                    Here’s the fastest way to check the status of your shipment. No need to call Customer Service – our online results give you real-time, detailed progress of your shipment is shown through Express Logistics Service.\n                "

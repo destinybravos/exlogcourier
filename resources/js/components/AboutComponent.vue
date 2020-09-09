@@ -33,14 +33,49 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="mt-3 pText">
+                    </div>
+                </div>
+                <div class="col-md-5 mt-5">
+                    <div class="card cardImg">
+                        <img src="/img/truck_on_go.jpg" class="  card-img-top">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" id="our-work-desc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mt-3">
+                        <img src="/img/warehouse_trucks.png" alt=" " style="max-width:100%;">
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <div class="hdCaption">
+                            <h1>Our Mission</h1>
+                        </div>
+                        <p class="mt-3 pText text-light">
+                            As a leading provider of air transportation, Express Logistics and Courier is here to provide you a fast delivery service down to your door steps.
+                        </p>
+                        <p class="mt-3 pText text-light">
                             Backed by our strong group network and experience, Express Logistics Courier Services offer a full range of cross-border shipping services covering more than 220 countries across the globe.
                         </p>
                     </div>
                 </div>
-                <div class="col-md-5">
-                    <div class="card cardImg">
-                        <img src="/img/bg3.jpg" class="  card-img-top">
+
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <div class="hdCaption">
+                            <h1 class="">How Do We Work?</h1>
+                        </div>
+                        <p class="mt-3 pText text-light">
+                            From Packages to Pallets, whether you need a document rushed across town or an urgent part delivered to your plant.
+                        </p>
+                        <p class="mt-3 pText text-light">
+                            Abex Courier Service offers a wide range of delivery options that will meet any budget. No distance is too far and no job is too big.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="/img/bg3.jpg" alt=" " style="max-width:100%;">
                     </div>
                 </div>
             </div>
@@ -61,7 +96,7 @@
                             Specialized heavy-Duty Vehicles
                             Shipping Services & Logistics Management
                         </h1>
-                        <p class="mt-3">
+                        <p class="mt-3 lastDivP">
                             From Packages to Pallets, whether you need a document rushed across town or an urgent part delivered to your plant.
                         </p>
                         <div>
@@ -104,7 +139,7 @@
     .pText{
         line-clamp: 0;
         font-family: "Trebuchet MS", Helvetica, sans-serif;
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
     .cardImg{
          box-shadow: 0 0 60px #0d04442d;
@@ -114,7 +149,7 @@
         height: 60px;
     }
     #abtContainerFluid{
-        background-color: #f8ebe2;
+        background-color: #fa992b;
         padding: 40px auto;
     }
     .abtServiceRow{
@@ -123,6 +158,28 @@
     .h1Text{
         font-weight: bolder;
         color: #3d3072;
+    }
+    h5 span{
+        font-weight: bold;
+    }
+    #our-work-desc{
+        min-height: 300px;
+        background-image: url('/img/shapes-dark.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 5vh 0;
+    }
+    #our-work-desc h1{
+        font-weight: bolder;
+        margin-top: 5px;
+    }
+    .hdCaption{
+        background-color: #fa992b;
+        padding: 7px 10px;
+        color: #fff;
+    }
+    .lastDivP{
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
     }
 
 

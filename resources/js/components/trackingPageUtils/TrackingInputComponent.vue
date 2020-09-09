@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="row justify-content-center mt-5">
-                <div class="col-md-6">
+                <div class="col-md-6 mb-3">
                     <h5 class="trackH5">
                         Here’s the fastest way to check the status of your shipment. No need to call Customer Service – our online results give you real-time, detailed progress of your shipment is shown through Express Logistics Service.
                     </h5>
@@ -48,6 +48,7 @@
     }
     .trackH5{
         text-align: center;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
     }
     .input{
         padding: 1.6rem;
