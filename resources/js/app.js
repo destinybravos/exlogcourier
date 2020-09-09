@@ -13,10 +13,10 @@ window.Vue = require('vue');
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFontAwesome, faFacebook, faTwitter, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import { faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, faShippingFast,
-    faClipboardList, faCircleNotch, faSave, faEdit, faTrash, faTrashAlt, faEye, faPhone, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+    faClipboardList, faPaperPlane, faCircleNotch, faSave, faEdit, faTrash, faTrashAlt, faEye, faPhone, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 library.add(faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, faShippingFast, faPhone, faPhoneAlt,
-    faClipboardList, faCircleNotch, faSave, faEdit, faTrash, faTrashAlt, faEye, faFontAwesome, faFacebook, faTwitter, faTwitterSquare);
+    faClipboardList, faPaperPlane, faCircleNotch, faSave, faEdit, faTrash, faTrashAlt, faEye, faFontAwesome, faFacebook, faTwitter, faTwitterSquare);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 /**
