@@ -9,24 +9,24 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-md-6">
                     <div class="mb-4">
-                        <h6  style="text-align:center">ENTER YOUR 10 CHARACTER TRACKING NUMBER</h6>
+                        <h6  style="text-align:center">ENTER YOUR 15 CHARACTER TRACKING NUMBER</h6>
                     </div>
                     <form method="post" @submit.prevent="checktrack">
                         <div class="form-group">
-                            <input class="form-control input" type="text" v-model="trackid" :class="trackid.length < 10 ? 'red':'green'">
-                            <div class="alert alert-primary mt-1" v-if="(trackid.length < 10)">
+                            <input class="form-control input" type="text" v-model="trackid" :class="trackid.length < 15 ? 'red':'green'">
+                            <div class="alert alert-primary mt-1" v-if="(trackid.length < 15)">
                                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                <span>Please enter any 10 character to enable you proceed</span>
+                                <span>Please enter your 15 character tracking number to proceed</span>
                             </div>
                         </div>
                         <div class="" style="text-align:center">
-                           <button type="button" class="themeBtn" :disabled="trackid.length < 10" @click.prevent="checktrack">TRACK</button>
+                           <button type="button" class="themeBtn" :disabled="trackid.length < 15" @click.prevent="checktrack">TRACK</button>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="row justify-content-center mt-5">
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 mb-5">
                     <h5 class="trackH5">
                         Here’s the fastest way to check the status of your shipment. No need to call Customer Service – our online results give you real-time, detailed progress of your shipment is shown through Express Logistics Service.
                     </h5>
@@ -38,13 +38,26 @@
 </template>
 
 <style scoped>
-    .themeBtn{
+    /* .themeBtn{
         background-image: linear-gradient(to right, #3d3072, #ffd09c);
         padding: 15px 35px;
         color: #fff;
         border: none;
         text-align: center !important;
-        /* width: 20%; */
+        
+    } */
+    .themeBtn{
+        border: 1pt solid white;
+        padding: 15px 35px;
+        background-color: #ff7900;
+        color: white !important;
+        font-weight: bold;
+    }
+    .themeBtn:hover{
+        border: 1pt solid #ff7900;
+        color: #ff7900 !important;
+        background-color: white;
+        box-shadow: 0 0 30px #261c6a54;
     }
     .trackH5{
         text-align: center;
@@ -92,7 +105,7 @@ export default {
     methods:{
         checktrack: function(){
             // Re-checking if the lenght is equal to or greater than 10
-            if(this.trackid.length >= 10){
+            if(this.trackid.length >= 15){
                 // will will have to check if the parcel number exist or not before proceeding
                 this.checkParcelExists(this.trackid)
             }else{
