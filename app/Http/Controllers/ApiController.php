@@ -348,4 +348,10 @@ class ApiController extends Controller
             ]);
         }
     }
+
+    public function view_requests(Request $request)
+    {
+        $all_request = quotes::orderBy('created_at', 'DESC')->get();
+        return json_encode($all_request);
+    }
 }

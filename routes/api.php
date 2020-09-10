@@ -36,5 +36,6 @@ Route::group(['prefix' => 'notification'], function () {
  });
  Route::group(['prefix' => 'requests'], function () {
     Route::post('/quote', 'ApiController@request_quote');
+    Route::post('/fetch_all', 'ApiController@view_requests');
 });
 

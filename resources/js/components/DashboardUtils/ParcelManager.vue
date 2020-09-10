@@ -1,9 +1,12 @@
 <template>
     <div id="parcel_manager">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 bg-success">
-                    <h2>Parcel Page</h2>
+        <div class="container top_page_hd">
+            <div class="row pt-3 pb-2">
+                <div class="col-md-12">
+                    <h2>
+                        <font-awesome-icon icon="truck" />
+                        Parcel Manager
+                    </h2>
                 </div>
             </div>
         </div>
@@ -37,6 +40,15 @@
 <style scoped>
     label{
         font-weight: bold;
+    }
+    .top_page_hd{
+        background-color: #ff8929;
+    }
+    .top_page_hd h2{
+        font-weight: bold;
+        font-size: 1.3rem;
+        color: white;
+        text-shadow: 0 0 12px #e96901;
     }
 </style>
 

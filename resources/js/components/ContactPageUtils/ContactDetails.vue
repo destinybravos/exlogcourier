@@ -4,39 +4,53 @@
         <div class="container" style="max-height:100%;">
                 <div class="row">
 
-                        <div class="col md-6">
-                            <div class="ConDet">EXPRESS LOGISTIC </div>
-                            <div class="ConDet" >FEEL FREE TO CONTACT US VIA PHONE OR EMAIL ANYTIME <br>
-                                IF YOU HAVE ANY QUESTIONS OR NEED HELP!
+                        <div class="col-md-6">
+                            <div class="ConDet">
+                                <h3 style="color:#261c6a;">
+                                    <strong>Express Logistics and Courier Services</strong>
+                                </h3>
+                            </div>
+                            <div class="ConDet" >
+                                Feel free to contact us via phone or email at anytime you need help or have any question!
                             </div>
                             <div class="ConDet">
-                                <font-awesome-icon icon="map-marker" /> support@exlogcourier.com
-                                We usually reply within 24 hours <br>
-                                +234 - 09087366474663664645
+                                <p>
+                                    <strong><font-awesome-icon icon="envelope" /> Mail Us :</strong>
+                                    support@exlogcourier.com <br>
+                                    We usually reply within 24 hours 
+                                </p>
+                                <p>
+                                    <strong><font-awesome-icon icon="phone-alt" /> Call Us :</strong>
+                                    +44 7520635476
+                                </p>
                             </div>
-                            <div class="ConDet">VISIT HEAD OFFICE</div>
                             <div class="ConDet">
-                                <font-awesome-icon icon="map-marker" />
-                                <font-awesome-icon icon="desktop" />expresslogistics.com
+                                <h4>
+                                    <strong>
+                                        <font-awesome-icon icon="map-marker" /> CONTACT ADDRESS
+                                    </strong>
+                                </h4>
+                                <p>
+                                    Yesikent Mah Allyey 1905, <br> Sok - No 123 Esenyurt Instanbul, <br> Turkey.
+                                </p>
                             </div>
                             <div class="ConDet">
                                 GET CONNECTED
                                 <div class="container">
                                     <!-- You dont use font awesome likr this here eeee yaaaa  not working there -->
-                                    <div><font-awesome-icon icon="envelope" /></div>
-                                    <div><font-awesome-icon icon="[fab facebook]" /></div>
-                                    <div><font-awesome-icon icon="[fab, google]" /></div>
-                                    <div><font-awesome-icon icon="[fab, linkedin]" /></div>
-                                    <div><font-awesome-icon icon="[fab, vimeo]" /></div>
-
+                                    <font-awesome-icon icon="envelope" />
+                                    <font-awesome-icon :icon="['fab', 'facebook']" />
+                                    <font-awesome-icon :icon="['fab', 'linkedin']" />
+                                    <font-awesome-icon :icon="['fab', 'twitter-square']" />
+                                    <font-awesome-icon :icon="['fab', 'google']" />
+                                    <font-awesome-icon :icon="['fab', 'vimeo']" />
                                 </div>
                             </div>
 
                         </div>
 
-                        <div class="col md-6" id="contImg">
-
-
+                        <div class="col-md-6" id="conImg">
+                            <img src="/img/bg2.jpg" alt=" " style="max-width:100%;">
                         </div>
                 </div>
 
@@ -50,19 +64,11 @@
         min-height: 600px;
         background-color: white;
     }
-
-    #contImg{
-    background-image: url('/img/bg2.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        min-height: 600px;
-        width: 100%;
-    }
-
     .ConDet{
-        margin: 50px auto;
+        margin: 40px auto 30px;
+    }
+    #conImg{
+        padding: 30px 0 20px;
     }
 </style>
 
