@@ -134,7 +134,9 @@ export default {
         },
         handleSaveParcel(response){
             if(response.data.status == 'success'){
-                alert(response.data.message)
+                window.location.href = 'home';
+                alert(response.data.message);
+                
             }else{
                 alert(response.data.message)
             }

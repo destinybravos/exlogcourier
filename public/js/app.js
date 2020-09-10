@@ -17031,6 +17031,7 @@ var token = $('meta[name=csrf-token]').attr('content');
     },
     handleSaveParcel: function handleSaveParcel(response) {
       if (response.data.status == 'success') {
+        window.location.href = 'home';
         alert(response.data.message);
       } else {
         alert(response.data.message);
@@ -22788,7 +22789,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.mainContainer[data-v-5049bb1b]{\n    margin-top: 100px;\n    margin-bottom: 50px;\n}\n.h3Text[data-v-5049bb1b]{\n    font-size: 1.4em;\n    font-family: \"Trebuchet MS\", Helvetica, sans-serif;\n}\n.h2Text[data-v-5049bb1b]{\n    font-weight: bolder;\n    font-family: \"Arial Black\", Gadget, sans-serif;\n    font-size: 3.2em;\n}\n.h5Text[data-v-5049bb1b]{\n    /* font-weight: bold; */\n    font-size: 1.2em;\n    text-transform: uppercase;\n    color: #3d3072;\n    font-family: \"Lucida Console\", Monaco, monospace;\n    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */\n}\n.pText[data-v-5049bb1b]{\n    line-clamp: 0;\n    font-family: \"Trebuchet MS\", Helvetica, sans-serif;\n    font-size: 1.2em;\n}\n.cardImg[data-v-5049bb1b]{\n     box-shadow: 0 0 60px #0d04442d;\n}\n.iconImg[data-v-5049bb1b]{\n    width: 70px;\n    height: 60px;\n}\n#abtContainerFluid[data-v-5049bb1b]{\n    background-color: #fa992b;\n    padding: 40px auto;\n}\n.abtServiceRow[data-v-5049bb1b]{\n    padding: 40px 0;\n}\n.h1Text[data-v-5049bb1b]{\n    font-weight: bolder;\n    color: #3d3072;\n}\nh5 span[data-v-5049bb1b]{\n    font-weight: bold;\n}\n#our-work-desc[data-v-5049bb1b]{\n    min-height: 300px;\n    background-image: url('/img/shapes-dark.jpg');\n    background-size: cover;\n    background-position: center;\n    padding: 5vh 0;\n}\n#our-work-desc h1[data-v-5049bb1b]{\n    font-weight: bolder;\n    margin-top: 5px;\n}\n.hdCaption[data-v-5049bb1b]{\n    background-color: #fa992b;\n    padding: 7px 10px;\n    color: #fff;\n}\n.lastDivP[data-v-5049bb1b]{\n    font-family: \"Trebuchet MS\", Helvetica, sans-serif;\n}\n@media screen and (max-width: 520px){\n.spanText[data-v-5049bb1b]{\n        display:block;\n}\n.mainContainer[data-v-5049bb1b]{\n        margin-top: 70px;\n}\n.h2Text[data-v-5049bb1b]{\n    font-size: 2.0em;\n}\n}\n", ""]);
+exports.push([module.i, "\n.mainContainer[data-v-5049bb1b]{\n    margin-top: 100px;\n    margin-bottom: 50px;\n}\n.h3Text[data-v-5049bb1b]{\n    font-size: 1.4em;\n    font-family: \"Trebuchet MS\", Helvetica, sans-serif;\n}\n.h2Text[data-v-5049bb1b]{\n    font-weight: bolder;\n    font-family: \"Arial Black\", Gadget, sans-serif;\n    font-size: 3.2em;\n}\n.h5Text[data-v-5049bb1b]{\n    /* font-weight: bold; */\n    font-size: 1.2em;\n    text-transform: uppercase;\n    color: #3d3072;\n    /* font-family: \"Lucida Console\", Monaco, monospace; */\n    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */\n}\n.pText[data-v-5049bb1b]{\n    line-clamp: 0;\n    /* font-family: \"Trebuchet MS\", Helvetica, sans-serif; */\n    font-size: 1.2em;\n}\n.cardImg[data-v-5049bb1b]{\n     box-shadow: 0 0 60px #0d04442d;\n}\n.iconImg[data-v-5049bb1b]{\n    width: 70px;\n    height: 60px;\n}\n#abtContainerFluid[data-v-5049bb1b]{\n    background-color: #f7d1a6;\n    padding: 40px auto;\n}\n.abtServiceRow[data-v-5049bb1b]{\n    padding: 40px 0;\n}\n.h1Text[data-v-5049bb1b]{\n    font-weight: bolder;\n    color: #3d3072;\n}\nh5 span[data-v-5049bb1b]{\n    font-weight: bold;\n}\n#our-work-desc[data-v-5049bb1b]{\n    min-height: 300px;\n    background-image: url('/img/shapes-dark.jpg');\n    background-size: cover;\n    background-position: center;\n    padding: 5vh 0;\n}\n#our-work-desc h1[data-v-5049bb1b]{\n    font-weight: bolder;\n    margin-top: 5px;\n}\n.hdCaption[data-v-5049bb1b]{\n    background-color: #fa992b;\n    padding: 7px 10px;\n    color: #fff;\n}\n.lastDivP[data-v-5049bb1b]{\n    /* font-family: \"Trebuchet MS\", Helvetica, sans-serif; */\n}\n@media screen and (max-width: 520px){\n.spanText[data-v-5049bb1b]{\n        display:block;\n}\n.mainContainer[data-v-5049bb1b]{\n        margin-top: 70px;\n}\n.h2Text[data-v-5049bb1b]{\n    font-size: 2.0em;\n}\n}\n", ""]);
 
 // exports
 
@@ -59997,7 +59998,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("p", { staticClass: "mt-3 pText text-light" }, [
                 _vm._v(
-                  "\n                        Abex Courier Service offers a wide range of delivery options that will meet any budget. No distance is too far and no job is too big.\n                    "
+                  "\n                        Express Logistics Courier Services offers a wide range of delivery options that will meet any budget. No distance is too far and no job is too big.\n                    "
                 )
               ])
             ]),

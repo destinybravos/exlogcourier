@@ -71,7 +71,7 @@
                             From Packages to Pallets, whether you need a document rushed across town or an urgent part delivered to your plant.
                         </p>
                         <p class="mt-3 pText text-light">
-                            Abex Courier Service offers a wide range of delivery options that will meet any budget. No distance is too far and no job is too big.
+                            Express Logistics Courier Services offers a wide range of delivery options that will meet any budget. No distance is too far and no job is too big.
                         </p>
                     </div>
                     <div class="col-md-6">
@@ -133,12 +133,12 @@
         font-size: 1.2em;
         text-transform: uppercase;
         color: #3d3072;
-        font-family: "Lucida Console", Monaco, monospace;
+        /* font-family: "Lucida Console", Monaco, monospace; */
         /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     }
     .pText{
         line-clamp: 0;
-        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        /* font-family: "Trebuchet MS", Helvetica, sans-serif; */
         font-size: 1.2em;
     }
     .cardImg{
@@ -149,7 +149,7 @@
         height: 60px;
     }
     #abtContainerFluid{
-        background-color: #fa992b;
+        background-color: #f7d1a6;
         padding: 40px auto;
     }
     .abtServiceRow{
@@ -179,7 +179,7 @@
         color: #fff;
     }
     .lastDivP{
-        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        /* font-family: "Trebuchet MS", Helvetica, sans-serif; */
     }
 
 
