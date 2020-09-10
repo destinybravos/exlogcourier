@@ -1,10 +1,10 @@
 <template>
     <div id="index-offer-card" class="pt-3 pb-5">
-        <section>
-            <h2 class="mt-5">  
+        <section >
+            <h2 class="mt-5" data-aos="fade-up">  
                 Your Consignment => Our Commitment!
             </h2>
-            <p class="my-3">
+            <p class="my-3" data-aos="fade-up">
                 For us moving your consignment from one destination to the other is equivalent to ensuring your reputation, travels far and wide, unblemished.
             </p>
         </section>
@@ -12,13 +12,7 @@
         <!-- Cards Structure -->
         <div class="container">
             <div class="row">
-<<<<<<< HEAD
-                <div class="col-lg-4 card-container" data-aos="fade-u">
-=======
-                <div class="col-lg-4 card-container" data-aos="fade-right"
-                                                data-aos-offset="300"
-                                                data-aos-easing="ease-in-sine">
->>>>>>> 7915c2ad416ed080bd2b69c5732cf15209905e67
+                <div class="col-lg-4 card-container" data-aos="fade-up">
                     <div class="card">
                         <div class="card-body">
                             <div class="card-image-container">
@@ -39,7 +33,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 card-container" data-aos="fade-down"
+                <div class="col-lg-4 card-container" data-aos="fade-up"
                                                     data-aos-easing="linear"
                                                     data-aos-duration="500">
                     <div class="card">
@@ -62,7 +56,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 card-container" data-aos="fade-left"
+                <div class="col-lg-4 card-container" data-aos="fade-up"
                                                 data-aos-offset="300"
                                                 data-aos-easing="ease-in-sine">
                     <div class="card">

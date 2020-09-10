@@ -1,10 +1,10 @@
 <template>
     <div id="services_page">
         <section>
-            <h2 class="mt-5">  
+            <h2 class="mt-5" data-aos="fade-up">  
                 EXPRESS LOGISTICS AND COURIER SERVICES
             </h2>
-            <p class="my-3">
+            <p class="my-3" data-aos="fade-up">
                 For us moving your consignment from one destination to the other is equivalent to ensuring your 
                 reputation, travels far and wide, unblemished.
             </p>
@@ -12,10 +12,10 @@
 
         <div class="container">
             <div class="row my-5">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-up-right">
                     <img src="/img/air_cargo.jpg" alt=" " style="max-width:100%;">
                 </div>
-                <div class="col-md-6 service_details">
+                <div class="col-md-6 service_details" data-aos="fade-up-left">
                     <h2>Air Freight</h2>
                     <p>
                         Express logistics and courier service provides, top notch, hassle free and timely movement for all your consignments 
@@ -50,10 +50,10 @@
             </div>
 
             <div class="row my-5 odd">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-up-right">
                     <img src="/img/ocean_shipping.jpg" alt=" " style="max-width:100%;">
                 </div>
-                <div class="col-md-6 service_details">
+                <div class="col-md-6 service_details" data-aos="fade-up-left">
                     <h2>Ocean Freight</h2>
                     <p>
                         We also provides a holistic solution to transport your bulky and gigantic cargo through water ways, 
@@ -81,10 +81,10 @@
             </div>
             
             <div class="row my-5">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-up-right">
                     <img src="/img/logistic_vehicles.jpg" alt=" " style="max-width:100%; padding:20px 0">
                 </div>
-                <div class="col-md-6 service_details">
+                <div class="col-md-6 service_details" data-aos="fade-up-left">
                     <h2>Road and Rail Services</h2>
                     <p>
                         Need a fleet of trucks or trian to transport containers from your manufacturing unit to the dock or airport? 
@@ -102,16 +102,16 @@
             </div>
 
             <div class="row my-5 odd">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-up-right">
                     <img src="/img/brokerage.jpg" alt=" " style="max-width:100%;">
                 </div>
-                <div class="col-md-6 service_details">
+                <div class="col-md-6 service_details" data-aos="fade-up-left">
                     <h2>Customs Brokerage</h2>
                     <p>
                         We also have recruited a lot of personels who are the sharpest and the smartest minds to 
                         work alongside in our team. Some of these professionals are individuals with years of 
                         experience in the export/import business, understanding the in and out, no matter what the 
-                        situation. There sole aim is to ensure that our clients are not hassled, and consignments 
+                        situation. Their sole aim is to ensure that our clients are not hassled, and consignments 
                         set for arrival or departure move as per schedules.
                     </p>
                     <h4>They are resposible for;</h4>

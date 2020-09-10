@@ -3,7 +3,7 @@
         <div class="container">
             <!--  -->
             <div class="row my-5">
-                <div class="col-md-12" id="containerT">
+                <div class="col-md-12" id="containerT" data-aos="fade-up">
                     <div class="container" id="trackCon">
                         <div class="row my-2">
                             <div class="col-md-4" id="trackText">
@@ -25,7 +25,7 @@
             <!--  -->
 
             <div class="row my-2" >
-                    <div class="col-md-5">
+                    <div class="col-md-5"  data-aos="fade-up">
                         <!-- <h5 id="contAside"><font-awesome-icon icon="shipping-fast"  /> EXPRESS LOGISTICS </h5> -->
                         <img src="/img/exlog_logo.jpg" alt=" " style="max-width:100%; max-height:70px;" class="mb-4">
                         <p>As a leading provider of air transportation, Express Logistics and Courier is your #1
@@ -34,7 +34,7 @@
                         we have the resources and expertise to facilitate your international shipment and make the delivery as simple as possbile.</p>
 
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2"  data-aos="fade-up">
                         <h5 style="font-weight:bold;">SERVICES</h5>
                         <p>
                             Sea Freight <br>
@@ -47,11 +47,11 @@
                         </p>
 
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2"  data-aos="fade-up">
                         <h5 style="font-weight:bolder;">DESTINATION</h5>
                         <p>
-                            Lagos, Nigeria <br>
-                            Accra, Ghana <br>
+                            China, South Korea<br>
+                            Singapore, Switzerland  <br>
                             Canada, United States <br>
                             Paris, France <br>
                             Osio, Norway <br>
@@ -61,15 +61,14 @@
                         </p>
 
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3"  data-aos="fade-up">
                         <h5 style="font-weight:bolder;">CONTACT DETAILS</h5>
                         <p>
-                            Yesikent Mah  Allyey 1905 Sok - No 123 Esenyurt Instanbul, Turkey <br>
+                            Deanshanger, Milton Keynes MK19 6HT, UK<br>
                             Email: support@exlogcourier.com<br>
                             Email: info@exlogcourier.com<br>
                             Call:  +44 7520635476 
                         </p>
-
                     </div>
             </div>
         </div>

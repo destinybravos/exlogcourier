@@ -15981,7 +15981,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -16770,8 +16769,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
 //
 //
 //
@@ -60823,73 +60820,107 @@ var staticRenderFns = [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-md-7" }, [
           _c("div", [
-            _c("h3", { staticClass: "h3Text" }, [
-              _vm._v(" WE PROVIDE BEST "),
-              _c("br"),
-              _vm._v(" INTERNATIONAL FREIGHT &")
-            ]),
+            _c(
+              "h3",
+              { staticClass: "h3Text", attrs: { "data-aos": "fade-right" } },
+              [
+                _vm._v(" WE PROVIDE BEST "),
+                _c("br"),
+                _vm._v(" INTERNATIONAL FREIGHT &")
+              ]
+            ),
             _vm._v(" "),
-            _c("h2", { staticClass: "h2Text" }, [_vm._v("EXPRESS LOGISTICS")])
+            _c(
+              "h2",
+              { staticClass: "h2Text", attrs: { "data-aos": "fade-right" } },
+              [_vm._v("EXPRESS LOGISTICS")]
+            )
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "mt-4" }, [
-            _c("div", { staticClass: "card shadow" }, [
-              _c("div", { staticClass: "card-body shadw" }, [
-                _c("h5", { staticClass: "h5Text" }, [
-                  _vm._v(
-                    "\n                                Express Logistics Courier Services provide standard domestic and international parcel pick-up, delivery and return solutions for business customers and consumers\n                            "
-                  )
+            _c(
+              "div",
+              {
+                staticClass: "card shadow",
+                attrs: { "data-aos": "fade-right" }
+              },
+              [
+                _c("div", { staticClass: "card-body shadw" }, [
+                  _c("h5", { staticClass: "h5Text" }, [
+                    _vm._v(
+                      "\n                                Express Logistics Courier Services provide standard domestic and international parcel pick-up, delivery and return solutions for business customers and consumers\n                            "
+                    )
+                  ])
                 ])
-              ])
-            ]),
+              ]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "mt-5" }, [
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col-4" }, [
                   _c("img", {
                     staticClass: "iconImg",
-                    attrs: { src: "/img/flight.png" }
+                    attrs: { src: "/img/flight.png", "data-aos": "zoom-in" }
                   }),
                   _vm._v(" "),
-                  _c("span", { staticClass: "spanText" }, [
-                    _vm._v("Air Transports")
-                  ])
+                  _c(
+                    "span",
+                    {
+                      staticClass: "spanText",
+                      attrs: { "data-aos": "fade-left" }
+                    },
+                    [_vm._v("Air Transports")]
+                  )
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-4" }, [
                   _c("img", {
                     staticClass: "iconImg",
-                    attrs: { src: "/img/truck.png" }
+                    attrs: { src: "/img/truck.png", "data-aos": "zoom-in" }
                   }),
                   _vm._v(" "),
-                  _c("span", { staticClass: "spanText" }, [
-                    _vm._v("Cargo Truck")
-                  ])
+                  _c(
+                    "span",
+                    {
+                      staticClass: "spanText",
+                      attrs: { "data-aos": "fade-left" }
+                    },
+                    [_vm._v("Cargo Truck")]
+                  )
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-4" }, [
                   _c("img", {
                     staticClass: "iconImg",
-                    attrs: { src: "/img/ship.png" }
+                    attrs: { src: "/img/ship.png", "data-aos": "zoom-in" }
                   }),
                   _vm._v(" "),
-                  _c("span", { staticClass: "spanText" }, [
-                    _vm._v("Sea Freight")
-                  ])
+                  _c(
+                    "span",
+                    {
+                      staticClass: "spanText",
+                      attrs: { "data-aos": "fade-left" }
+                    },
+                    [_vm._v("Sea Freight")]
+                  )
                 ])
               ])
             ])
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-5 mt-5" }, [
-          _c("div", { staticClass: "card cardImg" }, [
-            _c("img", {
-              staticClass: "  card-img-top",
-              attrs: { src: "/img/truck_on_go.jpg" }
-            })
-          ])
-        ])
+        _c(
+          "div",
+          { staticClass: "col-md-5 mt-5", attrs: { "data-aos": "zoom-in" } },
+          [
+            _c("div", { staticClass: "card cardImg" }, [
+              _c("img", {
+                staticClass: "  card-img-top",
+                attrs: { src: "/img/truck_on_go.jpg" }
+              })
+            ])
+          ]
+        )
       ])
     ])
   },
@@ -60903,57 +60934,79 @@ var staticRenderFns = [
       [
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-6 mt-3" }, [
-              _c("img", {
-                staticStyle: { "max-width": "100%" },
-                attrs: { src: "/img/warehouse_trucks.png", alt: " " }
-              })
-            ]),
+            _c(
+              "div",
+              {
+                staticClass: "col-md-6 mt-3",
+                attrs: { "data-aos": "fade-right" }
+              },
+              [
+                _c("img", {
+                  staticStyle: { "max-width": "100%" },
+                  attrs: { src: "/img/warehouse_trucks.png", alt: " " }
+                })
+              ]
+            ),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-6 mt-3" }, [
-              _c("div", { staticClass: "hdCaption" }, [
-                _c("h1", [_vm._v("Our Mission")])
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3 pText text-light" }, [
-                _vm._v(
-                  "\n                        As a leading provider of air transportation, Express Logistics and Courier is here to provide you a fast delivery service down to your door steps.\n                    "
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3 pText text-light" }, [
-                _vm._v(
-                  "\n                        Backed by our strong group network and experience, Express Logistics Courier Services offer a full range of cross-border shipping services covering more than 220 countries across the globe.\n                    "
-                )
-              ])
-            ])
+            _c(
+              "div",
+              {
+                staticClass: "col-md-6 mt-3",
+                attrs: { "data-aos": "fade-left" }
+              },
+              [
+                _c("div", { staticClass: "hdCaption" }, [
+                  _c("h1", [_vm._v("Our Mission")])
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "mt-3 pText text-light" }, [
+                  _vm._v(
+                    "\n                        As a leading provider of air transportation, Express Logistics and Courier is here to provide you a fast delivery service down to your door steps.\n                    "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "mt-3 pText text-light" }, [
+                  _vm._v(
+                    "\n                        Backed by our strong group network and experience, Express Logistics Courier Services offer a full range of cross-border shipping services covering more than 220 countries across the globe.\n                    "
+                  )
+                ])
+              ]
+            )
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row mt-5" }, [
-            _c("div", { staticClass: "col-md-6" }, [
-              _c("div", { staticClass: "hdCaption" }, [
-                _c("h1", {}, [_vm._v("How Do We Work?")])
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3 pText text-light" }, [
-                _vm._v(
-                  "\n                        From Packages to Pallets, whether you need a document rushed across town or an urgent part delivered to your plant.\n                    "
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3 pText text-light" }, [
-                _vm._v(
-                  "\n                        Express Logistics Courier Services offers a wide range of delivery options that will meet any budget. No distance is too far and no job is too big.\n                    "
-                )
-              ])
-            ]),
+            _c(
+              "div",
+              { staticClass: "col-md-6", attrs: { "data-aos": "fade-right" } },
+              [
+                _c("div", { staticClass: "hdCaption" }, [
+                  _c("h1", {}, [_vm._v("How Do We Work?")])
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "mt-3 pText text-light" }, [
+                  _vm._v(
+                    "\n                        From Packages to Pallets, whether you need a document rushed across town or an urgent part delivered to your plant.\n                    "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "mt-3 pText text-light" }, [
+                  _vm._v(
+                    "\n                        Express Logistics Courier Services offers a wide range of delivery options that will meet any budget. No distance is too far and no job is too big.\n                    "
+                  )
+                ])
+              ]
+            ),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-6" }, [
-              _c("img", {
-                staticStyle: { "max-width": "100%" },
-                attrs: { src: "/img/bg3.jpg", alt: " " }
-              })
-            ])
+            _c(
+              "div",
+              { staticClass: "col-md-6", attrs: { "data-aos": "fade-left" } },
+              [
+                _c("img", {
+                  staticStyle: { "max-width": "100%" },
+                  attrs: { src: "/img/bg3.jpg", alt: " " }
+                })
+              ]
+            )
           ])
         ])
       ]
@@ -60969,64 +61022,75 @@ var staticRenderFns = [
       [
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "row abtServiceRow" }, [
-            _c("div", { staticClass: "col-md-6 mt-5" }, [
-              _c("img", {
-                staticClass: "card-img-top",
-                attrs: { src: "/img/bg-2.png" }
-              })
-            ]),
+            _c(
+              "div",
+              {
+                staticClass: "col-md-6 mt-5",
+                attrs: { "data-aos": "fade-right" }
+              },
+              [
+                _c("img", {
+                  staticClass: "card-img-top",
+                  attrs: { src: "/img/bg-2.png" }
+                })
+              ]
+            ),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-6" }, [
-              _c("h1", { staticClass: "h1Text" }, [
-                _vm._v(
-                  "\n                        Fast and Safe Transport Service\n                        Specialized heavy-Duty Vehicles\n                        Shipping Services & Logistics Management\n                    "
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3 lastDivP" }, [
-                _vm._v(
-                  "\n                        From Packages to Pallets, whether you need a document rushed across town or an urgent part delivered to your plant.\n                    "
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", [
-                _c("h5", [
-                  _c("img", {
-                    staticClass: "iconImg",
-                    attrs: { src: "/img/flight.png" }
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("International Transport ")])
+            _c(
+              "div",
+              { staticClass: "col-md-6", attrs: { "data-aos": "fade-left" } },
+              [
+                _c("h1", { staticClass: "h1Text" }, [
+                  _vm._v(
+                    "\n                        Fast and Safe Transport Service\n                        Specialized heavy-Duty Vehicles\n                        Shipping Services & Logistics Management\n                    "
+                  )
                 ]),
                 _vm._v(" "),
-                _c("h5", [
-                  _c("img", {
-                    staticClass: "iconImg",
-                    attrs: { src: "/img/truck.png" }
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Truck Logistics Service")])
+                _c("p", { staticClass: "mt-3 lastDivP" }, [
+                  _vm._v(
+                    "\n                        From Packages to Pallets, whether you need a document rushed across town or an urgent part delivered to your plant.\n                    "
+                  )
                 ]),
                 _vm._v(" "),
-                _c("h5", [
-                  _c("img", {
-                    staticClass: "iconImg",
-                    attrs: { src: "/img/ship.png" }
-                  }),
+                _c("div", [
+                  _c("h5", [
+                    _c("img", {
+                      staticClass: "iconImg",
+                      attrs: { src: "/img/flight.png" }
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("International Transport ")])
+                  ]),
                   _vm._v(" "),
-                  _c("span", [_vm._v("Sea Shipping Freight")])
-                ]),
-                _vm._v(" "),
-                _c("h5", [
-                  _c("img", {
-                    staticClass: "iconImg",
-                    attrs: { src: "/img/bg-2.png" }
-                  }),
+                  _c("h5", [
+                    _c("img", {
+                      staticClass: "iconImg",
+                      attrs: { src: "/img/truck.png" }
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("Truck Logistics Service")])
+                  ]),
                   _vm._v(" "),
-                  _c("span", [_vm._v("Cargo Delivery Service")])
+                  _c("h5", [
+                    _c("img", {
+                      staticClass: "iconImg",
+                      attrs: { src: "/img/ship.png" }
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("Sea Shipping Freight")])
+                  ]),
+                  _vm._v(" "),
+                  _c("h5", [
+                    _c("img", {
+                      staticClass: "iconImg",
+                      attrs: { src: "/img/bg-2.png" }
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("Cargo Delivery Service")])
+                  ])
                 ])
-              ])
-            ])
+              ]
+            )
           ])
         ])
       ]
@@ -61101,98 +61165,118 @@ var render = function() {
             _c("div", { staticClass: "col-md-6" }, [
               _vm._m(0),
               _vm._v(" "),
-              _c("div", { staticClass: "ConDet" }, [
-                _vm._v(
-                  "\n                            Feel free to contact us via phone or email at anytime you need help or have any question!\n                        "
-                )
-              ]),
+              _c(
+                "div",
+                { staticClass: "ConDet", attrs: { "data-aos": "fade-up" } },
+                [
+                  _vm._v(
+                    "\n                            Feel free to contact us via phone or email at anytime you need help or have any question!\n                        "
+                  )
+                ]
+              ),
               _vm._v(" "),
-              _c("div", { staticClass: "ConDet" }, [
-                _c("p", [
+              _c(
+                "div",
+                { staticClass: "ConDet", attrs: { "data-aos": "fade-up" } },
+                [
+                  _c("p", [
+                    _c(
+                      "strong",
+                      [
+                        _c("font-awesome-icon", {
+                          attrs: { icon: "envelope" }
+                        }),
+                        _vm._v(" Mail Us :")
+                      ],
+                      1
+                    ),
+                    _vm._v(
+                      "\n                                support@exlogcourier.com "
+                    ),
+                    _c("br"),
+                    _vm._v(
+                      "\n                                We usually reply within 24 hours \n                            "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c(
+                      "strong",
+                      [
+                        _c("font-awesome-icon", {
+                          attrs: { icon: "phone-alt" }
+                        }),
+                        _vm._v(" Call Us :")
+                      ],
+                      1
+                    ),
+                    _vm._v(
+                      "\n                                +44 7520635476\n                            "
+                    )
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "ConDet", attrs: { "data-aos": "fade-up" } },
+                [
+                  _c("h4", [
+                    _c(
+                      "strong",
+                      [
+                        _c("font-awesome-icon", {
+                          attrs: { icon: "map-marker" }
+                        }),
+                        _vm._v(
+                          " CONTACT ADDRESS\n                                "
+                        )
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(1)
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "ConDet", attrs: { "data-aos": "fade-up" } },
+                [
+                  _vm._v(
+                    "\n                            GET CONNECTED\n                            "
+                  ),
                   _c(
-                    "strong",
+                    "div",
+                    { staticClass: "container" },
                     [
                       _c("font-awesome-icon", { attrs: { icon: "envelope" } }),
-                      _vm._v(" Mail Us :")
-                    ],
-                    1
-                  ),
-                  _vm._v(
-                    "\n                                support@exlogcourier.com "
-                  ),
-                  _c("br"),
-                  _vm._v(
-                    "\n                                We usually reply within 24 hours \n                            "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", [
-                  _c(
-                    "strong",
-                    [
-                      _c("font-awesome-icon", { attrs: { icon: "phone-alt" } }),
-                      _vm._v(" Call Us :")
-                    ],
-                    1
-                  ),
-                  _vm._v(
-                    "\n                                +44 7520635476\n                            "
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "ConDet" }, [
-                _c("h4", [
-                  _c(
-                    "strong",
-                    [
+                      _vm._v(" "),
                       _c("font-awesome-icon", {
-                        attrs: { icon: "map-marker" }
+                        attrs: { icon: ["fab", "facebook"] }
                       }),
-                      _vm._v(
-                        " CONTACT ADDRESS\n                                "
-                      )
+                      _vm._v(" "),
+                      _c("font-awesome-icon", {
+                        attrs: { icon: ["fab", "linkedin"] }
+                      }),
+                      _vm._v(" "),
+                      _c("font-awesome-icon", {
+                        attrs: { icon: ["fab", "twitter-square"] }
+                      }),
+                      _vm._v(" "),
+                      _c("font-awesome-icon", {
+                        attrs: { icon: ["fab", "google"] }
+                      }),
+                      _vm._v(" "),
+                      _c("font-awesome-icon", {
+                        attrs: { icon: ["fab", "vimeo"] }
+                      })
                     ],
                     1
                   )
-                ]),
-                _vm._v(" "),
-                _vm._m(1)
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "ConDet" }, [
-                _vm._v(
-                  "\n                            GET CONNECTED\n                            "
-                ),
-                _c(
-                  "div",
-                  { staticClass: "container" },
-                  [
-                    _c("font-awesome-icon", { attrs: { icon: "envelope" } }),
-                    _vm._v(" "),
-                    _c("font-awesome-icon", {
-                      attrs: { icon: ["fab", "facebook"] }
-                    }),
-                    _vm._v(" "),
-                    _c("font-awesome-icon", {
-                      attrs: { icon: ["fab", "linkedin"] }
-                    }),
-                    _vm._v(" "),
-                    _c("font-awesome-icon", {
-                      attrs: { icon: ["fab", "twitter-square"] }
-                    }),
-                    _vm._v(" "),
-                    _c("font-awesome-icon", {
-                      attrs: { icon: ["fab", "google"] }
-                    }),
-                    _vm._v(" "),
-                    _c("font-awesome-icon", {
-                      attrs: { icon: ["fab", "vimeo"] }
-                    })
-                  ],
-                  1
-                )
-              ])
+                ]
+              )
             ]),
             _vm._v(" "),
             _vm._m(2)
@@ -61207,11 +61291,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ConDet" }, [
-      _c("h3", { staticStyle: { color: "#261c6a" } }, [
-        _c("strong", [_vm._v("Express Logistics and Courier Services")])
-      ])
-    ])
+    return _c(
+      "div",
+      { staticClass: "ConDet", attrs: { "data-aos": "fade-up" } },
+      [
+        _c("h3", { staticStyle: { color: "#261c6a" } }, [
+          _c("strong", [_vm._v("Express Logistics and Courier Services")])
+        ])
+      ]
+    )
   },
   function() {
     var _vm = this
@@ -61229,12 +61317,19 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-6", attrs: { id: "conImg" } }, [
-      _c("img", {
-        staticStyle: { "max-width": "100%" },
-        attrs: { src: "/img/bg2.jpg", alt: " " }
-      })
-    ])
+    return _c(
+      "div",
+      {
+        staticClass: "col-md-6",
+        attrs: { id: "conImg", "data-aos": "fade-up-left" }
+      },
+      [
+        _c("img", {
+          staticStyle: { "max-width": "100%" },
+          attrs: { src: "/img/bg2.jpg", alt: " " }
+        })
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -61769,65 +61864,72 @@ var render = function() {
   return _c("div", { attrs: { id: "foot-component" } }, [
     _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row my-5" }, [
-        _c("div", { staticClass: "col-md-12", attrs: { id: "containerT" } }, [
-          _c("div", { staticClass: "container", attrs: { id: "trackCon" } }, [
-            _c("div", { staticClass: "row my-2" }, [
-              _vm._m(0),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "col-md-8", attrs: { id: "TrackbtnDiv" } },
-                [
-                  _c("div", { staticClass: "input-group mb-3" }, [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.tracking_id,
-                          expression: "tracking_id"
-                        }
-                      ],
-                      staticClass: "form-control trackinput",
-                      attrs: {
-                        type: "text",
-                        placeholder: "TRACKING ID",
-                        "aria-label": "TRACKING ID",
-                        "aria-describedby": "basic-addon2",
-                        required: ""
-                      },
-                      domProps: { value: _vm.tracking_id },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
+        _c(
+          "div",
+          {
+            staticClass: "col-md-12",
+            attrs: { id: "containerT", "data-aos": "fade-up" }
+          },
+          [
+            _c("div", { staticClass: "container", attrs: { id: "trackCon" } }, [
+              _c("div", { staticClass: "row my-2" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "col-md-8", attrs: { id: "TrackbtnDiv" } },
+                  [
+                    _c("div", { staticClass: "input-group mb-3" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.tracking_id,
+                            expression: "tracking_id"
                           }
-                          _vm.tracking_id = $event.target.value
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "input-group-append" }, [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-tracking",
-                          attrs: { type: "button" },
-                          on: {
-                            click: function($event) {
-                              return _vm.gotoTrackPage()
-                            }
-                          }
+                        ],
+                        staticClass: "form-control trackinput",
+                        attrs: {
+                          type: "text",
+                          placeholder: "TRACKING ID",
+                          "aria-label": "TRACKING ID",
+                          "aria-describedby": "basic-addon2",
+                          required: ""
                         },
-                        [_vm._v("TRACK")]
-                      )
+                        domProps: { value: _vm.tracking_id },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.tracking_id = $event.target.value
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "input-group-append" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-tracking",
+                            attrs: { type: "button" },
+                            on: {
+                              click: function($event) {
+                                return _vm.gotoTrackPage()
+                              }
+                            }
+                          },
+                          [_vm._v("TRACK")]
+                        )
+                      ])
                     ])
-                  ])
-                ]
-              )
+                  ]
+                )
+              ])
             ])
-          ])
-        ])
+          ]
+        )
       ]),
       _vm._v(" "),
       _vm._m(1)
@@ -61854,7 +61956,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row my-2" }, [
-      _c("div", { staticClass: "col-md-5" }, [
+      _c("div", { staticClass: "col-md-5", attrs: { "data-aos": "fade-up" } }, [
         _c("img", {
           staticClass: "mb-4",
           staticStyle: { "max-width": "100%", "max-height": "70px" },
@@ -61874,7 +61976,7 @@ var staticRenderFns = [
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-2" }, [
+      _c("div", { staticClass: "col-md-2", attrs: { "data-aos": "fade-up" } }, [
         _c("h5", { staticStyle: { "font-weight": "bold" } }, [
           _vm._v("SERVICES")
         ]),
@@ -61897,15 +61999,15 @@ var staticRenderFns = [
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-2" }, [
+      _c("div", { staticClass: "col-md-2", attrs: { "data-aos": "fade-up" } }, [
         _c("h5", { staticStyle: { "font-weight": "bolder" } }, [
           _vm._v("DESTINATION")
         ]),
         _vm._v(" "),
         _c("p", [
-          _vm._v("\n                        Lagos, Nigeria "),
+          _vm._v("\n                        China, South Korea"),
           _c("br"),
-          _vm._v("\n                        Accra, Ghana "),
+          _vm._v("\n                        Singapore, Switzerland  "),
           _c("br"),
           _vm._v("\n                        Canada, United States "),
           _c("br"),
@@ -61919,14 +62021,14 @@ var staticRenderFns = [
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-3" }, [
+      _c("div", { staticClass: "col-md-3", attrs: { "data-aos": "fade-up" } }, [
         _c("h5", { staticStyle: { "font-weight": "bolder" } }, [
           _vm._v("CONTACT DETAILS")
         ]),
         _vm._v(" "),
         _c("p", [
           _vm._v(
-            "\n                        Yesikent Mah  Allyey 1905 Sok - No 123 Esenyurt Instanbul, Turkey "
+            "\n                        Deanshanger, Milton Keynes MK19 6HT, UK"
           ),
           _c("br"),
           _vm._v("\n                        Email: support@exlogcourier.com"),
@@ -62746,13 +62848,13 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { attrs: { id: "services_page" } }, [
       _c("section", [
-        _c("h2", { staticClass: "mt-5" }, [
+        _c("h2", { staticClass: "mt-5", attrs: { "data-aos": "fade-up" } }, [
           _vm._v(
             "  \n            EXPRESS LOGISTICS AND COURIER SERVICES\n        "
           )
         ]),
         _vm._v(" "),
-        _c("p", { staticClass: "my-3" }, [
+        _c("p", { staticClass: "my-3", attrs: { "data-aos": "fade-up" } }, [
           _vm._v(
             "\n            For us moving your consignment from one destination to the other is equivalent to ensuring your \n            reputation, travels far and wide, unblemished.\n        "
           )
@@ -62761,175 +62863,219 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row my-5" }, [
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("img", {
-              staticStyle: { "max-width": "100%" },
-              attrs: { src: "/img/air_cargo.jpg", alt: " " }
-            })
-          ]),
+          _c(
+            "div",
+            { staticClass: "col-md-6", attrs: { "data-aos": "fade-up-right" } },
+            [
+              _c("img", {
+                staticStyle: { "max-width": "100%" },
+                attrs: { src: "/img/air_cargo.jpg", alt: " " }
+              })
+            ]
+          ),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-6 service_details" }, [
-            _c("h2", [_vm._v("Air Freight")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n                    Express logistics and courier service provides, top notch, hassle free and timely movement for all your consignments \n                    through our air Freight services at very \n                    competitive rates. We strive hard to ensure that you are ably guided through out the process that involves \n                    packing, document filing, clearance from customs, loading until the very last step of delivering. We are \n                    thoroughly prepared for;\n                "
-              )
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("ul", [
-                _c("li", [
-                  _vm._v(
-                    "\n                            Immediate Deliveries on the Next Flight Out\n                        "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _vm._v(
-                    "\n                            Time Definite Express Service\n                        "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _vm._v(
-                    "\n                            Personal Door to Door Service or Airport to Airport service\n                        "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _vm._v(
-                    "\n                            Consolidation and Direct to Consignee Service\n                        "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _vm._v(
-                    "\n                            Competitive Deferred Air Freight Service\n                        "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _vm._v(
-                    "\n                           Overnight Service \n                        "
-                  )
+          _c(
+            "div",
+            {
+              staticClass: "col-md-6 service_details",
+              attrs: { "data-aos": "fade-up-left" }
+            },
+            [
+              _c("h2", [_vm._v("Air Freight")]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n                    Express logistics and courier service provides, top notch, hassle free and timely movement for all your consignments \n                    through our air Freight services at very \n                    competitive rates. We strive hard to ensure that you are ably guided through out the process that involves \n                    packing, document filing, clearance from customs, loading until the very last step of delivering. We are \n                    thoroughly prepared for;\n                "
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _c("ul", [
+                  _c("li", [
+                    _vm._v(
+                      "\n                            Immediate Deliveries on the Next Flight Out\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "\n                            Time Definite Express Service\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "\n                            Personal Door to Door Service or Airport to Airport service\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "\n                            Consolidation and Direct to Consignee Service\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "\n                            Competitive Deferred Air Freight Service\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "\n                           Overnight Service \n                        "
+                    )
+                  ])
                 ])
               ])
-            ])
-          ])
+            ]
+          )
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row my-5 odd" }, [
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("img", {
-              staticStyle: { "max-width": "100%" },
-              attrs: { src: "/img/ocean_shipping.jpg", alt: " " }
-            })
-          ]),
+          _c(
+            "div",
+            { staticClass: "col-md-6", attrs: { "data-aos": "fade-up-right" } },
+            [
+              _c("img", {
+                staticStyle: { "max-width": "100%" },
+                attrs: { src: "/img/ocean_shipping.jpg", alt: " " }
+              })
+            ]
+          ),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-6 service_details" }, [
-            _c("h2", [_vm._v("Ocean Freight")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n                    We also provides a holistic solution to transport your bulky and gigantic cargo through water ways, \n                    eclipsing territories and regions. Our qualified, trained, professional workforce ensures that your \n                    consignment no matter how big or heavy finds adequate space, fulfills all requisitions for different \n                    countries and is set to sail as per schedule. We have a firm grip on the following;\n                "
-              )
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("ul", [
-                _c("li", [
-                  _vm._v(
-                    "\n                            Direct Consolidation Covering More Than 350 Destinations Worldwide\n                        "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _vm._v(
-                    "\n                            Fixed Cut Offs with Assured Sailings\n                        "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _vm._v(
-                    "\n                            Dedicated CFS at all FSL Gateways\n                        "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _vm._v(
-                    "\n                            Digitized Booking & Loading Confirmation\n                        "
-                  )
+          _c(
+            "div",
+            {
+              staticClass: "col-md-6 service_details",
+              attrs: { "data-aos": "fade-up-left" }
+            },
+            [
+              _c("h2", [_vm._v("Ocean Freight")]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n                    We also provides a holistic solution to transport your bulky and gigantic cargo through water ways, \n                    eclipsing territories and regions. Our qualified, trained, professional workforce ensures that your \n                    consignment no matter how big or heavy finds adequate space, fulfills all requisitions for different \n                    countries and is set to sail as per schedule. We have a firm grip on the following;\n                "
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _c("ul", [
+                  _c("li", [
+                    _vm._v(
+                      "\n                            Direct Consolidation Covering More Than 350 Destinations Worldwide\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "\n                            Fixed Cut Offs with Assured Sailings\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "\n                            Dedicated CFS at all FSL Gateways\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "\n                            Digitized Booking & Loading Confirmation\n                        "
+                    )
+                  ])
                 ])
               ])
-            ])
-          ])
+            ]
+          )
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row my-5" }, [
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("img", {
-              staticStyle: { "max-width": "100%", padding: "20px 0" },
-              attrs: { src: "/img/logistic_vehicles.jpg", alt: " " }
-            })
-          ]),
+          _c(
+            "div",
+            { staticClass: "col-md-6", attrs: { "data-aos": "fade-up-right" } },
+            [
+              _c("img", {
+                staticStyle: { "max-width": "100%", padding: "20px 0" },
+                attrs: { src: "/img/logistic_vehicles.jpg", alt: " " }
+              })
+            ]
+          ),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-6 service_details" }, [
-            _c("h2", [_vm._v("Road and Rail Services")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n                    Need a fleet of trucks or trian to transport containers from your manufacturing unit to the dock or airport? \n                    Looking at penetrating deep inside to far flung locations to make final delivery? Unsure about the quality of \n                    transport and safety of your goods?\n                "
-              )
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n                    We have an expansive network of owned and leased vehicles as well as rail transport partners, capable of \n                    safe and timely deliveries. Our stringent policies ensure that the vehicles used for transport are \n                    maintained in prime condition to avoid delays due to vehicle break down or any other adverse situation. \n                    Our handpicked, verified driving staff is well trained and equipped to drive long hours and respect \n                    commitments.\n                "
-              )
-            ])
-          ])
+          _c(
+            "div",
+            {
+              staticClass: "col-md-6 service_details",
+              attrs: { "data-aos": "fade-up-left" }
+            },
+            [
+              _c("h2", [_vm._v("Road and Rail Services")]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n                    Need a fleet of trucks or trian to transport containers from your manufacturing unit to the dock or airport? \n                    Looking at penetrating deep inside to far flung locations to make final delivery? Unsure about the quality of \n                    transport and safety of your goods?\n                "
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n                    We have an expansive network of owned and leased vehicles as well as rail transport partners, capable of \n                    safe and timely deliveries. Our stringent policies ensure that the vehicles used for transport are \n                    maintained in prime condition to avoid delays due to vehicle break down or any other adverse situation. \n                    Our handpicked, verified driving staff is well trained and equipped to drive long hours and respect \n                    commitments.\n                "
+                )
+              ])
+            ]
+          )
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row my-5 odd" }, [
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("img", {
-              staticStyle: { "max-width": "100%" },
-              attrs: { src: "/img/brokerage.jpg", alt: " " }
-            })
-          ]),
+          _c(
+            "div",
+            { staticClass: "col-md-6", attrs: { "data-aos": "fade-up-right" } },
+            [
+              _c("img", {
+                staticStyle: { "max-width": "100%" },
+                attrs: { src: "/img/brokerage.jpg", alt: " " }
+              })
+            ]
+          ),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-6 service_details" }, [
-            _c("h2", [_vm._v("Customs Brokerage")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n                    We also have recruited a lot of personels who are the sharpest and the smartest minds to \n                    work alongside in our team. Some of these professionals are individuals with years of \n                    experience in the export/import business, understanding the in and out, no matter what the \n                    situation. There sole aim is to ensure that our clients are not hassled, and consignments \n                    set for arrival or departure move as per schedules.\n                "
-              )
-            ]),
-            _vm._v(" "),
-            _c("h4", [_vm._v("They are resposible for;")]),
-            _vm._v(" "),
-            _c("p", [
-              _c("ul", [
-                _c("li", [
-                  _vm._v("Retainer Consultancy / Customs compliances")
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _vm._v(
-                    "AEO certification for Exporter / Importer and logistic service provider"
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [_vm._v("Certificate of BIS, WPC , EPR & ETA")]),
-                _vm._v(" "),
-                _c("li", [_vm._v("Customs Advisories")]),
-                _vm._v(" "),
-                _c("li", [_vm._v("Customs and GST appeals")])
+          _c(
+            "div",
+            {
+              staticClass: "col-md-6 service_details",
+              attrs: { "data-aos": "fade-up-left" }
+            },
+            [
+              _c("h2", [_vm._v("Customs Brokerage")]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n                    We also have recruited a lot of personels who are the sharpest and the smartest minds to \n                    work alongside in our team. Some of these professionals are individuals with years of \n                    experience in the export/import business, understanding the in and out, no matter what the \n                    situation. Their sole aim is to ensure that our clients are not hassled, and consignments \n                    set for arrival or departure move as per schedules.\n                "
+                )
+              ]),
+              _vm._v(" "),
+              _c("h4", [_vm._v("They are resposible for;")]),
+              _vm._v(" "),
+              _c("p", [
+                _c("ul", [
+                  _c("li", [
+                    _vm._v("Retainer Consultancy / Customs compliances")
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "AEO certification for Exporter / Importer and logistic service provider"
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [_vm._v("Certificate of BIS, WPC , EPR & ETA")]),
+                  _vm._v(" "),
+                  _c("li", [_vm._v("Customs Advisories")]),
+                  _vm._v(" "),
+                  _c("li", [_vm._v("Customs and GST appeals")])
+                ])
               ])
-            ])
-          ])
+            ]
+          )
         ])
       ])
     ])
@@ -63009,23 +63155,35 @@ var staticRenderFns = [
         _c("div", { staticClass: "row justify-content-center" }, [
           _c("div", { staticClass: "col-lg-7" }, [
             _c("div", { attrs: { id: "banText" } }, [
-              _c("h2", { staticClass: "mb-5" }, [
-                _vm._v(
-                  "\n                    Express Logistics and Speedy Courier Delivery\n                "
-                )
-              ]),
+              _c(
+                "h2",
+                { staticClass: "mb-5", attrs: { "data-aos": "fade-right" } },
+                [
+                  _vm._v(
+                    "\n                    Express Logistics and Speedy Courier Delivery\n                "
+                  )
+                ]
+              ),
               _vm._v(" "),
-              _c("p", { staticClass: "mb-5" }, [
-                _vm._v(
-                  "\n                    worldwide freight forwarding, logistics and courier services\n                "
-                )
-              ]),
+              _c(
+                "p",
+                { staticClass: "mb-5", attrs: { "data-aos": "fade-right" } },
+                [
+                  _vm._v(
+                    "\n                    worldwide freight forwarding, logistics and courier services\n                "
+                  )
+                ]
+              ),
               _vm._v(" "),
               _c(
                 "a",
                 {
                   staticClass: "btn mb-2",
-                  attrs: { href: "/services", id: "btn-request" }
+                  attrs: {
+                    href: "/services",
+                    id: "btn-request",
+                    "data-aos": "fade-right"
+                  }
                 },
                 [
                   _vm._v(
@@ -63034,7 +63192,7 @@ var staticRenderFns = [
                 ]
               ),
               _vm._v(" "),
-              _c("p", { attrs: { id: "tagged" } }, [
+              _c("p", { attrs: { id: "tagged", "data-aos": "fade-right" } }, [
                 _c("label", [_vm._v("Speedy Delivery")]),
                 _vm._v(" "),
                 _c("span", [_vm._v(".")]),
@@ -63044,12 +63202,19 @@ var staticRenderFns = [
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-5", attrs: { id: "banImg" } }, [
-            _c("img", {
-              staticStyle: { "max-width": "100%", padding: "20px" },
-              attrs: { src: "/img/bg2.jpg", alt: " " }
-            })
-          ])
+          _c(
+            "div",
+            {
+              staticClass: "col-lg-5",
+              attrs: { id: "banImg", "data-aos": "fade-left" }
+            },
+            [
+              _c("img", {
+                staticStyle: { "max-width": "100%", padding: "20px" },
+                attrs: { src: "/img/bg2.jpg", alt: " " }
+              })
+            ]
+          )
         ])
       ]
     )
@@ -63088,13 +63253,13 @@ var staticRenderFns = [
       { staticClass: "pt-3 pb-5", attrs: { id: "index-offer-card" } },
       [
         _c("section", [
-          _c("h2", { staticClass: "mt-5" }, [
+          _c("h2", { staticClass: "mt-5", attrs: { "data-aos": "fade-up" } }, [
             _vm._v(
               "  \n            Your Consignment => Our Commitment!\n        "
             )
           ]),
           _vm._v(" "),
-          _c("p", { staticClass: "my-3" }, [
+          _c("p", { staticClass: "my-3", attrs: { "data-aos": "fade-up" } }, [
             _vm._v(
               "\n            For us moving your consignment from one destination to the other is equivalent to ensuring your reputation, travels far and wide, unblemished.\n        "
             )
@@ -63107,15 +63272,7 @@ var staticRenderFns = [
               "div",
               {
                 staticClass: "col-lg-4 card-container",
-<<<<<<< HEAD
-                attrs: { "data-aos": "fade-u" }
-=======
-                attrs: {
-                  "data-aos": "fade-right",
-                  "data-aos-offset": "300",
-                  "data-aos-easing": "ease-in-sine"
-                }
->>>>>>> 7915c2ad416ed080bd2b69c5732cf15209905e67
+                attrs: { "data-aos": "fade-up" }
               },
               [
                 _c("div", { staticClass: "card" }, [
@@ -63164,7 +63321,7 @@ var staticRenderFns = [
               {
                 staticClass: "col-lg-4 card-container",
                 attrs: {
-                  "data-aos": "fade-down",
+                  "data-aos": "fade-up",
                   "data-aos-easing": "linear",
                   "data-aos-duration": "500"
                 }
@@ -63216,7 +63373,7 @@ var staticRenderFns = [
               {
                 staticClass: "col-lg-4 card-container",
                 attrs: {
-                  "data-aos": "fade-left",
+                  "data-aos": "fade-up",
                   "data-aos-offset": "300",
                   "data-aos-easing": "ease-in-sine"
                 }
@@ -63335,7 +63492,7 @@ var render = function() {
           {
             staticClass: "col-md-6",
             staticStyle: { color: "white" },
-            attrs: { id: "dont_fret" }
+            attrs: { id: "dont_fret", "data-aos": "fade-left" }
           },
           [
             _c("h1", [_vm._v("Don’t Fret, Over Freight!")]),
@@ -63385,12 +63542,16 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-6" }, [
-      _c("img", {
-        staticStyle: { "max-width": "100%" },
-        attrs: { src: "/img/air_cargo2.jpg", alt: " " }
-      })
-    ])
+    return _c(
+      "div",
+      { staticClass: "col-md-6", attrs: { "data-aos": "fade-right" } },
+      [
+        _c("img", {
+          staticStyle: { "max-width": "100%" },
+          attrs: { src: "/img/air_cargo2.jpg", alt: " " }
+        })
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -63425,7 +63586,7 @@ var render = function() {
             _c("div", { staticClass: "col-md-6" }, [
               _c(
                 "button",
-                { attrs: { id: "btn_truck" } },
+                { attrs: { id: "btn_truck", "data-aos": "zoom-in" } },
                 [
                   _c("font-awesome-icon", {
                     attrs: { icon: "shipping-fast", size: "2x" }
@@ -63438,362 +63599,375 @@ var render = function() {
               _vm._v(" "),
               _c("div", { staticClass: "container" }, [
                 _c("div", { staticClass: "row py-3 px-0" }, [
-                  _c("div", { staticClass: "col-md-12" }, [
-                    _c(
-                      "form",
-                      {
-                        ref: "frmQuote",
-                        attrs: { method: "post" },
-                        on: {
-                          submit: function($event) {
-                            $event.preventDefault()
-                            return _vm.requestQuote($event)
+                  _c(
+                    "div",
+                    {
+                      staticClass: "col-md-12",
+                      attrs: { "data-aos": "fade-up" }
+                    },
+                    [
+                      _c(
+                        "form",
+                        {
+                          ref: "frmQuote",
+                          attrs: { method: "post" },
+                          on: {
+                            submit: function($event) {
+                              $event.preventDefault()
+                              return _vm.requestQuote($event)
+                            }
                           }
-                        }
-                      },
-                      [
-                        _c("div", { staticClass: "row" }, [
-                          _c("div", { staticClass: "form-group col-md-12" }, [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.fname,
-                                  expression: "fname"
-                                }
-                              ],
-                              staticClass: "form-control",
-                              attrs: {
-                                type: "text",
-                                name: "fullname",
-                                id: "fullname",
-                                placeholder: "Full Name",
-                                required: ""
-                              },
-                              domProps: { value: _vm.fname },
-                              on: {
-                                input: function($event) {
-                                  if ($event.target.composing) {
-                                    return
-                                  }
-                                  _vm.fname = $event.target.value
-                                }
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "row" }, [
-                          _c("div", { staticClass: "form-group col-md-12" }, [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.email,
-                                  expression: "email"
-                                }
-                              ],
-                              staticClass: "form-control",
-                              attrs: {
-                                type: "text",
-                                name: "email",
-                                id: "email",
-                                placeholder: "Email Address",
-                                required: ""
-                              },
-                              domProps: { value: _vm.email },
-                              on: {
-                                input: function($event) {
-                                  if ($event.target.composing) {
-                                    return
-                                  }
-                                  _vm.email = $event.target.value
-                                }
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "row" }, [
-                          _c("div", { staticClass: "form-group col-md-6" }, [
-                            _c(
-                              "select",
-                              {
+                        },
+                        [
+                          _c("div", { staticClass: "row" }, [
+                            _c("div", { staticClass: "form-group col-md-12" }, [
+                              _c("input", {
                                 directives: [
                                   {
                                     name: "model",
                                     rawName: "v-model",
-                                    value: _vm.origin,
-                                    expression: "origin"
+                                    value: _vm.fname,
+                                    expression: "fname"
                                   }
                                 ],
                                 staticClass: "form-control",
                                 attrs: {
-                                  name: "des_from",
-                                  id: "des_from",
-                                  placeholder: "Email Address",
+                                  type: "text",
+                                  name: "fullname",
+                                  id: "fullname",
+                                  placeholder: "Full Name",
                                   required: ""
                                 },
+                                domProps: { value: _vm.fname },
                                 on: {
-                                  change: function($event) {
-                                    var $$selectedVal = Array.prototype.filter
-                                      .call($event.target.options, function(o) {
-                                        return o.selected
-                                      })
-                                      .map(function(o) {
-                                        var val =
-                                          "_value" in o ? o._value : o.value
-                                        return val
-                                      })
-                                    _vm.origin = $event.target.multiple
-                                      ? $$selectedVal
-                                      : $$selectedVal[0]
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.fname = $event.target.value
                                   }
                                 }
-                              },
-                              [
-                                _c("option", { attrs: { value: "" } }, [
-                                  _vm._v("Location From")
-                                ]),
-                                _vm._v(" "),
-                                _vm._l(_vm.countries, function(country, i) {
-                                  return _c(
-                                    "option",
-                                    { key: i, domProps: { value: country } },
-                                    [_vm._v(" " + _vm._s(country) + " ")]
-                                  )
-                                })
-                              ],
-                              2
-                            )
+                              })
+                            ])
                           ]),
                           _vm._v(" "),
-                          _c("div", { staticClass: "form-group col-md-6" }, [
-                            _c(
-                              "select",
-                              {
+                          _c("div", { staticClass: "row" }, [
+                            _c("div", { staticClass: "form-group col-md-12" }, [
+                              _c("input", {
                                 directives: [
                                   {
                                     name: "model",
                                     rawName: "v-model",
-                                    value: _vm.destination,
-                                    expression: "destination"
+                                    value: _vm.email,
+                                    expression: "email"
                                   }
                                 ],
                                 staticClass: "form-control",
                                 attrs: {
-                                  name: "des_to",
-                                  id: "des_to",
+                                  type: "text",
+                                  name: "email",
+                                  id: "email",
                                   placeholder: "Email Address",
                                   required: ""
                                 },
+                                domProps: { value: _vm.email },
                                 on: {
-                                  change: function($event) {
-                                    var $$selectedVal = Array.prototype.filter
-                                      .call($event.target.options, function(o) {
-                                        return o.selected
-                                      })
-                                      .map(function(o) {
-                                        var val =
-                                          "_value" in o ? o._value : o.value
-                                        return val
-                                      })
-                                    _vm.destination = $event.target.multiple
-                                      ? $$selectedVal
-                                      : $$selectedVal[0]
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.email = $event.target.value
                                   }
                                 }
-                              },
-                              [
-                                _c("option", { attrs: { value: "" } }, [
-                                  _vm._v("Destination To")
-                                ]),
-                                _vm._v(" "),
-                                _vm._l(_vm.countries, function(country, i) {
-                                  return _c(
-                                    "option",
-                                    { key: i, domProps: { value: country } },
-                                    [_vm._v(" " + _vm._s(country) + " ")]
-                                  )
-                                })
-                              ],
-                              2
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "row" }, [
-                          _c("div", { staticClass: "form-group col-md-6" }, [
-                            _c(
-                              "select",
-                              {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.log_type,
-                                    expression: "log_type"
-                                  }
-                                ],
-                                staticClass: "form-control",
-                                attrs: {
-                                  name: "log_type",
-                                  id: "log_type",
-                                  placeholder: "Email Address",
-                                  required: ""
-                                },
-                                on: {
-                                  change: function($event) {
-                                    var $$selectedVal = Array.prototype.filter
-                                      .call($event.target.options, function(o) {
-                                        return o.selected
-                                      })
-                                      .map(function(o) {
-                                        var val =
-                                          "_value" in o ? o._value : o.value
-                                        return val
-                                      })
-                                    _vm.log_type = $event.target.multiple
-                                      ? $$selectedVal
-                                      : $$selectedVal[0]
-                                  }
-                                }
-                              },
-                              [
-                                _c("option", { attrs: { value: "" } }, [
-                                  _vm._v("Logistic Type")
-                                ]),
-                                _vm._v(" "),
-                                _vm._l(_vm.logistic_types, function(type) {
-                                  return _c(
-                                    "option",
-                                    { key: type, domProps: { value: type } },
-                                    [_vm._v(_vm._s(type))]
-                                  )
-                                })
-                              ],
-                              2
-                            )
+                              })
+                            ])
                           ]),
                           _vm._v(" "),
-                          _c("div", { staticClass: "form-group col-md-6" }, [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.subject,
-                                  expression: "subject"
-                                }
-                              ],
-                              staticClass: "form-control",
-                              attrs: {
-                                type: "text",
-                                name: "subject",
-                                id: "subject",
-                                placeholder: "Subject",
-                                required: ""
-                              },
-                              domProps: { value: _vm.subject },
-                              on: {
-                                input: function($event) {
-                                  if ($event.target.composing) {
-                                    return
-                                  }
-                                  _vm.subject = $event.target.value
-                                }
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "row" }, [
-                          _c("div", { staticClass: "form-group col-md-12" }, [
-                            _c("textarea", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.message,
-                                  expression: "message"
-                                }
-                              ],
-                              staticClass: "form-control",
-                              attrs: {
-                                required: "",
-                                name: "message",
-                                id: "message",
-                                rows: "10",
-                                placeholder: "Message"
-                              },
-                              domProps: { value: _vm.message },
-                              on: {
-                                input: function($event) {
-                                  if ($event.target.composing) {
-                                    return
-                                  }
-                                  _vm.message = $event.target.value
-                                }
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "row" }, [
-                          _c("div", { staticClass: "form-group col-md-12" }, [
-                            _c("div", { staticClass: "input-group" }, [
+                          _c("div", { staticClass: "row" }, [
+                            _c("div", { staticClass: "form-group col-md-6" }, [
                               _c(
-                                "div",
-                                { staticClass: "input-group-prepend" },
+                                "select",
+                                {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.origin,
+                                      expression: "origin"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    name: "des_from",
+                                    id: "des_from",
+                                    placeholder: "Email Address",
+                                    required: ""
+                                  },
+                                  on: {
+                                    change: function($event) {
+                                      var $$selectedVal = Array.prototype.filter
+                                        .call($event.target.options, function(
+                                          o
+                                        ) {
+                                          return o.selected
+                                        })
+                                        .map(function(o) {
+                                          var val =
+                                            "_value" in o ? o._value : o.value
+                                          return val
+                                        })
+                                      _vm.origin = $event.target.multiple
+                                        ? $$selectedVal
+                                        : $$selectedVal[0]
+                                    }
+                                  }
+                                },
                                 [
-                                  _c(
-                                    "span",
-                                    {
-                                      staticClass:
-                                        "input-group-text text-light",
-                                      staticStyle: {
-                                        "border-radius": "0",
-                                        "background-color": "#261c6a"
-                                      }
-                                    },
-                                    [
-                                      _vm.sending === false
-                                        ? _c("font-awesome-icon", {
-                                            attrs: { icon: "paper-plane" }
-                                          })
-                                        : _c("font-awesome-icon", {
-                                            attrs: {
-                                              icon: "circle-notch",
-                                              pulse: ""
-                                            }
-                                          })
-                                    ],
-                                    1
-                                  ),
+                                  _c("option", { attrs: { value: "" } }, [
+                                    _vm._v("Location From")
+                                  ]),
                                   _vm._v(" "),
-                                  _c(
-                                    "button",
+                                  _vm._l(_vm.countries, function(country, i) {
+                                    return _c(
+                                      "option",
+                                      { key: i, domProps: { value: country } },
+                                      [_vm._v(" " + _vm._s(country) + " ")]
+                                    )
+                                  })
+                                ],
+                                2
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "form-group col-md-6" }, [
+                              _c(
+                                "select",
+                                {
+                                  directives: [
                                     {
-                                      staticClass:
-                                        "btn btn-primary form-control",
-                                      attrs: { type: "submit" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                                    REQUEST QUOTE\n                                                "
-                                      )
-                                    ]
-                                  )
-                                ]
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.destination,
+                                      expression: "destination"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    name: "des_to",
+                                    id: "des_to",
+                                    placeholder: "Email Address",
+                                    required: ""
+                                  },
+                                  on: {
+                                    change: function($event) {
+                                      var $$selectedVal = Array.prototype.filter
+                                        .call($event.target.options, function(
+                                          o
+                                        ) {
+                                          return o.selected
+                                        })
+                                        .map(function(o) {
+                                          var val =
+                                            "_value" in o ? o._value : o.value
+                                          return val
+                                        })
+                                      _vm.destination = $event.target.multiple
+                                        ? $$selectedVal
+                                        : $$selectedVal[0]
+                                    }
+                                  }
+                                },
+                                [
+                                  _c("option", { attrs: { value: "" } }, [
+                                    _vm._v("Destination To")
+                                  ]),
+                                  _vm._v(" "),
+                                  _vm._l(_vm.countries, function(country, i) {
+                                    return _c(
+                                      "option",
+                                      { key: i, domProps: { value: country } },
+                                      [_vm._v(" " + _vm._s(country) + " ")]
+                                    )
+                                  })
+                                ],
+                                2
                               )
                             ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "row" }, [
+                            _c("div", { staticClass: "form-group col-md-6" }, [
+                              _c(
+                                "select",
+                                {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.log_type,
+                                      expression: "log_type"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    name: "log_type",
+                                    id: "log_type",
+                                    placeholder: "Email Address",
+                                    required: ""
+                                  },
+                                  on: {
+                                    change: function($event) {
+                                      var $$selectedVal = Array.prototype.filter
+                                        .call($event.target.options, function(
+                                          o
+                                        ) {
+                                          return o.selected
+                                        })
+                                        .map(function(o) {
+                                          var val =
+                                            "_value" in o ? o._value : o.value
+                                          return val
+                                        })
+                                      _vm.log_type = $event.target.multiple
+                                        ? $$selectedVal
+                                        : $$selectedVal[0]
+                                    }
+                                  }
+                                },
+                                [
+                                  _c("option", { attrs: { value: "" } }, [
+                                    _vm._v("Logistic Type")
+                                  ]),
+                                  _vm._v(" "),
+                                  _vm._l(_vm.logistic_types, function(type) {
+                                    return _c(
+                                      "option",
+                                      { key: type, domProps: { value: type } },
+                                      [_vm._v(_vm._s(type))]
+                                    )
+                                  })
+                                ],
+                                2
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "form-group col-md-6" }, [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.subject,
+                                    expression: "subject"
+                                  }
+                                ],
+                                staticClass: "form-control",
+                                attrs: {
+                                  type: "text",
+                                  name: "subject",
+                                  id: "subject",
+                                  placeholder: "Subject",
+                                  required: ""
+                                },
+                                domProps: { value: _vm.subject },
+                                on: {
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.subject = $event.target.value
+                                  }
+                                }
+                              })
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "row" }, [
+                            _c("div", { staticClass: "form-group col-md-12" }, [
+                              _c("textarea", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.message,
+                                    expression: "message"
+                                  }
+                                ],
+                                staticClass: "form-control",
+                                attrs: {
+                                  required: "",
+                                  name: "message",
+                                  id: "message",
+                                  rows: "10",
+                                  placeholder: "Message"
+                                },
+                                domProps: { value: _vm.message },
+                                on: {
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.message = $event.target.value
+                                  }
+                                }
+                              })
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "row" }, [
+                            _c("div", { staticClass: "form-group col-md-12" }, [
+                              _c("div", { staticClass: "input-group" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "input-group-prepend" },
+                                  [
+                                    _c(
+                                      "span",
+                                      {
+                                        staticClass:
+                                          "input-group-text text-light",
+                                        staticStyle: {
+                                          "border-radius": "0",
+                                          "background-color": "#261c6a"
+                                        }
+                                      },
+                                      [
+                                        _vm.sending === false
+                                          ? _c("font-awesome-icon", {
+                                              attrs: { icon: "paper-plane" }
+                                            })
+                                          : _c("font-awesome-icon", {
+                                              attrs: {
+                                                icon: "circle-notch",
+                                                pulse: ""
+                                              }
+                                            })
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "btn btn-primary form-control",
+                                        attrs: { type: "submit" }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                                    REQUEST QUOTE\n                                                "
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ])
+                            ])
                           ])
-                        ])
-                      ]
-                    )
-                  ])
+                        ]
+                      )
+                    ]
+                  )
                 ])
               ])
             ]),
@@ -63809,210 +63983,217 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "row py-3 px-0" }, [
-                    _c("div", { staticClass: "col-md-12" }, [
-                      _c("div", { attrs: { id: "accordion" } }, [
-                        _c("div", { staticClass: "card" }, [
-                          _c(
-                            "div",
-                            {
-                              staticClass: "card-header",
-                              attrs: { id: "headingOne" }
-                            },
-                            [
-                              _c("h5", { staticClass: "mb-0" }, [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass:
-                                      "btn btn-link btn-toggle-accord",
-                                    attrs: {
-                                      "data-toggle": "collapse",
-                                      "data-target": "#collapseOne",
-                                      "aria-expanded": "true",
-                                      "aria-controls": "collapseOne"
-                                    }
-                                  },
-                                  [
-                                    _c("font-awesome-icon", {
-                                      attrs: { icon: "plus" }
-                                    })
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c("small", [
-                                  _vm._v(
-                                    "I want to send a shipment, but don't know what paperwork is required?"
-                                  )
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-md-12",
+                        attrs: { "data-aos": "fade-up" }
+                      },
+                      [
+                        _c("div", { attrs: { id: "accordion" } }, [
+                          _c("div", { staticClass: "card" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "card-header",
+                                attrs: { id: "headingOne" }
+                              },
+                              [
+                                _c("h5", { staticClass: "mb-0" }, [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "btn btn-link btn-toggle-accord",
+                                      attrs: {
+                                        "data-toggle": "collapse",
+                                        "data-target": "#collapseOne",
+                                        "aria-expanded": "true",
+                                        "aria-controls": "collapseOne"
+                                      }
+                                    },
+                                    [
+                                      _c("font-awesome-icon", {
+                                        attrs: { icon: "plus" }
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("small", [
+                                    _vm._v(
+                                      "I want to send a shipment, but don't know what paperwork is required?"
+                                    )
+                                  ])
                                 ])
-                              ])
-                            ]
-                          ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm._m(2)
+                          ]),
                           _vm._v(" "),
-                          _vm._m(2)
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "card" }, [
-                          _c(
-                            "div",
-                            {
-                              staticClass: "card-header",
-                              attrs: { id: "headingTwo" }
-                            },
-                            [
-                              _c("h5", { staticClass: "mb-0" }, [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass:
-                                      "btn btn-link collapsed btn-toggle-accord",
-                                    attrs: {
-                                      "data-toggle": "collapse",
-                                      "data-target": "#collapseTwo",
-                                      "aria-expanded": "false",
-                                      "aria-controls": "collapseTwo"
-                                    }
-                                  },
-                                  [
-                                    _c("font-awesome-icon", {
-                                      attrs: { icon: "plus" }
-                                    })
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c("small", [_vm._v("Where is my shipment?")])
-                              ])
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _vm._m(3)
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "card" }, [
-                          _c(
-                            "div",
-                            {
-                              staticClass: "card-header",
-                              attrs: { id: "headingThree" }
-                            },
-                            [
-                              _c("h5", { staticClass: "mb-0" }, [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass:
-                                      "btn btn-link collapsed btn-toggle-accord",
-                                    attrs: {
-                                      "data-toggle": "collapse",
-                                      "data-target": "#collapseThree",
-                                      "aria-expanded": "false",
-                                      "aria-controls": "collapseThree"
-                                    }
-                                  },
-                                  [
-                                    _c("font-awesome-icon", {
-                                      attrs: { icon: "plus" }
-                                    })
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c("small", [
-                                  _vm._v(
-                                    "What is the maximum size of package I can send?"
-                                  )
+                          _c("div", { staticClass: "card" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "card-header",
+                                attrs: { id: "headingTwo" }
+                              },
+                              [
+                                _c("h5", { staticClass: "mb-0" }, [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "btn btn-link collapsed btn-toggle-accord",
+                                      attrs: {
+                                        "data-toggle": "collapse",
+                                        "data-target": "#collapseTwo",
+                                        "aria-expanded": "false",
+                                        "aria-controls": "collapseTwo"
+                                      }
+                                    },
+                                    [
+                                      _c("font-awesome-icon", {
+                                        attrs: { icon: "plus" }
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("small", [_vm._v("Where is my shipment?")])
                                 ])
-                              ])
-                            ]
-                          ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm._m(3)
+                          ]),
                           _vm._v(" "),
-                          _vm._m(4)
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "card" }, [
-                          _c(
-                            "div",
-                            {
-                              staticClass: "card-header",
-                              attrs: { id: "headingFour" }
-                            },
-                            [
-                              _c("h5", { staticClass: "mb-0" }, [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass:
-                                      "btn btn-link collapsed btn-toggle-accord",
-                                    attrs: {
-                                      "data-toggle": "collapse",
-                                      "data-target": "#collapseFour",
-                                      "aria-expanded": "false",
-                                      "aria-controls": "collapseThree"
-                                    }
-                                  },
-                                  [
-                                    _c("font-awesome-icon", {
-                                      attrs: { icon: "plus" }
-                                    })
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c("small", [
-                                  _vm._v(
-                                    "What payment methods can I use with Transmacs Global?"
-                                  )
+                          _c("div", { staticClass: "card" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "card-header",
+                                attrs: { id: "headingThree" }
+                              },
+                              [
+                                _c("h5", { staticClass: "mb-0" }, [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "btn btn-link collapsed btn-toggle-accord",
+                                      attrs: {
+                                        "data-toggle": "collapse",
+                                        "data-target": "#collapseThree",
+                                        "aria-expanded": "false",
+                                        "aria-controls": "collapseThree"
+                                      }
+                                    },
+                                    [
+                                      _c("font-awesome-icon", {
+                                        attrs: { icon: "plus" }
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("small", [
+                                    _vm._v(
+                                      "What is the maximum size of package I can send?"
+                                    )
+                                  ])
                                 ])
-                              ])
-                            ]
-                          ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm._m(4)
+                          ]),
                           _vm._v(" "),
-                          _vm._m(5)
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "card" }, [
-                          _c(
-                            "div",
-                            {
-                              staticClass: "card-header",
-                              attrs: { id: "headingFive" }
-                            },
-                            [
-                              _c("h5", { staticClass: "mb-0" }, [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass:
-                                      "btn btn-link collapsed btn-toggle-accord",
-                                    attrs: {
-                                      "data-toggle": "collapse",
-                                      "data-target": "#collapseFive",
-                                      "aria-expanded": "false",
-                                      "aria-controls": "collapseThree"
-                                    }
-                                  },
-                                  [
-                                    _c("font-awesome-icon", {
-                                      attrs: { icon: "plus" }
-                                    })
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c("small", [
-                                  _vm._v(
-                                    "I Want clarification on something else!"
-                                  )
+                          _c("div", { staticClass: "card" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "card-header",
+                                attrs: { id: "headingFour" }
+                              },
+                              [
+                                _c("h5", { staticClass: "mb-0" }, [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "btn btn-link collapsed btn-toggle-accord",
+                                      attrs: {
+                                        "data-toggle": "collapse",
+                                        "data-target": "#collapseFour",
+                                        "aria-expanded": "false",
+                                        "aria-controls": "collapseThree"
+                                      }
+                                    },
+                                    [
+                                      _c("font-awesome-icon", {
+                                        attrs: { icon: "plus" }
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("small", [
+                                    _vm._v(
+                                      "What payment methods can I use with Transmacs Global?"
+                                    )
+                                  ])
                                 ])
-                              ])
-                            ]
-                          ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm._m(5)
+                          ]),
                           _vm._v(" "),
-                          _vm._m(6)
+                          _c("div", { staticClass: "card" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "card-header",
+                                attrs: { id: "headingFive" }
+                              },
+                              [
+                                _c("h5", { staticClass: "mb-0" }, [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "btn btn-link collapsed btn-toggle-accord",
+                                      attrs: {
+                                        "data-toggle": "collapse",
+                                        "data-target": "#collapseFive",
+                                        "aria-expanded": "false",
+                                        "aria-controls": "collapseThree"
+                                      }
+                                    },
+                                    [
+                                      _c("font-awesome-icon", {
+                                        attrs: { icon: "plus" }
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("small", [
+                                    _vm._v(
+                                      "I Want clarification on something else!"
+                                    )
+                                  ])
+                                ])
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm._m(6)
+                          ])
                         ])
-                      ])
-                    ])
+                      ]
+                    )
                   ])
                 ]
               )
@@ -64046,7 +64227,8 @@ var staticRenderFns = [
       "div",
       {
         staticClass: "col-md-12 py-4",
-        staticStyle: { "background-color": "#261c6a" }
+        staticStyle: { "background-color": "#261c6a" },
+        attrs: { "data-aos": "fade-right" }
       },
       [_c("h3", [_vm._v("Request Quote")])]
     )
@@ -64059,7 +64241,8 @@ var staticRenderFns = [
       "div",
       {
         staticClass: "col-md-12 py-4",
-        staticStyle: { "background-color": "#ff7900" }
+        staticStyle: { "background-color": "#ff7900" },
+        attrs: { "data-aos": "fade-left" }
       },
       [_c("h3", [_vm._v("GENERAL FAQ")])]
     )
@@ -64210,35 +64393,44 @@ var render = function() {
       _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-3", attrs: { id: "stat_side" } }, [
-          _c("aside", { staticClass: "mb-5" }, [
-            _c("h1", [_vm._v(_vm._s(_vm.statistics.customers))]),
+        _c(
+          "div",
+          {
+            staticClass: "col-md-3",
+            attrs: { id: "stat_side", "data-aos": "fade-right" }
+          },
+          [
+            _c("aside", { staticClass: "mb-5" }, [
+              _c("h1", [_vm._v(_vm._s(_vm.statistics.customers))]),
+              _vm._v(" "),
+              _c("span", [
+                _vm._v(
+                  "\n                        Clients/Customers\n                    "
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c("span", [
-              _vm._v(
-                "\n                        Clients/Customers\n                    "
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("aside", { staticClass: "mb-5" }, [
-            _c("h1", [_vm._v(_vm._s(_vm.statistics.branches))]),
+            _c("aside", { staticClass: "mb-5" }, [
+              _c("h1", [_vm._v(_vm._s(_vm.statistics.branches))]),
+              _vm._v(" "),
+              _c("span", [
+                _vm._v(
+                  "\n                        Branches\n                    "
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c("span", [
-              _vm._v("\n                        Branches\n                    ")
+            _c("aside", [
+              _c("h1", [_vm._v(_vm._s(_vm.statistics.vehicles))]),
+              _vm._v(" "),
+              _c("span", [
+                _vm._v(
+                  "\n                        Owned Vehicles \n                    "
+                )
+              ])
             ])
-          ]),
-          _vm._v(" "),
-          _c("aside", [
-            _c("h1", [_vm._v(_vm._s(_vm.statistics.vehicles))]),
-            _vm._v(" "),
-            _c("span", [
-              _vm._v(
-                "\n                        Owned Vehicles \n                    "
-              )
-            ])
-          ])
-        ]),
+          ]
+        ),
         _vm._v(" "),
         _vm._m(1)
       ])
@@ -64254,19 +64446,23 @@ var staticRenderFns = [
       "div",
       { staticClass: "row my-5 mx-auto", attrs: { id: "top_stat_hd" } },
       [
-        _c("div", { staticClass: "col-md-12" }, [
-          _c("h2", [
-            _vm._v(
-              "\n                    Express Logistics and Courier Services\n                "
-            )
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n                    We provide standard domestic and international parcel pick-up, delivery and return solutions \n                    for business customers and consumers.\n                "
-            )
-          ])
-        ])
+        _c(
+          "div",
+          { staticClass: "col-md-12", attrs: { "data-aos": "fade-up" } },
+          [
+            _c("h2", [
+              _vm._v(
+                "\n                    Express Logistics and Courier Services\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                    We provide standard domestic and international parcel pick-up, delivery and return solutions \n                    for business customers and consumers.\n                "
+              )
+            ])
+          ]
+        )
       ]
     )
   },
@@ -64274,12 +64470,16 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-9" }, [
-      _c("img", {
-        staticStyle: { "max-width": "100%" },
-        attrs: { src: "/img/logistic_vehicles.jpg", alt: " " }
-      })
-    ])
+    return _c(
+      "div",
+      { staticClass: "col-md-9", attrs: { "data-aos": "zoom-in" } },
+      [
+        _c("img", {
+          staticStyle: { "max-width": "100%" },
+          attrs: { src: "/img/logistic_vehicles.jpg", alt: " " }
+        })
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -65793,13 +65993,17 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row justify-content-center mt-5" }, [
-      _c("div", { staticClass: "col-md-6 mb-5" }, [
-        _c("h5", { staticClass: "trackH5" }, [
-          _vm._v(
-            "\n                    Here’s the fastest way to check the status of your shipment. No need to call Customer Service – our online results give you real-time, detailed progress of your shipment is shown through Express Logistics Service.\n                "
-          )
-        ])
-      ])
+      _c(
+        "div",
+        { staticClass: "col-md-6 mb-5", attrs: { "data-aos": "fade-up" } },
+        [
+          _c("h5", { staticClass: "trackH5" }, [
+            _vm._v(
+              "\n                    Here’s the fastest way to check the status of your shipment. No need to call Customer Service – our online results give you real-time, detailed progress of your shipment is shown through Express Logistics Service.\n                "
+            )
+          ])
+        ]
+      )
     ])
   }
 ]

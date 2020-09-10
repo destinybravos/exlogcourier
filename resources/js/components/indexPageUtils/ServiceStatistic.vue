@@ -2,7 +2,7 @@
     <div id="services_stat">
         <div class="container py-2">
             <div class="row my-5 mx-auto" id="top_stat_hd">
-                <div class="col-md-12">
+                <div class="col-md-12" data-aos="fade-up">
                     <h2>
                         Express Logistics and Courier Services
                     </h2>
@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3" id="stat_side">
+                <div class="col-md-3" id="stat_side" data-aos="fade-right">
                     <aside class="mb-5">
                         <h1>{{ statistics.customers }}</h1>
                         <span>
@@ -33,7 +33,7 @@
                         </span>
                     </aside>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-9" data-aos="zoom-in">
                     <img src="/img/logistic_vehicles.jpg" alt=" " style="max-width:100%;">
                 </div>
             </div>

@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="row justify-content-center mt-5">
-                <div class="col-md-6 mb-5">
+                <div class="col-md-6 mb-5" data-aos="fade-up">
                     <h5 class="trackH5">
                         Here’s the fastest way to check the status of your shipment. No need to call Customer Service – our online results give you real-time, detailed progress of your shipment is shown through Express Logistics Service.
                     </h5>

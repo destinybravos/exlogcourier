@@ -2,7 +2,7 @@
     <div id="our-work-desc" class="">
         <div class="container">
             <div class="row">
-                <div class="col-md-6" style="color:white;" id="dont_fret">
+                <div class="col-md-6" style="color:white;" id="dont_fret" data-aos="fade-left">
                     <h1>Don’t Fret, Over Freight!</h1>
 
                     <ul type="circle">
@@ -20,7 +20,7 @@
                     </h2>
 
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-right">
                     <img src="/img/air_cargo2.jpg" alt=" " style="max-width:100%;">
                 </div>
             </div>

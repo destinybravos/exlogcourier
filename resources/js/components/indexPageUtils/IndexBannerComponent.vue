@@ -3,16 +3,16 @@
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div id="banText">
-                    <h2 class="mb-5">
+                    <h2 class="mb-5" data-aos="fade-right">
                         Express Logistics and Speedy Courier Delivery
                     </h2>
-                    <p class="mb-5">
+                    <p class="mb-5" data-aos="fade-right">
                         worldwide freight forwarding, logistics and courier services
                     </p>
-                    <a href="/services" class="btn mb-2" id="btn-request">
+                    <a href="/services" class="btn mb-2" id="btn-request" data-aos="fade-right">
                         SEE OUR SERVICES
                     </a>
-                    <p id="tagged">
+                    <p id="tagged" data-aos="fade-right">
                         <label>Speedy Delivery</label>
                         <span>.</span>
                         <label>Reliable Services</label>
@@ -20,7 +20,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-5" id="banImg">
+            <div class="col-lg-5" id="banImg" data-aos="fade-left">
                 <img src="/img/bg2.jpg" alt=" " style="max-width:100%; padding:20px;">
             </div>
         </div>

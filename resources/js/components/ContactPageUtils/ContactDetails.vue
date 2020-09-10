@@ -5,15 +5,15 @@
                 <div class="row">
 
                         <div class="col-md-6">
-                            <div class="ConDet">
+                            <div class="ConDet" data-aos="fade-up">
                                 <h3 style="color:#261c6a;">
                                     <strong>Express Logistics and Courier Services</strong>
                                 </h3>
                             </div>
-                            <div class="ConDet" >
+                            <div class="ConDet" data-aos="fade-up">
                                 Feel free to contact us via phone or email at anytime you need help or have any question!
                             </div>
-                            <div class="ConDet">
+                            <div class="ConDet" data-aos="fade-up">
                                 <p>
                                     <strong><font-awesome-icon icon="envelope" /> Mail Us :</strong>
                                     support@exlogcourier.com <br>
@@ -24,7 +24,7 @@
                                     +44 7520635476
                                 </p>
                             </div>
-                            <div class="ConDet">
+                            <div class="ConDet" data-aos="fade-up">
                                 <h4>
                                     <strong>
                                         <font-awesome-icon icon="map-marker" /> CONTACT ADDRESS
@@ -34,7 +34,7 @@
                                     Yesikent Mah Allyey 1905, <br> Sok - No 123 Esenyurt Instanbul, <br> Turkey.
                                 </p>
                             </div>
-                            <div class="ConDet">
+                            <div class="ConDet" data-aos="fade-up">
                                 GET CONNECTED
                                 <div class="container">
                                     <!-- You dont use font awesome likr this here eeee yaaaa  not working there -->
@@ -49,7 +49,7 @@
 
                         </div>
 
-                        <div class="col-md-6" id="conImg">
+                        <div class="col-md-6" id="conImg" data-aos="fade-up-left">
                             <img src="/img/bg2.jpg" alt=" " style="max-width:100%;">
                         </div>
                 </div>

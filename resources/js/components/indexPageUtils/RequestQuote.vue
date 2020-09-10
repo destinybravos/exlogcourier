@@ -3,17 +3,17 @@
         <div class="container-fluid" id="top_hd_req">
             <div class="row">
                 <div class="col-md-6">
-                    <button id="btn_truck">
+                    <button id="btn_truck" data-aos="zoom-in">
                         <font-awesome-icon icon="shipping-fast" size="2x" />
                     </button>
                     <!-- Heading -->
-                    <div class="col-md-12 py-4" style="background-color:#261c6a;">
+                    <div class="col-md-12 py-4" style="background-color:#261c6a;" data-aos="fade-right">
                         <h3>Request Quote</h3>
                     </div>
                     <!-- Form -->
                     <div class="container">
                         <div class="row py-3 px-0">
-                            <div class="col-md-12">
+                            <div class="col-md-12" data-aos="fade-up">
                                 <form method="post" @submit.prevent="requestQuote" ref="frmQuote">
                                     <div class="row">
                                         <div class="form-group col-md-12">
@@ -78,13 +78,13 @@
 
                 <div class="col-md-6">
                     <!-- Heading -->
-                    <div class="col-md-12 py-4" style="background-color:#ff7900;">
+                    <div class="col-md-12 py-4" style="background-color:#ff7900;" data-aos="fade-left">
                         <h3>GENERAL FAQ</h3>
                     </div>
                     <!-- FAQ -->
                     <div class="container" style="text-align:left">
                         <div class="row py-3 px-0">
-                            <div class="col-md-12">
+                            <div class="col-md-12" data-aos="fade-up">
                                 <div id="accordion">
                                     <div class="card">
                                         <div class="card-header" id="headingOne">
