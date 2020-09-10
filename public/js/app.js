@@ -15670,6 +15670,164 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FooterComponent.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FooterComponent.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {},
+  methods: {
+    gotoTrackPage: function gotoTrackPage() {
+      window.location.href = 'tracking';
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/HeaderComponent.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/HeaderComponent.vue?vue&type=script&lang=js& ***!
@@ -17846,6 +18004,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 var token = $('meta[name=csrf_token]').attr('content');
@@ -17863,7 +18034,7 @@ var token = $('meta[name=csrf_token]').attr('content');
   methods: {
     checktrack: function checktrack() {
       // Re-checking if the lenght is equal to or greater than 10
-      if (this.trackid.length >= 10) {
+      if (this.trackid.length >= 15) {
         // will will have to check if the parcel number exist or not before proceeding
         this.checkParcelExists(this.trackid);
       } else {
@@ -22884,7 +23055,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#footer-component[data-v-abfbddf2]{\n    background-color: #261c6a;\n    color: white;\n    padding: 20px 0;\n}\n#containerT[data-v-abfbddf2]{\n    background-color: #f57302;\n    max-height: 2000px;\n    width: 100%;\n}\n#contAside h5[data-v-abfbddf2]{\n    background-color:whitesmoke;\n    color:#261c6a;\n    width:50%;\n    text-align: center;\n    font-weight: bolder;\n}\n#trackText[data-v-abfbddf2]{\n    margin-top: 30px;\n}\n#TrackbtnDiv[data-v-abfbddf2]{\n    margin-top: 30px;\n}\n#trackInput[data-v-abfbddf2]{\n    width: 500px;\n    height: 40px;\n    background-color: #f57302;\n    color: white;\n}\n#trackBtn[data-v-abfbddf2]{\n    height: 40px;\n    background-color: #f57302;\n    width: 100px;\n    color:white;\n}\n", ""]);
+exports.push([module.i, "\n#footer-component[data-v-abfbddf2]{\n    background-color: #261c6a;\n    color: white;\n    padding: 20px 0;\n}\n#containerT[data-v-abfbddf2]{\n    background-color: #f57302;\n    padding: 20px 10px;\n    border-radius: 10px 0 10px 0;\n}\n#contAside[data-v-abfbddf2]{\n    background-color:whitesmoke;\n    color:#261c6a;\n    width:50%;\n    padding: 4px;\n    text-align: center;\n    font-weight: bolder;\n}\n.btn-tracking[data-v-abfbddf2]{\n    border: 1pt solid white;\n    margin-left: 7px;\n    border-radius: 5px;\n    background-color: #ff7900;\n    color: white !important;\n    font-weight: bold;\n}\n.btn-tracking[data-v-abfbddf2]:hover{\n    border: 1pt solid #ff7900;\n    color: #ff7900 !important;\n    background-color: white;\n    box-shadow: 0 0 30px #261c6a54;\n}\n#trackText[data-v-abfbddf2]{\n    margin-top: 30px;\n}\n#TrackbtnDiv[data-v-abfbddf2]{\n    margin-top: 30px;\n}\n.trackinput[data-v-abfbddf2]{\n    padding: 1.5rem;\n}\n#trackInput[data-v-abfbddf2]{\n    width: 500px;\n    height: 40px;\n    background-color: #f57302;\n    color: white;\n}\n#trackBtn[data-v-abfbddf2]{\n    height: 40px;\n    background-color: #f57302;\n    width: 100px;\n    color:white;\n}\n.my-2 p[data-v-abfbddf2]{\n    font-size: 0.9em;\n    line-height: 2em;\n}\n", ""]);
 
 // exports
 
@@ -23112,7 +23283,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.themeBtn[data-v-506a7d79]{\n    background-image: linear-gradient(to right, #3d3072, #ffd09c);\n    padding: 15px 35px;\n    color: #fff;\n    border: none;\n    text-align: center !important;\n    /* width: 20%; */\n}\n.trackH5[data-v-506a7d79]{\n    text-align: center;\n    font-family: \"Trebuchet MS\", Helvetica, sans-serif;\n}\n.input[data-v-506a7d79]{\n    padding: 1.6rem;\n}\n.red[data-v-506a7d79]{\n    border: 2px solid red;\n}\n.green[data-v-506a7d79]{\n    border: 2px solid green;\n}\n@media screen and (max-width: 767px) {\n#banText h2[data-v-506a7d79]{\n        font-size: 1.2rem;\n}\n#banText[data-v-506a7d79]{\n        margin:3vh auto;\n}\n.trackH5[data-v-506a7d79]{\n        font-size: 1.1em;\n}\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* .themeBtn{\n    background-image: linear-gradient(to right, #3d3072, #ffd09c);\n    padding: 15px 35px;\n    color: #fff;\n    border: none;\n    text-align: center !important;\n    \n} */\n.themeBtn[data-v-506a7d79]{\n    border: 1pt solid white;\n    padding: 15px 35px;\n    background-color: #ff7900;\n    color: white !important;\n    font-weight: bold;\n}\n.themeBtn[data-v-506a7d79]:hover{\n    border: 1pt solid #ff7900;\n    color: #ff7900 !important;\n    background-color: white;\n    box-shadow: 0 0 30px #261c6a54;\n}\n.trackH5[data-v-506a7d79]{\n    text-align: center;\n    font-family: \"Trebuchet MS\", Helvetica, sans-serif;\n}\n.input[data-v-506a7d79]{\n    padding: 1.6rem;\n}\n.red[data-v-506a7d79]{\n    border: 2px solid red;\n}\n.green[data-v-506a7d79]{\n    border: 2px solid green;\n}\n@media screen and (max-width: 767px) {\n#banText h2[data-v-506a7d79]{\n        font-size: 1.2rem;\n}\n#banText[data-v-506a7d79]{\n        margin:3vh auto;\n}\n.trackH5[data-v-506a7d79]{\n        font-size: 1.1em;\n}\n}\n", ""]);
 
 // exports
 
@@ -60710,133 +60881,176 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { attrs: { id: "footer-component" } }, [
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row my-5" }, [
+        _c("div", { staticClass: "col-md-12", attrs: { id: "containerT" } }, [
+          _c("div", { staticClass: "container", attrs: { id: "trackCon" } }, [
+            _c("div", { staticClass: "row my-2" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "col-md-8", attrs: { id: "TrackbtnDiv" } },
+                [
+                  _c("div", { staticClass: "input-group mb-3" }, [
+                    _c("input", {
+                      staticClass: "form-control trackinput",
+                      attrs: {
+                        type: "text",
+                        placeholder: "TRACKING ID",
+                        "aria-label": "TRACKING ID",
+                        "aria-describedby": "basic-addon2",
+                        required: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "input-group-append" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-tracking",
+                          attrs: { type: "button" },
+                          on: {
+                            click: function($event) {
+                              return _vm.gotoTrackPage()
+                            }
+                          }
+                        },
+                        [_vm._v("TRACK")]
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row my-2" }, [
+        _c("div", { staticClass: "col-md-5" }, [
+          _c(
+            "h5",
+            { attrs: { id: "contAside" } },
+            [
+              _c("font-awesome-icon", { attrs: { icon: "shipping-fast" } }),
+              _vm._v(" EXPRESS LOGISTICS ")
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "As a leading provider of air transportation, Express Logistics and Courier is your #1\n                    source for expedited international automobile shopping."
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "with services to over 150 countries worldwide,\n                    we have the resources and expertise to facilitate your international shipment and make the delivery as simple as possbile."
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _vm._m(2),
+        _vm._v(" "),
+        _vm._m(3)
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "footer-component" } }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row my-5" }, [
-          _c("div", { staticClass: "col-md-12", attrs: { id: "containerT" } }, [
-            _c("div", { staticClass: "container", attrs: { id: "trackCon" } }, [
-              _c("div", { staticClass: "row my-2" }, [
-                _c(
-                  "div",
-                  { staticClass: "col-md-4", attrs: { id: "trackText" } },
-                  [
-                    _c(
-                      "h3",
-                      {
-                        staticStyle: { "font-weight": "bolder", margin: "0px" }
-                      },
-                      [_vm._v("TRACK NUMBER")]
-                    ),
-                    _vm._v(" "),
-                    _c("p", { staticStyle: { margin: "0px" } }, [
-                      _vm._v("TRACK UP TO 10 NUMBERS AT A TIME")
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "col-md-8", attrs: { id: "TrackbtnDiv" } },
-                  [
-                    _c("input", {
-                      attrs: {
-                        id: "trackInput",
-                        type: "text",
-                        value: "#PACKAGE ID"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("button", { attrs: { id: "trackBtn", type: "text" } }, [
-                      _vm._v("TRACK ")
-                    ])
-                  ]
-                )
-              ])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row my-2" }, [
-          _c("div", { staticClass: "col-md-5" }, [
-            _c("aside", { attrs: { id: "contAside" } }, [
-              _c("h5", [_vm._v(" EXPRESS LOGISTICS ")])
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "As a leading provider of air transportation, Express Logistics and Courier is your #1\n                    source for expedited international automobile shopping with services to over 150 countries worldwide,\n                    we have the resources and expertise to facilitate your international shipment and make the delivery as simple as possbile\n                    "
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-2" }, [
-            _c("h5", { staticStyle: { "font-weight": "bold" } }, [
-              _vm._v("SERVICES")
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v("\n                        Sea Freight "),
-              _c("br"),
-              _vm._v("\n                        Road transport "),
-              _c("br"),
-              _vm._v("\n                        Air Freight "),
-              _c("br"),
-              _vm._v("\n                        Railway Logistics "),
-              _c("br"),
-              _vm._v("\n                        Packaging & Storage "),
-              _c("br"),
-              _vm._v("\n                        Warehousing "),
-              _c("br"),
-              _vm._v("\n                        Door-2-Door Delivery "),
-              _c("br")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-2" }, [
-            _c("h5", { staticStyle: { "font-weight": "bolder" } }, [
-              _vm._v("DESTINATION")
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v("\n                        Lagos, Nigeria "),
-              _c("br"),
-              _vm._v("\n                        Accra, Ghana "),
-              _c("br"),
-              _vm._v("\n                        Canada, United States "),
-              _c("br"),
-              _vm._v("\n                        Paris, France "),
-              _c("br"),
-              _vm._v("\n                        Osio, Norway "),
-              _c("br"),
-              _vm._v(
-                "\n                        Frankfurt, Germany\n\n\n                    "
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-3" }, [
-            _c("h5", { staticStyle: { "font-weight": "bolder" } }, [
-              _vm._v("CONTACT DETAILS")
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n                        Yesikent Mah  Allyey 1905 Sok - No 123 Esenyurt Instanbul, Turkey "
-              ),
-              _c("br"),
-              _vm._v(
-                "\n                        Email: contact@expresslogistics&courier.com\n                        Call: +120 - 344 -567\n                    "
-              )
-            ])
-          ])
-        ])
+    return _c("div", { staticClass: "col-md-4", attrs: { id: "trackText" } }, [
+      _c("h3", { staticStyle: { "font-weight": "bolder", margin: "0px" } }, [
+        _vm._v("TRACK NUMBER")
+      ]),
+      _vm._v(" "),
+      _c("p", { staticStyle: { margin: "0px" } }, [
+        _vm._v("TRACK UP TO 10 NUMBERS AT A TIME")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-2" }, [
+      _c("h5", { staticStyle: { "font-weight": "bold" } }, [
+        _vm._v("SERVICES")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v("\n                        Sea Freight "),
+        _c("br"),
+        _vm._v("\n                        Road transport "),
+        _c("br"),
+        _vm._v("\n                        Air Freight "),
+        _c("br"),
+        _vm._v("\n                        Railway Logistics "),
+        _c("br"),
+        _vm._v("\n                        Packaging & Storage "),
+        _c("br"),
+        _vm._v("\n                        Warehousing "),
+        _c("br"),
+        _vm._v("\n                        Door-2-Door Delivery "),
+        _c("br")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-2" }, [
+      _c("h5", { staticStyle: { "font-weight": "bolder" } }, [
+        _vm._v("DESTINATION")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v("\n                        Lagos, Nigeria "),
+        _c("br"),
+        _vm._v("\n                        Accra, Ghana "),
+        _c("br"),
+        _vm._v("\n                        Canada, United States "),
+        _c("br"),
+        _vm._v("\n                        Paris, France "),
+        _c("br"),
+        _vm._v("\n                        Osio, Norway "),
+        _c("br"),
+        _vm._v(
+          "\n                        Frankfurt, Germany\n\n\n                    "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-3" }, [
+      _c("h5", { staticStyle: { "font-weight": "bolder" } }, [
+        _vm._v("CONTACT DETAILS")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n                        Yesikent Mah  Allyey 1905 Sok - No 123 Esenyurt Instanbul, Turkey "
+        ),
+        _c("br"),
+        _vm._v("\n                        Email: support@exlogcourier.com"),
+        _c("br"),
+        _vm._v("\n                        Email: info@exlogcourier.com"),
+        _c("br"),
+        _vm._v(
+          "\n                        Call:  +44 7520635476 \n                    "
+        )
       ])
     ])
   }
@@ -63828,7 +64042,7 @@ var render = function() {
                         }
                       ],
                       staticClass: "form-control input",
-                      class: _vm.trackid.length < 10 ? "red" : "green",
+                      class: _vm.trackid.length < 15 ? "red" : "green",
                       attrs: { type: "text" },
                       domProps: { value: _vm.trackid },
                       on: {
@@ -63841,7 +64055,7 @@ var render = function() {
                       }
                     }),
                     _vm._v(" "),
-                    _vm.trackid.length < 10
+                    _vm.trackid.length < 15
                       ? _c("div", { staticClass: "alert alert-primary mt-1" }, [
                           _c(
                             "a",
@@ -63858,7 +64072,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("span", [
                             _vm._v(
-                              "Please enter any 10 character to enable you proceed"
+                              "Please enter your 15 character tracking number to proceed"
                             )
                           ])
                         ])
@@ -63872,7 +64086,7 @@ var render = function() {
                         staticClass: "themeBtn",
                         attrs: {
                           type: "button",
-                          disabled: _vm.trackid.length < 10
+                          disabled: _vm.trackid.length < 15
                         },
                         on: {
                           click: function($event) {
@@ -63913,7 +64127,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "mb-4" }, [
       _c("h6", { staticStyle: { "text-align": "center" } }, [
-        _vm._v("ENTER YOUR 10 CHARACTER TRACKING NUMBER")
+        _vm._v("ENTER YOUR 15 CHARACTER TRACKING NUMBER")
       ])
     ])
   },
@@ -63922,7 +64136,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row justify-content-center mt-5" }, [
-      _c("div", { staticClass: "col-md-6 mb-3" }, [
+      _c("div", { staticClass: "col-md-6 mb-5" }, [
         _c("h5", { staticClass: "trackH5" }, [
           _vm._v(
             "\n                    Here’s the fastest way to check the status of your shipment. No need to call Customer Service – our online results give you real-time, detailed progress of your shipment is shown through Express Logistics Service.\n                "
@@ -77598,17 +77812,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FooterComponent_vue_vue_type_template_id_abfbddf2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FooterComponent.vue?vue&type=template&id=abfbddf2&scoped=true& */ "./resources/js/components/FooterComponent.vue?vue&type=template&id=abfbddf2&scoped=true&");
-/* harmony import */ var _FooterComponent_vue_vue_type_style_index_0_id_abfbddf2_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FooterComponent.vue?vue&type=style&index=0&id=abfbddf2&scoped=true&lang=css& */ "./resources/js/components/FooterComponent.vue?vue&type=style&index=0&id=abfbddf2&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _FooterComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FooterComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/FooterComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _FooterComponent_vue_vue_type_style_index_0_id_abfbddf2_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FooterComponent.vue?vue&type=style&index=0&id=abfbddf2&scoped=true&lang=css& */ "./resources/js/components/FooterComponent.vue?vue&type=style&index=0&id=abfbddf2&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _FooterComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _FooterComponent_vue_vue_type_template_id_abfbddf2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
   _FooterComponent_vue_vue_type_template_id_abfbddf2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -77622,6 +77838,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/FooterComponent.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/FooterComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/FooterComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FooterComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./FooterComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FooterComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FooterComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 

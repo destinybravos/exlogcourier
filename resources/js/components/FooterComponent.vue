@@ -10,8 +10,12 @@
                                         <p style="margin:0px;">TRACK UP TO 10 NUMBERS AT A TIME</p>
                                 </div>
                                 <div class="col-md-8" id="TrackbtnDiv">
-                                        <input id="trackInput" type="text" value="#PACKAGE ID">
-                                        <button id="trackBtn" type="text">TRACK </button>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control trackinput" placeholder="TRACKING ID" aria-label="TRACKING ID" aria-describedby="basic-addon2" required>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-tracking" type="button" @click="gotoTrackPage()">TRACK</button>
+                                        </div>
+                                    </div>
                                 </div>
 
                         </div>
@@ -21,11 +25,11 @@
 
             <div class="row my-2" >
                     <div class="col-md-5">
-                        <aside id="contAside"> <h5> EXPRESS LOGISTICS </h5> </aside>
+                        <h5 id="contAside"><font-awesome-icon icon="shipping-fast"  /> EXPRESS LOGISTICS </h5>
                         <p>As a leading provider of air transportation, Express Logistics and Courier is your #1
-                        source for expedited international automobile shopping with services to over 150 countries worldwide,
-                        we have the resources and expertise to facilitate your international shipment and make the delivery as simple as possbile
-                        </p>
+                        source for expedited international automobile shopping.</p>
+                        <p>with services to over 150 countries worldwide,
+                        we have the resources and expertise to facilitate your international shipment and make the delivery as simple as possbile.</p>
 
                     </div>
                     <div class="col-md-2">
@@ -59,8 +63,9 @@
                         <h5 style="font-weight:bolder;">CONTACT DETAILS</h5>
                         <p>
                             Yesikent Mah  Allyey 1905 Sok - No 123 Esenyurt Instanbul, Turkey <br>
-                            Email: contact@expresslogistics&courier.com
-                            Call: +120 - 344 -567
+                            Email: support@exlogcourier.com<br>
+                            Email: info@exlogcourier.com<br>
+                            Call:  +44 7520635476 
                         </p>
 
                     </div>
@@ -78,15 +83,30 @@
 
     #containerT{
         background-color: #f57302;
-        max-height: 2000px;
-        width: 100%;
+        padding: 20px 10px;
+        border-radius: 10px 0 10px 0;
     }
-    #contAside h5{
+    #contAside{
         background-color:whitesmoke;
         color:#261c6a;
         width:50%;
+        padding: 4px;
         text-align: center;
         font-weight: bolder;
+    }
+    .btn-tracking{
+        border: 1pt solid white;
+        margin-left: 7px;
+        border-radius: 5px;
+        background-color: #ff7900;
+        color: white !important;
+        font-weight: bold;
+    }
+    .btn-tracking:hover{
+        border: 1pt solid #ff7900;
+        color: #ff7900 !important;
+        background-color: white;
+        box-shadow: 0 0 30px #261c6a54;
     }
     #trackText{
         margin-top: 30px;
@@ -94,9 +114,10 @@
 
     #TrackbtnDiv{
         margin-top: 30px;
-
     }
-
+    .trackinput{
+        padding: 1.5rem;
+    }
     #trackInput{
         width: 500px;
         height: 40px;
@@ -109,4 +130,21 @@
         width: 100px;
         color:white;
     }
+    .my-2 p{
+        font-size: 0.9em;
+        line-height: 2em;
+    }
 </style>
+
+<script>
+export default {
+    data(){
+
+    },
+    methods:{
+        gotoTrackPage(){
+            window.location.href = 'tracking';
+        }
+    }
+}
+</script>
