@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\notify;
 use App\parcel;
 use App\timeline;
+use App\quotes;
 
 class ApiController extends Controller
 {
@@ -320,6 +321,30 @@ class ApiController extends Controller
             return json_encode([
                 'status' => 'error',
                 'message' => 'Parcel unable to be Deleted'
+            ]);
+        }
+    }
+    
+    public function request_quote(Request $request)
+    {
+        $quote = new quotes;
+        $quote->fullname = $request->fname;
+        $quote->email = $request->email;
+        $quote->origin = $request->origin;
+        $quote->destination = $request->destination;
+        $quote->type = $request->log_type;
+        $quote->subject = $request->subject;
+        $quote->message = $request->message;
+        if($quote->save()){
+            return json_encode([
+                'status' => 'success',
+                'message' => 'Your Quote request was recieved successfully! 
+                    We will give you feedback via your email address accordingly.'
+            ]);
+        }else{
+            return json_encode([
+                'status' => 'error',
+                'message' => 'An unexpected error occured'
             ]);
         }
     }
