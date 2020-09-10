@@ -33,6 +33,8 @@
                 </div>
             </div>
         </div>
+        <!-- Modal -->
+        <AlertModal :message="modal_msg" :type="modal_type" :is-show="modalShowState" @hideModal="modalShowState = $event" />
     </div>
     <ParcelDetails v-else :track-id="trackid"></ParcelDetails>
 </template>
@@ -90,16 +92,35 @@
 <script>
 import Api from "../../api/Api";
 import ParcelDetails from "../trackingPageUtils/ParcelDetails.vue";
+import AlertModal from "../utils/AlertModalComponent.vue";
 var token = $('meta[name=csrf_token]').attr('content');
 export default {
     components: {
-        ParcelDetails
+        ParcelDetails,
+        AlertModal
     },
     data(){
         return{
             trackid:'',
             openParcelDetails:false,
-            displayParcelDetails:[]
+            displayParcelDetails:[],
+            modal_msg:'',
+            modal_type:'',
+            modalShowState:false
+        }
+    },
+    beforeMount(){
+        let IDTracker = window.location.hash;
+        if (IDTracker != '') {
+            let trackid = '';
+            let len = IDTracker.length;
+            for (let i = 1; i < len; i++) {
+                trackid += IDTracker[i];
+            }
+            this.trackid = trackid;
+            if(this.trackid != ''){
+                this.checkParcelExists(this.trackid)
+            }
         }
     },
     methods:{
@@ -111,7 +132,10 @@ export default {
             }else{
                 //we will bring in a very nice modal here
                 //but for now let's display an alert
-                alert('Your parcel details must be correct')
+                // alert('Your parcel details must be correct');
+                this.modal_msg = 'Your parcel details must be correct';
+                this.modal_type = 'error';
+                this.modalShowState = true;
             }
         },
         mounted(){
@@ -138,7 +162,10 @@ export default {
                 this.displayParcelDetails = response.data.displayParcelDetails
                 this.openParcelDetails = true;
             }else{
-                alert('Invalid Tracking Number')
+                // alert('Invalid Tracking Number')
+                this.modal_msg = 'Invalid Tracking Number';
+                this.modal_type = 'error';
+                this.modalShowState = true;
             }
         }
     }

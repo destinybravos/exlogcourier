@@ -44,7 +44,8 @@ export default {
             parcels: [],
             modalShowState:false,
             selectedParcel: {},
-            editMode:false
+            editMode:false,
+            errors:''
         }
     },
     mounted(){

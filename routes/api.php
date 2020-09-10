@@ -34,5 +34,8 @@ Route::group(['prefix' => 'notification'], function () {
     Route::post('/resetparcelstatus','ApiController@reset_parcel_shipping_status');
     Route::post('/deleteparcel','ApiController@delete_parcel');
  });
-
+ Route::group(['prefix' => 'requests'], function () {
+    Route::post('/quote', 'ApiController@request_quote');
+    Route::post('/fetch_all', 'ApiController@view_requests');
+});
 

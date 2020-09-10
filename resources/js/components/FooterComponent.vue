@@ -5,6 +5,7 @@
                 <div class="col-md-12" id="containerT">
                     <div class="container" id="trackCon">
                         <div class="row my-2">
+<<<<<<< HEAD
                             <div class="col-md-4" id="trackText">
                                     <h3 style="font-weight:bolder; margin:0px;">TRACK NUMBER</h3>
                                     <p style="margin:0px;">TRACK UP TO 10 NUMBERS AT A TIME</p>
@@ -14,6 +15,18 @@
                                     <input type="text" class="form-control trackinput" placeholder="TRACKING ID" aria-label="TRACKING ID" aria-describedby="basic-addon2" required>
                                     <div class="input-group-append">
                                         <button class="btn btn-tracking" type="button" @click="gotoTrackPage()">TRACK</button>
+=======
+                                <div class="col-md-4" id="trackText">
+                                        <h3 style="font-weight:bolder; margin:0px;">TRACK NUMBER</h3>
+                                        <p style="margin:0px;">TRACK UP TO 10 NUMBERS AT A TIME</p>
+                                </div>
+                                <div class="col-md-8" id="TrackbtnDiv">
+                                    <div class="input-group mb-3">
+                                        <input type="text" v-model="tracking_id" class="form-control trackinput" placeholder="TRACKING ID" aria-label="TRACKING ID" aria-describedby="basic-addon2" required>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-tracking" type="button" @click="gotoTrackPage()">TRACK</button>
+                                        </div>
+>>>>>>> a9d5b55700c74d9db4585d4618c28b27af8ff755
                                     </div>
                                 </div>
                             </div>
@@ -24,7 +37,8 @@
 
             <div class="row my-2" >
                     <div class="col-md-5">
-                        <h5 id="contAside"><font-awesome-icon icon="shipping-fast"  /> EXPRESS LOGISTICS </h5>
+                        <!-- <h5 id="contAside"><font-awesome-icon icon="shipping-fast"  /> EXPRESS LOGISTICS </h5> -->
+                        <img src="/img/exlog_logo.jpg" alt=" " style="max-width:100%; max-height:70px;" class="mb-4">
                         <p>As a leading provider of air transportation, Express Logistics and Courier is your #1
                         source for expedited international automobile shopping.</p>
                         <p>with services to over 150 countries worldwide,
@@ -138,11 +152,18 @@
 <script>
 export default {
     data(){
-
+        return {
+            tracking_id:''
+        }
+    },
+    watch:{
+        'tracking_id': function(newid){
+            this.tracking_id = newid;
+        }
     },
     methods:{
         gotoTrackPage(){
-            window.location.href = 'tracking';
+            window.location.href = 'tracking#' + this.tracking_id;
         }
     }
 }

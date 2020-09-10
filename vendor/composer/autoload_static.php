@@ -525,6 +525,7 @@ class ComposerStaticInit120eabb14efc29cfeb37f43013663cfa
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\notify' => __DIR__ . '/../..' . '/app/notify.php',
         'App\\parcel' => __DIR__ . '/../..' . '/app/parcel.php',
+        'App\\quotes' => __DIR__ . '/../..' . '/app/quotes.php',
         'App\\timeline' => __DIR__ . '/../..' . '/app/timeline.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
