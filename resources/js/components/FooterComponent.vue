@@ -5,19 +5,18 @@
                 <div class="col-md-12" id="containerT">
                     <div class="container" id="trackCon">
                         <div class="row my-2">
-                                <div class="col-md-4" id="trackText">
-                                        <h3 style="font-weight:bolder; margin:0px;">TRACK NUMBER</h3>
-                                        <p style="margin:0px;">TRACK UP TO 10 NUMBERS AT A TIME</p>
-                                </div>
-                                <div class="col-md-8" id="TrackbtnDiv">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control trackinput" placeholder="TRACKING ID" aria-label="TRACKING ID" aria-describedby="basic-addon2" required>
-                                        <div class="input-group-append">
-                                            <button class="btn btn-tracking" type="button" @click="gotoTrackPage()">TRACK</button>
-                                        </div>
+                            <div class="col-md-4" id="trackText">
+                                    <h3 style="font-weight:bolder; margin:0px;">TRACK NUMBER</h3>
+                                    <p style="margin:0px;">TRACK UP TO 10 NUMBERS AT A TIME</p>
+                            </div>
+                            <div class="col-md-8" id="TrackbtnDiv">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control trackinput" placeholder="TRACKING ID" aria-label="TRACKING ID" aria-describedby="basic-addon2" required>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-tracking" type="button" @click="gotoTrackPage()">TRACK</button>
                                     </div>
                                 </div>
-
+                            </div>
                         </div>
                     </div>
                 </div>
