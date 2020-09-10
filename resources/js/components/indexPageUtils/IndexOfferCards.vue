@@ -12,7 +12,7 @@
         <!-- Cards Structure -->
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 card-container">
+                <div class="col-lg-4 card-container" data-aos="fade-u">
                     <div class="card">
                         <div class="card-body">
                             <div class="card-image-container">

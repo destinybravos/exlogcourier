@@ -15939,17 +15939,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -23712,7 +23701,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#footer-component[data-v-abfbddf2]{\n    background-color: #261c6a;\n    color: white;\n    padding: 20px 0;\n}\n#containerT[data-v-abfbddf2]{\n    background-color: #f57302;\n    padding: 20px 10px;\n    border-radius: 10px 0 10px 0;\n}\n#contAside[data-v-abfbddf2]{\n    background-color:whitesmoke;\n    color:#261c6a;\n    width:50%;\n    padding: 4px;\n    text-align: center;\n    font-weight: bolder;\n}\n.btn-tracking[data-v-abfbddf2]{\n    border: 1pt solid white;\n    margin-left: 7px;\n    border-radius: 5px;\n    background-color: #ff7900;\n    color: white !important;\n    font-weight: bold;\n}\n.btn-tracking[data-v-abfbddf2]:hover{\n    border: 1pt solid #ff7900;\n    color: #ff7900 !important;\n    background-color: white;\n    box-shadow: 0 0 30px #261c6a54;\n}\n#trackText[data-v-abfbddf2]{\n    margin-top: 30px;\n}\n#TrackbtnDiv[data-v-abfbddf2]{\n    margin-top: 30px;\n}\n.trackinput[data-v-abfbddf2]{\n    padding: 1.5rem;\n}\n#trackInput[data-v-abfbddf2]{\n    width: 500px;\n    height: 40px;\n    background-color: #f57302;\n    color: white;\n}\n#trackBtn[data-v-abfbddf2]{\n    height: 40px;\n    background-color: #f57302;\n    width: 100px;\n    color:white;\n}\n.my-2 p[data-v-abfbddf2]{\n    font-size: 0.9em;\n    line-height: 2em;\n}\n", ""]);
+exports.push([module.i, "\n#foot-component[data-v-abfbddf2]{\n    background-color: #261c6a;\n    color: white;\n    padding: 20px 0;\n}\n#containerT[data-v-abfbddf2]{\n    background-color: #f57302;\n    padding: 20px 10px;\n    border-radius: 10px 0 10px 0;\n}\n#contAside[data-v-abfbddf2]{\n    background-color:whitesmoke;\n    color:#261c6a;\n    width:50%;\n    padding: 4px;\n    text-align: center;\n    font-weight: bolder;\n}\n.btn-tracking[data-v-abfbddf2]{\n    border: 1pt solid white;\n    margin-left: 7px;\n    border-radius: 5px;\n    background-color: #ff7900;\n    color: white !important;\n    font-weight: bold;\n}\n.btn-tracking[data-v-abfbddf2]:hover{\n    border: 1pt solid #ff7900;\n    color: #ff7900 !important;\n    background-color: white;\n    box-shadow: 0 0 30px #261c6a54;\n}\n#trackText[data-v-abfbddf2]{\n    margin-top: 30px;\n}\n#TrackbtnDiv[data-v-abfbddf2]{\n    margin-top: 30px;\n}\n.trackinput[data-v-abfbddf2]{\n    padding: 1.5rem;\n}\n#trackInput[data-v-abfbddf2]{\n    width: 500px;\n    height: 40px;\n    background-color: #f57302;\n    color: white;\n}\n#trackBtn[data-v-abfbddf2]{\n    height: 40px;\n    background-color: #f57302;\n    width: 100px;\n    color:white;\n}\n.my-2 p[data-v-abfbddf2]{\n    font-size: 0.9em;\n    line-height: 2em;\n}\n", ""]);
 
 // exports
 
@@ -61705,8 +61694,186 @@ render._withStripped = true
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {}
-var staticRenderFns = []
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { attrs: { id: "foot-component" } }, [
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row my-5" }, [
+        _c("div", { staticClass: "col-md-12", attrs: { id: "containerT" } }, [
+          _c("div", { staticClass: "container", attrs: { id: "trackCon" } }, [
+            _c("div", { staticClass: "row my-2" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "col-md-8", attrs: { id: "TrackbtnDiv" } },
+                [
+                  _c("div", { staticClass: "input-group mb-3" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.tracking_id,
+                          expression: "tracking_id"
+                        }
+                      ],
+                      staticClass: "form-control trackinput",
+                      attrs: {
+                        type: "text",
+                        placeholder: "TRACKING ID",
+                        "aria-label": "TRACKING ID",
+                        "aria-describedby": "basic-addon2",
+                        required: ""
+                      },
+                      domProps: { value: _vm.tracking_id },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.tracking_id = $event.target.value
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "input-group-append" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-tracking",
+                          attrs: { type: "button" },
+                          on: {
+                            click: function($event) {
+                              return _vm.gotoTrackPage()
+                            }
+                          }
+                        },
+                        [_vm._v("TRACK")]
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(1)
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-4", attrs: { id: "trackText" } }, [
+      _c("h3", { staticStyle: { "font-weight": "bolder", margin: "0px" } }, [
+        _vm._v("TRACK NUMBER")
+      ]),
+      _vm._v(" "),
+      _c("p", { staticStyle: { margin: "0px" } }, [
+        _vm._v("TRACK UP TO 10 NUMBERS AT A TIME")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row my-2" }, [
+      _c("div", { staticClass: "col-md-5" }, [
+        _c("img", {
+          staticClass: "mb-4",
+          staticStyle: { "max-width": "100%", "max-height": "70px" },
+          attrs: { src: "/img/exlog_logo.jpg", alt: " " }
+        }),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "As a leading provider of air transportation, Express Logistics and Courier is your #1\n                    source for expedited international automobile shopping."
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "with services to over 150 countries worldwide,\n                    we have the resources and expertise to facilitate your international shipment and make the delivery as simple as possbile."
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-2" }, [
+        _c("h5", { staticStyle: { "font-weight": "bold" } }, [
+          _vm._v("SERVICES")
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v("\n                        Sea Freight "),
+          _c("br"),
+          _vm._v("\n                        Road transport "),
+          _c("br"),
+          _vm._v("\n                        Air Freight "),
+          _c("br"),
+          _vm._v("\n                        Railway Logistics "),
+          _c("br"),
+          _vm._v("\n                        Packaging & Storage "),
+          _c("br"),
+          _vm._v("\n                        Warehousing "),
+          _c("br"),
+          _vm._v("\n                        Door-2-Door Delivery "),
+          _c("br")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-2" }, [
+        _c("h5", { staticStyle: { "font-weight": "bolder" } }, [
+          _vm._v("DESTINATION")
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v("\n                        Lagos, Nigeria "),
+          _c("br"),
+          _vm._v("\n                        Accra, Ghana "),
+          _c("br"),
+          _vm._v("\n                        Canada, United States "),
+          _c("br"),
+          _vm._v("\n                        Paris, France "),
+          _c("br"),
+          _vm._v("\n                        Osio, Norway "),
+          _c("br"),
+          _vm._v(
+            "\n                        Frankfurt, Germany\n\n\n                    "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-3" }, [
+        _c("h5", { staticStyle: { "font-weight": "bolder" } }, [
+          _vm._v("CONTACT DETAILS")
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "\n                        Yesikent Mah  Allyey 1905 Sok - No 123 Esenyurt Instanbul, Turkey "
+          ),
+          _c("br"),
+          _vm._v("\n                        Email: support@exlogcourier.com"),
+          _c("br"),
+          _vm._v("\n                        Email: info@exlogcourier.com"),
+          _c("br"),
+          _vm._v(
+            "\n                        Call:  +44 7520635476 \n                    "
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
 
 
 
@@ -62868,46 +63035,53 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-4 card-container" }, [
-              _c("div", { staticClass: "card" }, [
-                _c("div", { staticClass: "card-body" }, [
-                  _c("div", { staticClass: "card-image-container" }, [
-                    _c("img", { attrs: { src: "/img/bg1.jpg", alt: "" } })
-                  ]),
-                  _vm._v(" "),
-                  _c("h4", { staticClass: "card-title mt-4 mb-4" }, [
-                    _vm._v(
-                      "\n                            OCEAN FREIGHTS\n                        "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "mt-4 mb-3" }, [
-                    _vm._v(
-                      "\n                            We provides a holistic solution to transport your bulky and gigantic \n                            cargo through water ways, eclipsing territories and regions..\n                        "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn my-2",
-                      attrs: {
-                        href: "/services#ocean_frieght",
-                        id: "btn-action"
-                      }
-                    },
-                    [
+            _c(
+              "div",
+              {
+                staticClass: "col-lg-4 card-container",
+                attrs: { "data-aos": "fade-u" }
+              },
+              [
+                _c("div", { staticClass: "card" }, [
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("div", { staticClass: "card-image-container" }, [
+                      _c("img", { attrs: { src: "/img/bg1.jpg", alt: "" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("h4", { staticClass: "card-title mt-4 mb-4" }, [
                       _vm._v(
-                        "\n                            View Service\n                            "
-                      ),
-                      _c("img", {
-                        attrs: { src: "/img/arrow-right.svg", alt: " " }
-                      })
-                    ]
-                  )
+                        "\n                            OCEAN FREIGHTS\n                        "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "mt-4 mb-3" }, [
+                      _vm._v(
+                        "\n                            We provides a holistic solution to transport your bulky and gigantic \n                            cargo through water ways, eclipsing territories and regions..\n                        "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "btn my-2",
+                        attrs: {
+                          href: "/services#ocean_frieght",
+                          id: "btn-action"
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n                            View Service\n                            "
+                        ),
+                        _c("img", {
+                          attrs: { src: "/img/arrow-right.svg", alt: " " }
+                        })
+                      ]
+                    )
+                  ])
                 ])
-              ])
-            ]),
+              ]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "col-lg-4 card-container" }, [
               _c("div", { staticClass: "card" }, [

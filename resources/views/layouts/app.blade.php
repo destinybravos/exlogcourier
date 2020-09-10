@@ -29,6 +29,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- AOS CDN --}}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    {{-- <script ></script> --}}
 </head>
 <body>
     <div id="app">
@@ -45,5 +48,13 @@
         </main>
         <footer-component></footer-component>
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+        // import AOS from 'aos';
+        // import 'aos/dist/aos.css'; // You can also use <link> for styles
+        // ..
+        AOS.init();
+    </script>
+
 </body>
 </html>
