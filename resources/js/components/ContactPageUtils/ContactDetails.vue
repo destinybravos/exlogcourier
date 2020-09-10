@@ -10,7 +10,7 @@
                                 IF YOU HAVE ANY QUESTIONS OR NEED HELP!
                             </div>
                             <div class="ConDet">
-                                <font-awesome-icon icon="map-marker" /> Contact@expresslogistics.com
+                                <font-awesome-icon icon="map-marker" /> support@exlogcourier.com
                                 We usually reply within 24 hours <br>
                                 +234 - 09087366474663664645
                             </div>
@@ -24,10 +24,10 @@
                                 <div class="container">
                                     <!-- You dont use font awesome likr this here eeee yaaaa  not working there -->
                                     <div><font-awesome-icon icon="envelope" /></div>
-                                    <div><font-awesome-icon icon="facebook" /></div>
-                                    <div><font-awesome-icon icon="google" /></div>
-                                    <div><font-awesome-icon icon="linkedin-square" /></div>
-                                    <div><font-awesome-icon icon="vimeo" /></div>
+                                    <div><font-awesome-icon icon="[fab facebook]" /></div>
+                                    <div><font-awesome-icon icon="[fab, google]" /></div>
+                                    <div><font-awesome-icon icon="[fab, linkedin]" /></div>
+                                    <div><font-awesome-icon icon="[fab, vimeo]" /></div>
 
                                 </div>
                             </div>

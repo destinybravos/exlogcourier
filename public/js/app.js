@@ -15315,6 +15315,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_utils_BannerComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/utils/BannerComponent.vue */ "./resources/js/components/utils/BannerComponent.vue");
 /* harmony import */ var _components_ContactPageUtils_ContactDetails_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ContactPageUtils/ContactDetails.vue */ "./resources/js/components/ContactPageUtils/ContactDetails.vue");
+/* harmony import */ var _components_indexPageUtils_RequestQuote_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/indexPageUtils/RequestQuote.vue */ "./resources/js/components/indexPageUtils/RequestQuote.vue");
 //
 //
 //
@@ -15323,12 +15324,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     BannerComponent: _components_utils_BannerComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    ContactDetails: _components_ContactPageUtils_ContactDetails_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+    ContactDetails: _components_ContactPageUtils_ContactDetails_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    RequestQuote: _components_indexPageUtils_RequestQuote_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }
 });
 
@@ -15817,11 +15821,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {},
+  data: function data() {
+    return {
+      tracking_id: ''
+    };
+  },
+  watch: {
+    'tracking_id': function tracking_id(newid) {
+      this.tracking_id = newid;
+    }
+  },
   methods: {
     gotoTrackPage: function gotoTrackPage() {
-      window.location.href = 'tracking';
+      window.location.href = 'tracking#' + this.tracking_id;
     }
   }
 });
@@ -18170,6 +18184,7 @@ var token = $('meta[name=csrf_token]').attr('content');
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _api_Api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../api/Api */ "./resources/js/api/Api.js");
 /* harmony import */ var _trackingPageUtils_ParcelDetails_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../trackingPageUtils/ParcelDetails.vue */ "./resources/js/components/trackingPageUtils/ParcelDetails.vue");
+/* harmony import */ var _utils_AlertModalComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/AlertModalComponent.vue */ "./resources/js/components/utils/AlertModalComponent.vue");
 //
 //
 //
@@ -18259,19 +18274,44 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+
 
 
 var token = $('meta[name=csrf_token]').attr('content');
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    ParcelDetails: _trackingPageUtils_ParcelDetails_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+    ParcelDetails: _trackingPageUtils_ParcelDetails_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    AlertModal: _utils_AlertModalComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {
       trackid: '',
       openParcelDetails: false,
-      displayParcelDetails: []
+      displayParcelDetails: [],
+      modal_msg: '',
+      modal_type: '',
+      modalShowState: false
     };
+  },
+  beforeMount: function beforeMount() {
+    var IDTracker = window.location.hash;
+
+    if (IDTracker != '') {
+      var trackid = '';
+      var len = IDTracker.length;
+
+      for (var i = 1; i < len; i++) {
+        trackid += IDTracker[i];
+      }
+
+      this.trackid = trackid;
+
+      if (this.trackid != '') {
+        this.checkParcelExists(this.trackid);
+      }
+    }
   },
   methods: {
     checktrack: function checktrack() {
@@ -18282,7 +18322,10 @@ var token = $('meta[name=csrf_token]').attr('content');
       } else {
         //we will bring in a very nice modal here
         //but for now let's display an alert
-        alert('Your parcel details must be correct');
+        // alert('Your parcel details must be correct');
+        this.modal_msg = 'Your parcel details must be correct';
+        this.modal_type = 'error';
+        this.modalShowState = true;
       }
     },
     mounted: function mounted() {
@@ -18307,7 +18350,10 @@ var token = $('meta[name=csrf_token]').attr('content');
         this.displayParcelDetails = response.data.displayParcelDetails;
         this.openParcelDetails = true;
       } else {
-        alert('Invalid Tracking Number');
+        // alert('Invalid Tracking Number')
+        this.modal_msg = 'Invalid Tracking Number';
+        this.modal_type = 'error';
+        this.modalShowState = true;
       }
     }
   }
@@ -23595,7 +23641,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* .themeBtn{\n    background-image: linear-gradient(to right, #3d3072, #ffd09c);\n    padding: 15px 35px;\n    color: #fff;\n    border: none;\n    text-align: center !important;\n    \n} */\n.themeBtn[data-v-506a7d79]{\n    border: 1pt solid white;\n    padding: 15px 35px;\n    background-color: #ff7900;\n    color: white !important;\n    font-weight: bold;\n}\n.themeBtn[data-v-506a7d79]:hover{\n    border: 1pt solid #ff7900;\n    color: #ff7900 !important;\n    background-color: white;\n    box-shadow: 0 0 30px #261c6a54;\n}\n.trackH5[data-v-506a7d79]{\n    text-align: center;\n    font-family: \"Trebuchet MS\", Helvetica, sans-serif;\n}\n.input[data-v-506a7d79]{\n    padding: 1.6rem;\n}\n.red[data-v-506a7d79]{\n    border: 2px solid red;\n}\n.green[data-v-506a7d79]{\n    border: 2px solid green;\n}\n@media screen and (max-width: 767px) {\n#banText h2[data-v-506a7d79]{\n        font-size: 1.2rem;\n}\n#banText[data-v-506a7d79]{\n        margin:3vh auto;\n}\n.trackH5[data-v-506a7d79]{\n        font-size: 1.1em;\n}\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* .themeBtn{\n    background-image: linear-gradient(to right, #3d3072, #ffd09c);\n    padding: 15px 35px;\n    color: #fff;\n    border: none;\n    text-align: center !important;\n    \n} */\n.themeBtn[data-v-506a7d79]{\n    border: 1pt solid white;\n    padding: 15px 35px;\n    background-color: #ff7900;\n    color: white !important;\n    font-weight: bold;\n}\n.themeBtn[data-v-506a7d79]:hover{\n    border: 1pt solid #ff7900;\n    color: #ff7900 !important;\n    background-color: white;\n    box-shadow: 0 0 30px #261c6a54;\n}\n.trackH5[data-v-506a7d79]{\n    text-align: center;\n    font-family: \"Trebuchet MS\", Helvetica, sans-serif;\n}\n.input[data-v-506a7d79]{\n    padding: 1.6rem;\n}\n.red[data-v-506a7d79]{\n    border: 2px solid red;\n}\n.green[data-v-506a7d79]{\n    border: 2px solid green;\n}\n@media screen and (max-width: 767px) {\n#banText h2[data-v-506a7d79]{\n        font-size: 1.2rem;\n}\n#banText[data-v-506a7d79]{\n        margin:3vh auto;\n}\n.trackH5[data-v-506a7d79]{\n        font-size: 1.1em;\n}\n}\n", ""]);
 
 // exports
 
@@ -60598,7 +60644,9 @@ var render = function() {
     [
       _c("BannerComponent", { attrs: { "page-name": "contact" } }),
       _vm._v(" "),
-      _c("ContactDetails")
+      _c("ContactDetails"),
+      _vm._v(" "),
+      _c("RequestQuote")
     ],
     1
   )
@@ -60647,7 +60695,7 @@ var render = function() {
                 [
                   _c("font-awesome-icon", { attrs: { icon: "map-marker" } }),
                   _vm._v(
-                    " Contact@expresslogistics.com\n                            We usually reply within 24 hours "
+                    " support@exlogcourier.com\n                            We usually reply within 24 hours "
                   ),
                   _c("br"),
                   _vm._v(
@@ -60686,21 +60734,9 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "div",
-                    [_c("font-awesome-icon", { attrs: { icon: "facebook" } })],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    [_c("font-awesome-icon", { attrs: { icon: "google" } })],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
                     [
                       _c("font-awesome-icon", {
-                        attrs: { icon: "linkedin-square" }
+                        attrs: { icon: "[fab facebook]" }
                       })
                     ],
                     1
@@ -60708,7 +60744,31 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "div",
-                    [_c("font-awesome-icon", { attrs: { icon: "vimeo" } })],
+                    [
+                      _c("font-awesome-icon", {
+                        attrs: { icon: "[fab, google]" }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    [
+                      _c("font-awesome-icon", {
+                        attrs: { icon: "[fab, linkedin]" }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    [
+                      _c("font-awesome-icon", {
+                        attrs: { icon: "[fab, vimeo]" }
+                      })
+                    ],
                     1
                   )
                 ])
@@ -61207,6 +61267,14 @@ var render = function() {
                 [
                   _c("div", { staticClass: "input-group mb-3" }, [
                     _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.tracking_id,
+                          expression: "tracking_id"
+                        }
+                      ],
                       staticClass: "form-control trackinput",
                       attrs: {
                         type: "text",
@@ -61214,6 +61282,15 @@ var render = function() {
                         "aria-label": "TRACKING ID",
                         "aria-describedby": "basic-addon2",
                         required: ""
+                      },
+                      domProps: { value: _vm.tracking_id },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.tracking_id = $event.target.value
+                        }
                       }
                     }),
                     _vm._v(" "),
@@ -61240,37 +61317,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "row my-2" }, [
-        _c("div", { staticClass: "col-md-5" }, [
-          _c(
-            "h5",
-            { attrs: { id: "contAside" } },
-            [
-              _c("font-awesome-icon", { attrs: { icon: "shipping-fast" } }),
-              _vm._v(" EXPRESS LOGISTICS ")
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "As a leading provider of air transportation, Express Logistics and Courier is your #1\n                    source for expedited international automobile shopping."
-            )
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "with services to over 150 countries worldwide,\n                    we have the resources and expertise to facilitate your international shipment and make the delivery as simple as possbile."
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _vm._m(1),
-        _vm._v(" "),
-        _vm._m(2),
-        _vm._v(" "),
-        _vm._m(3)
-      ])
+      _vm._m(1)
     ])
   ])
 }
@@ -61293,76 +61340,90 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-2" }, [
-      _c("h5", { staticStyle: { "font-weight": "bold" } }, [
-        _vm._v("SERVICES")
+    return _c("div", { staticClass: "row my-2" }, [
+      _c("div", { staticClass: "col-md-5" }, [
+        _c("img", {
+          staticClass: "mb-4",
+          staticStyle: { "max-width": "100%", "max-height": "70px" },
+          attrs: { src: "/img/exlog_logo.jpg", alt: " " }
+        }),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "As a leading provider of air transportation, Express Logistics and Courier is your #1\n                    source for expedited international automobile shopping."
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "with services to over 150 countries worldwide,\n                    we have the resources and expertise to facilitate your international shipment and make the delivery as simple as possbile."
+          )
+        ])
       ]),
       _vm._v(" "),
-      _c("p", [
-        _vm._v("\n                        Sea Freight "),
-        _c("br"),
-        _vm._v("\n                        Road transport "),
-        _c("br"),
-        _vm._v("\n                        Air Freight "),
-        _c("br"),
-        _vm._v("\n                        Railway Logistics "),
-        _c("br"),
-        _vm._v("\n                        Packaging & Storage "),
-        _c("br"),
-        _vm._v("\n                        Warehousing "),
-        _c("br"),
-        _vm._v("\n                        Door-2-Door Delivery "),
-        _c("br")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-2" }, [
-      _c("h5", { staticStyle: { "font-weight": "bolder" } }, [
-        _vm._v("DESTINATION")
+      _c("div", { staticClass: "col-md-2" }, [
+        _c("h5", { staticStyle: { "font-weight": "bold" } }, [
+          _vm._v("SERVICES")
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v("\n                        Sea Freight "),
+          _c("br"),
+          _vm._v("\n                        Road transport "),
+          _c("br"),
+          _vm._v("\n                        Air Freight "),
+          _c("br"),
+          _vm._v("\n                        Railway Logistics "),
+          _c("br"),
+          _vm._v("\n                        Packaging & Storage "),
+          _c("br"),
+          _vm._v("\n                        Warehousing "),
+          _c("br"),
+          _vm._v("\n                        Door-2-Door Delivery "),
+          _c("br")
+        ])
       ]),
       _vm._v(" "),
-      _c("p", [
-        _vm._v("\n                        Lagos, Nigeria "),
-        _c("br"),
-        _vm._v("\n                        Accra, Ghana "),
-        _c("br"),
-        _vm._v("\n                        Canada, United States "),
-        _c("br"),
-        _vm._v("\n                        Paris, France "),
-        _c("br"),
-        _vm._v("\n                        Osio, Norway "),
-        _c("br"),
-        _vm._v(
-          "\n                        Frankfurt, Germany\n\n\n                    "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-3" }, [
-      _c("h5", { staticStyle: { "font-weight": "bolder" } }, [
-        _vm._v("CONTACT DETAILS")
+      _c("div", { staticClass: "col-md-2" }, [
+        _c("h5", { staticStyle: { "font-weight": "bolder" } }, [
+          _vm._v("DESTINATION")
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v("\n                        Lagos, Nigeria "),
+          _c("br"),
+          _vm._v("\n                        Accra, Ghana "),
+          _c("br"),
+          _vm._v("\n                        Canada, United States "),
+          _c("br"),
+          _vm._v("\n                        Paris, France "),
+          _c("br"),
+          _vm._v("\n                        Osio, Norway "),
+          _c("br"),
+          _vm._v(
+            "\n                        Frankfurt, Germany\n\n\n                    "
+          )
+        ])
       ]),
       _vm._v(" "),
-      _c("p", [
-        _vm._v(
-          "\n                        Yesikent Mah  Allyey 1905 Sok - No 123 Esenyurt Instanbul, Turkey "
-        ),
-        _c("br"),
-        _vm._v("\n                        Email: support@exlogcourier.com"),
-        _c("br"),
-        _vm._v("\n                        Email: info@exlogcourier.com"),
-        _c("br"),
-        _vm._v(
-          "\n                        Call:  +44 7520635476 \n                    "
-        )
+      _c("div", { staticClass: "col-md-3" }, [
+        _c("h5", { staticStyle: { "font-weight": "bolder" } }, [
+          _vm._v("CONTACT DETAILS")
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "\n                        Yesikent Mah  Allyey 1905 Sok - No 123 Esenyurt Instanbul, Turkey "
+          ),
+          _c("br"),
+          _vm._v("\n                        Email: support@exlogcourier.com"),
+          _c("br"),
+          _vm._v("\n                        Email: info@exlogcourier.com"),
+          _c("br"),
+          _vm._v(
+            "\n                        Call:  +44 7520635476 \n                    "
+          )
+        ])
       ])
     ])
   }
@@ -65030,101 +65091,123 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return !_vm.openParcelDetails
-    ? _c("div", { attrs: { id: "tracking-component-div" } }, [
-        _c("div", { staticClass: "container", attrs: { id: "app" } }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "row justify-content-center mt-5" }, [
-            _c("div", { staticClass: "col-md-6" }, [
-              _vm._m(1),
-              _vm._v(" "),
-              _c(
-                "form",
-                {
-                  attrs: { method: "post" },
-                  on: {
-                    submit: function($event) {
-                      $event.preventDefault()
-                      return _vm.checktrack($event)
-                    }
-                  }
-                },
-                [
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.trackid,
-                          expression: "trackid"
-                        }
-                      ],
-                      staticClass: "form-control input",
-                      class: _vm.trackid.length < 15 ? "red" : "green",
-                      attrs: { type: "text" },
-                      domProps: { value: _vm.trackid },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.trackid = $event.target.value
-                        }
+    ? _c(
+        "div",
+        { attrs: { id: "tracking-component-div" } },
+        [
+          _c("div", { staticClass: "container", attrs: { id: "app" } }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "row justify-content-center mt-5" }, [
+              _c("div", { staticClass: "col-md-6" }, [
+                _vm._m(1),
+                _vm._v(" "),
+                _c(
+                  "form",
+                  {
+                    attrs: { method: "post" },
+                    on: {
+                      submit: function($event) {
+                        $event.preventDefault()
+                        return _vm.checktrack($event)
                       }
-                    }),
-                    _vm._v(" "),
-                    _vm.trackid.length < 15
-                      ? _c("div", { staticClass: "alert alert-primary mt-1" }, [
-                          _c(
-                            "a",
-                            {
-                              staticClass: "close",
-                              attrs: {
-                                href: "#",
-                                "data-dismiss": "alert",
-                                "aria-label": "close"
-                              }
-                            },
-                            [_vm._v("×")]
-                          ),
-                          _vm._v(" "),
-                          _c("span", [
-                            _vm._v(
-                              "Please enter your 15 character tracking number to proceed"
-                            )
-                          ])
-                        ])
-                      : _vm._e()
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticStyle: { "text-align": "center" } }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "themeBtn",
-                        attrs: {
-                          type: "button",
-                          disabled: _vm.trackid.length < 15
-                        },
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.trackid,
+                            expression: "trackid"
+                          }
+                        ],
+                        staticClass: "form-control input",
+                        class: _vm.trackid.length < 15 ? "red" : "green",
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.trackid },
                         on: {
-                          click: function($event) {
-                            $event.preventDefault()
-                            return _vm.checktrack($event)
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.trackid = $event.target.value
                           }
                         }
-                      },
-                      [_vm._v("TRACK")]
-                    )
-                  ])
-                ]
-              )
-            ])
+                      }),
+                      _vm._v(" "),
+                      _vm.trackid.length < 15
+                        ? _c(
+                            "div",
+                            { staticClass: "alert alert-primary mt-1" },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "close",
+                                  attrs: {
+                                    href: "#",
+                                    "data-dismiss": "alert",
+                                    "aria-label": "close"
+                                  }
+                                },
+                                [_vm._v("×")]
+                              ),
+                              _vm._v(" "),
+                              _c("span", [
+                                _vm._v(
+                                  "Please enter your 15 character tracking number to proceed"
+                                )
+                              ])
+                            ]
+                          )
+                        : _vm._e()
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticStyle: { "text-align": "center" } }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "themeBtn",
+                          attrs: {
+                            type: "button",
+                            disabled: _vm.trackid.length < 15
+                          },
+                          on: {
+                            click: function($event) {
+                              $event.preventDefault()
+                              return _vm.checktrack($event)
+                            }
+                          }
+                        },
+                        [_vm._v("TRACK")]
+                      )
+                    ])
+                  ]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _vm._m(2)
           ]),
           _vm._v(" "),
-          _vm._m(2)
-        ])
-      ])
+          _c("AlertModal", {
+            attrs: {
+              message: _vm.modal_msg,
+              type: _vm.modal_type,
+              "is-show": _vm.modalShowState
+            },
+            on: {
+              hideModal: function($event) {
+                _vm.modalShowState = $event
+              }
+            }
+          })
+        ],
+        1
+      )
     : _c("ParcelDetails", { attrs: { "track-id": _vm.trackid } })
 }
 var staticRenderFns = [
@@ -65315,7 +65398,7 @@ var render = function() {
                         [
                           _c("font-awesome-icon", {
                             staticClass: "text-success",
-                            attrs: { icon: "check-circle", size: "3x" }
+                            attrs: { icon: "check-circle", size: "2x" }
                           })
                         ],
                         1
@@ -65328,7 +65411,7 @@ var render = function() {
                         [
                           _c("font-awesome-icon", {
                             staticClass: "text-danger",
-                            attrs: { icon: "times-circle", size: "3x" }
+                            attrs: { icon: "times-circle", size: "2x" }
                           })
                         ],
                         1
@@ -78184,7 +78267,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 
 
-_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faUser"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faEnvelope"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faTachometerAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faLock"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faSignInAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faKey"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faUserLock"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faTruck"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faShippingFast"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faPhone"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faPhoneAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faClipboardList"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faPlus"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faCheckCircle"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faTimesCircle"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faCheck"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faTimes"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faPaperPlane"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faCircleNotch"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faSave"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faEdit"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faTrash"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faTrashAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faEye"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faFontAwesome"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faFacebook"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faTwitter"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faTwitterSquare"]);
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faUser"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faEnvelope"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faTachometerAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faLock"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faSignInAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faKey"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faUserLock"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faTruck"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faShippingFast"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faPhone"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faPhoneAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faClipboardList"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faPlus"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faCheckCircle"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faTimesCircle"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faCheck"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faTimes"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faPaperPlane"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faCircleNotch"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faSave"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faEdit"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faTrash"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faTrashAlt"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faEye"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faFontAwesome"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faFacebook"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faTwitter"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faTwitterSquare"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faGoogle"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faFacebookF"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faVimeo"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faMapMarker"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faDesktop"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faLinkedinIn"]);
 Vue.component('font-awesome-icon', _fortawesome_vue_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"]);
 /**
  * The following block of code may be used to automatically register your

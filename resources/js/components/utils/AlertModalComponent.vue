@@ -5,8 +5,8 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
             <div class="modal-body" style="text-align:center;">
-                <h3 v-if="type === 'success'"> <font-awesome-icon icon="check-circle" size="3x" class="text-success" /> </h3>
-                <h3 v-if="type === 'error'"> <font-awesome-icon icon="times-circle" size="3x" class="text-danger" /> </h3>
+                <h3 v-if="type === 'success'"> <font-awesome-icon icon="check-circle" size="2x" class="text-success" /> </h3>
+                <h3 v-if="type === 'error'"> <font-awesome-icon icon="times-circle" size="2x" class="text-danger" /> </h3>
                 <div style="font-weight:1.1rem;">
                     {{ message }}
                 </div>

@@ -11,12 +11,15 @@ window.Vue = require('vue');
 // Added Font-Awesome Here
 // We need to also install social icon with it ok
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faFontAwesome, faFacebook, faTwitter, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { faFontAwesome, faFacebook, faTwitter, faTwitterSquare, faGoogle, faFacebookF, faVimeo, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, faShippingFast,
-    faClipboardList, faPlus, faCheckCircle, faTimesCircle, faCheck, faTimes, faPaperPlane, faCircleNotch, faSave, faEdit, faTrash, faTrashAlt, faEye, faPhone, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+    faClipboardList, faPlus, faCheckCircle, faTimesCircle, faCheck, faTimes, faPaperPlane, faCircleNotch, 
+    faMapMarker, faDesktop, faSave, faEdit, faTrash, faTrashAlt, faEye, faPhone, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 library.add(faUser, faEnvelope, faTachometerAlt, faLock, faSignInAlt, faKey, faUserLock, faTruck, faShippingFast, faPhone, faPhoneAlt,
-    faClipboardList, faPlus,  faCheckCircle, faTimesCircle, faCheck, faTimes, faPaperPlane, faCircleNotch, faSave, faEdit, faTrash, faTrashAlt, faEye, faFontAwesome, faFacebook, faTwitter, faTwitterSquare);
+    faClipboardList, faPlus,  faCheckCircle, faTimesCircle, faCheck, faTimes, faPaperPlane, faCircleNotch, 
+    faSave, faEdit, faTrash, faTrashAlt, faEye, faFontAwesome, faFacebook, faTwitter, faTwitterSquare, 
+    faGoogle, faFacebookF, faVimeo, faMapMarker, faDesktop, faLinkedinIn);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 /**
