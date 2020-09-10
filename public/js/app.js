@@ -78918,8 +78918,8 @@ var Api = function Api() {
 
   //   const domain   = process.env.MIX_API_DOMAIN,
   //         protocol = process.env.MIX_API_PROTOCOL,
-  var domain = 'exlog.com/api',
-      protocol = 'http',
+  var domain = 'exlogcourier.com/api',
+      protocol = 'https',
       apiUrl = "".concat(protocol, "://").concat(domain);
   this.client = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
     baseURL: apiUrl
