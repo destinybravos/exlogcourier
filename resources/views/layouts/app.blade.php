@@ -48,6 +48,7 @@
         </main>
         <footer-component></footer-component>
     </div>
+<<<<<<< HEAD
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
         // import AOS from 'aos';
@@ -56,5 +57,12 @@
         AOS.init();
     </script>
 
+=======
+    
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+>>>>>>> 7915c2ad416ed080bd2b69c5732cf15209905e67
 </body>
 </html>
