@@ -12,7 +12,9 @@
         <!-- Cards Structure -->
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 card-container">
+                <div class="col-lg-4 card-container" data-aos="fade-right"
+                                                data-aos-offset="300"
+                                                data-aos-easing="ease-in-sine">
                     <div class="card">
                         <div class="card-body">
                             <div class="card-image-container">
@@ -33,7 +35,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 card-container">
+                <div class="col-lg-4 card-container" data-aos="fade-down"
+                                                    data-aos-easing="linear"
+                                                    data-aos-duration="500">
                     <div class="card">
                         <div class="card-body">
                             <div class="card-image-container">
@@ -54,7 +58,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 card-container">
+                <div class="col-lg-4 card-container" data-aos="fade-left"
+                                                data-aos-offset="300"
+                                                data-aos-easing="ease-in-sine">
                     <div class="card">
                         <div class="card-body">
                             <div class="card-image-container">
@@ -148,6 +154,8 @@
 </style>
 
 <script>
+
+
 export default {
     
 }
