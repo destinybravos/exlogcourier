@@ -207,7 +207,7 @@ class ApiController extends Controller
                 $setDate = date('U');
                 $getDate = date('D, d M, Y.', $setDate);
                 $getTime = date('h:i:s A', $setDate);
-                $activity = 'Parcel Enroute to' . $getRecAddress;
+                $activity = 'Parcel Enroute to ' . $getRecAddress;
 
                 $saveTimeline = new timeline;
                 $saveTimeline->trackid = $getTrackid;
@@ -281,7 +281,7 @@ class ApiController extends Controller
                         $setDate = date('U');
                         $getDate = date('D, d M, Y.', $setDate);
                         $getTime = date('h:i:s A', $setDate);
-                        $activity = 'Parcel was released and parcel enroute to' . $getRecAddress;
+                        $activity = 'Parcel was released and parcel enroute to ' . $getRecAddress;
 
                         $saveTimeline = new timeline;
                         $saveTimeline->trackid = $getTrackid;
