@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\notify;
 use App\parcel;
-use App\timeline;
 use App\quotes;
+use App\timeline;
+use App\Mail\SupportEmail;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class ApiController extends Controller
 {
@@ -48,6 +50,14 @@ class ApiController extends Controller
 
     // Create Parcel function
     public function create_parcel(Request  $req){
+        // check if parcel already exists
+        $check = parcel::where('trackid',$req->trackid)->exists();
+        if($check == true){
+            return json_encode([
+                'status' => 'exists',
+                'message' => 'Parcel with Trackind ID ' . $req->trackid . ' already exists!'
+            ]);
+        }
         // return $req;
         $saveParcel =  new parcel;
         $days = $req->days;
@@ -91,12 +101,12 @@ class ApiController extends Controller
                 $saveTimeline->save();
             }
             return json_encode([
-                'statu' => 'success',
+                'status' => 'success',
                 'message' => 'Parcel Content Uploaded Successfully'
             ]);
         }else{
             return json_encode([
-                'statu' => 'error',
+                'status' => 'error',
                 'message' => 'Parcel could not be uploaded'
             ]);
         }
@@ -147,7 +157,11 @@ class ApiController extends Controller
     }
 
     public function generate_receipt(Request $request){
-        $receipt = parcel::orderBy('id','DESC')->take(1)->get();
+        if($request->trackid != ''){
+            $receipt = parcel::where('trackid',$request->trackid)->orderBy('id','DESC')->take(1)->get();
+        }else{
+            $receipt = parcel::orderBy('id','DESC')->take(1)->get();
+        }
         if(count($receipt) > 0){
             $result = [
                 'count'=>count($receipt),
@@ -161,7 +175,12 @@ class ApiController extends Controller
         return json_encode($result);
     }
     public function generate_receipt_timeline(Request $request){
-        $receipt = parcel::orderBy('id','DESC')->take(1)->get();
+        if($request->trackid != ''){
+            $receipt = parcel::where('trackid',$request->trackid)->orderBy('id','DESC')->get();
+        }else{
+            $receipt = parcel::orderBy('id','DESC')->take(1)->get();
+        }
+        
         foreach($receipt as $value){
             $getTrackid = $value->trackid;
             $fetchTimeline = timeline::where('trackid',$getTrackid)->get();
@@ -224,7 +243,7 @@ class ApiController extends Controller
         }else{
             return json_encode([
                 'status' => 'error',
-                'message' => 'An error occured, please try saving again'
+                'message' => 'No Update was made on parcel details!'
             ]);
         }
 
@@ -353,5 +372,11 @@ class ApiController extends Controller
     {
         $all_request = quotes::orderBy('created_at', 'DESC')->get();
         return json_encode($all_request);
+    }
+
+    public function send_email(Request $request)
+    {
+        Mail::to($request->recipient)->send(new SupportEmail($request));
+        return $request;
     }
 }

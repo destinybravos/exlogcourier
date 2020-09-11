@@ -8,6 +8,19 @@
                 </div>
             </div>
             <!-- Tracking number row -->
+            <div class="row justify-content-center py-3">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" v-model="track_id" placeholder="ENTER TRACKING ID" class="form-control">
+                        <div class="input-group-append">
+                            <button class="btn input-group-text" @click="generateReceipt()">
+                                View Receipt
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-md-12 bg-gray">
                     <p class="pTextBold">
@@ -186,7 +199,7 @@
                     </div>
                 </div>
             </div>
-
+        <AlertModal :message="modal_msg" :type="modal_type" :is-show="modalShowState" @hideModal="modalShowState = $event" />
         </div>
     </div>
 </template>
@@ -204,46 +217,62 @@
 
 <script>
 import Api from "../../api/Api";
-var token = $('meta[name=csrf_token]').attr('content')
+var token = $('meta[name=csrf_token]').attr('content');
+import AlertModal from '../utils/AlertModalComponent.vue';
 export default {
+    components:{
+        AlertModal
+    },
     data(){
         return {
             // parcel : {}
             receiptDetails : {},
             getTrack:'',
-            receiptTimeline: []
+            receiptTimeline: [],
+            track_id:'',
+            modal_msg:'',
+            modal_type:'',
+            modalShowState:false
         }
     },
     mounted(){
         // Send a Request to the database to generate the receipt
         var _token = this.token;
-        this.generateReceipt();
         // console.log( receiptDetails.trackid);
         this.getTrack = document.getElementById('track');
-        console.log(this.getTrack);
+        // console.log(this.getTrack);
     },
     methods:{
         generateReceipt(){
             let setReceipt = {
                 _token:this._token,
+                trackid : this.track_id
             };
 
             Api.client.post('parcel/generatereceipt', setReceipt)
             .then((res)=>{
                 this.displayReceipt(res);
             });
-
-            Api.client.post('parcel/generatereceipttimeline', setReceipt)
-            .then((res)=>{
-                this.displayReceiptTimeline(res);
-            });
         },
         displayReceipt(response){
             if(response.data.count > 0){
                 this.receiptDetails = response.data.receiptdetail[0];
-                console.log(this.receiptDetails);
+                Api.client.post('parcel/generatereceipttimeline', {
+                    _token:this._token,
+                    trackid : this.track_id
+                })
+                .then((res)=>{
+                    this.displayReceiptTimeline(res);
+                });
             }else{
-                alert('Invalide Request');
+                if (this.track_id != '') {
+                    this.modal_msg = `Parcel with Tracking ID #${this.track_id} could not be found! 
+                    Please re-check/confirm the parcel Tracking ID and try again.`;
+                } else {
+                    this.modal_msg = 'No parcel Receipt to display';
+                }
+                this.modal_type = 'error';
+                this.modalShowState = true;
             }
         },
         displayReceiptTimeline(response){
@@ -251,7 +280,13 @@ export default {
                 this.receiptTimeline = response.data.receiptdetail;
                 console.log(this.receiptTimeline);
             }else{
-                alert('Invalide Request');
+                if (this.track_id != '') {
+                    this.modal_msg = `Parcel with Tracking ID #${this.track_id} has no timeline yet!`;
+                } else {
+                    this.modal_msg = 'No Reciept timeline to display';
+                }
+                this.modal_type = 'error';
+                this.modalShowState = true;
             }
         }
     }
