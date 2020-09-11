@@ -14,7 +14,7 @@
         <div class="container">
         <div class="row">
             <!-- navBox 1 -->
-            <div class="col-md-4 mt-5">
+            <div class="col-md-3 mt-5">
                 <div class="card shadow">
                     <div class="card-body">
                         <h5>Parcels</h5>
@@ -23,12 +23,12 @@
                         <!-- </div> -->
                     </div>
                     <div class="card-footer">
-                        <h6><a href="" @click.prevent="changePage('parcel')">Access Here</a></h6>
+                        <h6><a href="" @click.prevent="changePage('parcel')">Manage Parcels</a></h6>
                     </div>
                 </div>
             </div>
             <!-- navBox 2 -->
-            <div class="col-md-4 mt-5">
+            <div class="col-md-3 mt-5">
                 <div class="card shadow">
                     <div class="card-body">
                         <h5>Request</h5>
@@ -37,12 +37,12 @@
                         <!-- </div> -->
                     </div>
                     <div class="card-footer">
-                        <h6><a href="#">Access Here</a></h6>
+                        <h6><a href="" @click.prevent="changePage('request')">View All Requests</a></h6>
                     </div>
                 </div>
             </div>
             <!-- navBox 3 -->
-            <div class="col-md-4 mt-5">
+            <div class="col-md-3 mt-5">
                 <div class="card shadow">
                     <div class="card-body">
                         <h5>Contact</h5>
@@ -51,7 +51,7 @@
                         <!-- </div> -->
                     </div>
                     <div class="card-footer">
-                        <h6><a href="#">Access Here</a></h6>
+                        <h6><a href="" @click.prevent="changePage('contact')">Send Email/Contact Clients</a></h6>
                     </div>
                 </div>
             </div>
