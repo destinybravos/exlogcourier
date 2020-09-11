@@ -1,15 +1,14 @@
 <template>
     <div id="home">
         <SideBarComponent :current-page="currentPage" @selectPage="loadMyPage($event)"></SideBarComponent>
+        <!-- <DashboardHomeComponent :current-page="currentPage" @selectPage="loadMyPage($event)"></DashboardHomeComponent> -->
         <div id="dashboard_contents">
             <DashboardHome v-if="currentPage === 'dashboard'"></DashboardHome>
             <ContactManger v-if="currentPage === 'contact'"></ContactManger>
             <ParcelManager v-if="currentPage === 'parcel'"></ParcelManager>
             <RequestManager v-if="currentPage === 'request'"></RequestManager>
-
-            <!-- I Additional Parcel Receipt Component was added -->
-            <!-- <ParcelReceipt></ParcelReceipt> -->
         </div>
+
     </div>
 </template>
 
