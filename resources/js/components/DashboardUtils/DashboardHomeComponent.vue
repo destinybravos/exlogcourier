@@ -10,6 +10,55 @@
                 </div>
             </div>
         </div>
+
+        <div class="container">
+        <div class="row">
+            <!-- navBox 1 -->
+            <div class="col-md-4 mt-5">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5>Parcels</h5>
+                        <!-- <div> -->
+                            <p style="font-size:3.0em; text-align:right"><font-awesome-icon icon="truck" /> </p>
+                        <!-- </div> -->
+                    </div>
+                    <div class="card-footer">
+                        <h6><a href="" @click.prevent="changePage('parcel')">Access Here</a></h6>
+                    </div>
+                </div>
+            </div>
+            <!-- navBox 2 -->
+            <div class="col-md-4 mt-5">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5>Request</h5>
+                        <!-- <div> -->
+                            <p style="font-size:3.0em; text-align:right"><font-awesome-icon icon="clipboard-list" /> </p>
+                        <!-- </div> -->
+                    </div>
+                    <div class="card-footer">
+                        <h6><a href="#">Access Here</a></h6>
+                    </div>
+                </div>
+            </div>
+            <!-- navBox 3 -->
+            <div class="col-md-4 mt-5">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5>Contact</h5>
+                        <!-- <div> -->
+                            <p style="font-size:3.0em; text-align:right"><font-awesome-icon icon="user" /> </p>
+                        <!-- </div> -->
+                    </div>
+                    <div class="card-footer">
+                        <h6><a href="#">Access Here</a></h6>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
     </div>
 </template>
 
@@ -24,3 +73,25 @@
         text-shadow: 0 0 12px #e96901;
     }
 </style>
+
+<script>
+export default {
+    props:{
+        currentPage: String
+    },
+    data(){
+        return {
+
+        }
+    },
+    methods:{
+        changePage(page){
+            if(window.outerWidth < 768){
+                let sideBar = $('#side_bar');
+                sideBar.toggleClass('open');
+            }
+            this.$emit('selectPage', page);
+        }
+    }
+}
+</script>
