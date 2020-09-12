@@ -23,7 +23,7 @@
                         <!-- </div> -->
                     </div>
                     <div class="card-footer">
-                        <h6><a href="" @click.prevent="changePage('parcel')">Access Here</a></h6>
+                        <h6><a href="" >Access Here</a></h6>
                     </div>
                 </div>
             </div>
