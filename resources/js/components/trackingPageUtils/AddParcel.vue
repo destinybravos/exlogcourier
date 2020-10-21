@@ -70,14 +70,20 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>        
+        
+        <AlertModal :message="modal_msg" :type="modal_type" :is-show="modalShowState" @hideModal="modalShowState = $event" />
     </div>
 </template>
 
 <script>
 import Api from "../../api/Api";
-var token = $('meta[name=csrf-token]').attr('content')
+var token = $('meta[name=csrf-token]').attr('content');
+import AlertModal from '../utils/AlertModalComponent.vue';
 export default {
+    components:{
+        AlertModal
+    },
     data(){
         return {
             // setting form input values here
@@ -95,7 +101,10 @@ export default {
             message:'',
             _token:'',
             errors:{},
-            processing:false
+            processing:false,
+            modal_msg:'',
+            modal_type:'',
+            modalShowState:false
         }
     },
     mounted(){
@@ -134,17 +143,23 @@ export default {
         },
         handleSaveParcel(response){
             if(response.data.status == 'success'){
-                window.location.href = 'home';
-                alert(response.data.message);
-                
+                setTimeout(() => window.location.reload(), 5000);
+                this.modal_msg = response.data.message + '! Please wait while changes take effect..!';
+                this.modal_type = 'success';
+                this.modalShowState = true;
             }else{
-                alert(response.data.message)
+                this.modal_msg = response.data.message;
+                this.modal_type = 'error';
+                this.modalShowState = true;
             }
             this.processing = false;
         },
         handleError(errorsObj){
             // Review if the error object is correct (Has response)
             this.errors = errorsObj.response;
+            this.modal_msg = 'An Unexpected Error Occured!';
+            this.modal_type = 'error';
+            this.modalShowState = true;
             console.log(this.errors);
         }
     }

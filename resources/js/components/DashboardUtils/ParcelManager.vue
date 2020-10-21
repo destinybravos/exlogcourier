@@ -50,6 +50,11 @@
         color: white;
         text-shadow: 0 0 12px #e96901;
     }
+    @media screen and (max-width:640px) {
+        #nav-tab a{
+            font-size: 0.8rem;
+        }
+    }
 </style>
 
 <script>

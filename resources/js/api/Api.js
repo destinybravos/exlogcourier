@@ -6,6 +6,8 @@ class Api {
     //         protocol = process.env.MIX_API_PROTOCOL,
     const domain   = 'exlogcourier.com/api',
             protocol = 'https',
+   // const domain   = 'exlog.com/api',
+   //          protocol = 'http',
             apiUrl   = `${protocol}://${domain}`;
 
       this.client = axios.create({
