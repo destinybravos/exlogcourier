@@ -31,7 +31,10 @@
                                     </strong>
                                 </h4>
                                 <p>
-                                    Yesikent Mah Allyey 1905, <br> Sok - No 123 Esenyurt Instanbul, <br> Turkey.
+                                    Deanshanger, Milton Keynes MK19 6HT, UK<br>
+                                    Email: support@exlogcourier.com<br>
+                                    Email: info@exlogcourier.com<br>
+                                    Call:  +44 7520635476 
                                 </p>
                             </div>
                             <div class="ConDet" data-aos="fade-up">

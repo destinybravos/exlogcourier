@@ -15464,6 +15464,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -61724,11 +61727,19 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("p", [
-      _vm._v("\n                                Yesikent Mah Allyey 1905, "),
+      _vm._v(
+        "\n                                Deanshanger, Milton Keynes MK19 6HT, UK"
+      ),
       _c("br"),
-      _vm._v(" Sok - No 123 Esenyurt Instanbul, "),
+      _vm._v(
+        "\n                                Email: support@exlogcourier.com"
+      ),
       _c("br"),
-      _vm._v(" Turkey.\n                            ")
+      _vm._v("\n                                Email: info@exlogcourier.com"),
+      _c("br"),
+      _vm._v(
+        "\n                                Call:  +44 7520635476 \n                            "
+      )
     ])
   },
   function() {
