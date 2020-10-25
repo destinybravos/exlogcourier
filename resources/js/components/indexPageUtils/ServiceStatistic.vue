@@ -71,9 +71,9 @@ export default {
             },
             interval: false,
             actualStat:{
-                customers: 8200,
-                vehicles: 237,
-                branches: 357
+                customers: 16400,
+                vehicles: 574,
+                branches: 814
             }
         }
     },
@@ -101,15 +101,15 @@ export default {
             let aStat = this.actualStat;
             this.interval = window.setInterval(function () {
                 if(stat.customers < aStat.customers){
-                    stat.customers += 5
+                    stat.customers += 50
                 }
                 if(stat.vehicles < aStat.vehicles){
-                    stat.vehicles += 1
+                    stat.vehicles += 2
                 }
                 if(stat.branches < aStat.branches){
-                    stat.branches += 1
+                    stat.branches += 2
                 }
-            },20)
+            },5)
         }
     }
 }
